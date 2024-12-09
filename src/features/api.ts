@@ -1,17 +1,19 @@
+/* eslint-disable unicorn/no-null */
+import {EndpointNameUser, RTKTagNames, SERVER_URL} from '@/constants'
+import {useStorage} from '@/utils/storage'
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import {Mutex} from 'async-mutex'
 
-export const baseUrl = `''/api/`
+export const baseUrl = `${SERVER_URL}/api/`
 
 const mutex = new Mutex()
 
 const baseQuery = fetchBaseQuery({
   baseUrl,
   prepareHeaders: (headers: any) => {
-    const token = ''
-    const accessToken = token?.split(' ')
-    if (token) {
-      headers.set('Authorization', `Bearer ${accessToken?.[1]}`)
+    const accessToken = useStorage.getTokens().accessToken?.split(' ')[1]
+    if (accessToken) {
+      headers.set('Authorization', `Bearer ${accessToken}`)
     }
     headers.set('Accept', 'application/json')
     return headers
@@ -22,18 +24,19 @@ const customFetchBase = async (args: any, api: any, extraOptions: any) => {
   await mutex.waitForUnlock()
   let result = await baseQuery(args, api, extraOptions)
 
-  if (result.error && result.error.status === 401) {
+  const refreshToken = useStorage.getTokens().refreshToken?.split(' ')[1]
+
+  if (args.url === 'user/me' && !refreshToken) {
+    return {data: null}
+  }
+
+  if (result.error) {
     if (!mutex.isLocked()) {
       const release = await mutex.acquire()
-
       try {
         const refreshResult = (await baseQuery(
           {
-            url: '',
-            body: {
-              accessToken: api.getState()?.auth?.token,
-              refreshToken: api.getState()?.auth?.refreshToken,
-            } as any,
+            url: EndpointNameUser.REFRESH_TOKEN + refreshToken,
             method: 'POST',
           },
           api,
@@ -58,6 +61,6 @@ const customFetchBase = async (args: any, api: any, extraOptions: any) => {
 export const baseApi = createApi({
   reducerPath: 'api',
   baseQuery: customFetchBase,
-  tagTypes: [],
+  tagTypes: Object.values(RTKTagNames),
   endpoints: () => ({}),
 })

@@ -1,0 +1,1 @@
+export const RANDOM_COLORS = ['#E3D3FB', '#C4DFDD', '#CFE4FF', '#CDE8BF', '#6E86FF80', '#FFA9DC80']
