@@ -1,0 +1,7 @@
+@import url('./shadcn.css');
+@import url('./fonts.css');
+@import url('./styles.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
