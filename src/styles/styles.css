@@ -57,14 +57,9 @@ select::-webkit-scrollbar {
   transition-timing-function: cubic-bezier(0.01, 0.92, 0.25, 0.87);
 }
 
-.link {
-  transition-duration: 150ms;
-}
-
 .link:hover {
-  color: #4c6fff;
+  text-decoration: underline;
 }
-
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -74,7 +69,7 @@ select::-webkit-scrollbar {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #EBEDF4;
+  background: #ebedf4;
   height: 1px;
   border-radius: 5px;
 }

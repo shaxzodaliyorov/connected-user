@@ -36,7 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   switch (size) {
     case 'sm':
-      paddingClasses = 'px-3 py-2 text-sm'
+      paddingClasses = 'px-5 py-2.5 text-sm'
       break
     case 'md':
       paddingClasses = 'px-5 py-[15px] text-base'
@@ -54,7 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       className={cn(
-        'rounded-md font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2',
+        'rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2',
         fullWidth && 'w-full',
         paddingClasses,
         buttonClasses,
@@ -62,8 +62,8 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       disabled={disabled || loading}
     >
-      {loading && <Spinner thickness={2} />}
-      {!loading && leftIcon && <span className="  mr-2">{leftIcon}</span>}
+      {loading && <Spinner size={12} thickness={1} />}
+      {!loading && leftIcon && <span className=" mr-2">{leftIcon}</span>}
       <span>{children}</span>
       {!loading && rightIcon && <span className="ml-2">{rightIcon}</span>}
     </button>

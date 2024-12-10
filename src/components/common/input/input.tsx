@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {InputProps} from './types'
 import {cn} from '@/lib/utils'
+import {IoEye} from 'react-icons/io5'
+import {IoEyeOff} from 'react-icons/io5'
 
 export const Input: React.FC<InputProps> = ({
   label,
@@ -15,6 +17,7 @@ export const Input: React.FC<InputProps> = ({
   errorMessage,
   size = 'md',
   fullWidth = false,
+  placeholder,
 }) => {
   const [showPassword, setShowPassword] = useState(false)
 
@@ -38,12 +41,12 @@ export const Input: React.FC<InputProps> = ({
   }
 
   return (
-    <label className={`flex flex-col ${fullWidth ? 'w-full' : 'w-auto'} ${className}`}>
+    <label className={cn('flex flex-col', fullWidth && 'w-full', className)}>
       {label && (
         <span className="text-[#0b0b0b] text-base inline-block mb-2 font-normal font-['Inter Display']">{label}</span>
       )}
       <div
-        className={`relative border border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'} ${
+        className={`relative flex justify-between border items-center border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'} ${
           disabled ? 'bg-gray-200 cursor-not-allowed' : 'focus-within:border-blue-500'
         }`}
       >
@@ -55,6 +58,7 @@ export const Input: React.FC<InputProps> = ({
           onChange={onChange}
           disabled={disabled}
           onClick={onClick}
+          placeholder={placeholder}
           className={cn(
             'w-full h-14 pr-12 rounded-md text-[#0b0b0b] text-lg font-normal focus:outline-none focus:ring-2 focus:ring-blue-300',
             inputSizeClasses,
@@ -65,13 +69,13 @@ export const Input: React.FC<InputProps> = ({
           <button
             type="button"
             onClick={togglePasswordVisibility}
-            className="absolute right-3 text-gray-500"
+            className="absolute right-2 text-black"
             disabled={disabled}
           >
-            {showPassword ? '🙈' : '👁️'}
+            {showPassword ? <IoEye /> : <IoEyeOff />}
           </button>
         )}
-        {rightIcon && !showPassword && <span className="absolute right-3">{rightIcon}</span>}
+        {rightIcon && !showPassword && <span className="absolute right-2">{rightIcon}</span>}
       </div>
 
       {errorMessage && <span className="text-red-500 text-xs mt-1">{errorMessage}</span>}
