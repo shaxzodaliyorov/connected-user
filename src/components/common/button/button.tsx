@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
       buttonClasses = 'bg-[#0062FF] hover:bg-blue-600 text-white'
       break
     case 'secondary':
-      buttonClasses = 'bg-gray-500 hover:bg-gray-600 text-white'
+      buttonClasses = 'bg-neutral-100 hover:bg-neutral-200 text-[#848484]'
       break
     case 'outline':
       buttonClasses = 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'

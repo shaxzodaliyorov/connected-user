@@ -45,7 +45,7 @@ export const SignUp = () => {
         return response
       },
       onSuccess: () => {
-        navigate('/login')
+        navigate('/sign-in')
         toast({title: t('Register successfully'), variant: 'default'})
       },
     })
@@ -73,7 +73,7 @@ export const SignUp = () => {
             </Button>
             <div>
               <p className="text-center text-[#838383] text-base font-normal font-['Inter Display']">
-                Don’t have an account?{' '}
+                Do you have a Account?{' '}
                 <Link to={'/sign-in'} className="text-[#0062ff] font-medium font-['Inter Display'] link">
                   Sign In
                 </Link>

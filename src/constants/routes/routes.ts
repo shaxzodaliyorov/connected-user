@@ -1,5 +1,5 @@
 export enum AUTH_ROUTE {
-  LOGIN = '/login',
+  LOGIN = '/sign-in',
   REGISTER = '/register',
   FORGOT_PASSWORD = '/forgot-password',
   VISA_HELP = '/get-visa-help',

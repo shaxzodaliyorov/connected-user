@@ -1,6 +1,6 @@
 export enum ROUTES_NAME {
   HOME = '/',
-  LOGIN = '/login',
+  SIGNIN = '/sign-in',
   JOBS = '/jobs',
   PART_TIME_JOBS = '/part-time-jobs',
   REAL_TIME_POPULAR_POSITION = '/real-time-popular-position',

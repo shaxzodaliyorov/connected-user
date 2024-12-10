@@ -44,7 +44,7 @@ export const Form = ({form, agreeData, setAgreeData}: Props) => {
       },
       onSuccess: () => {
         toast({title: t('Successfully verified'), variant: 'default'})
-        navigate('/register?step=registration&verify=true', {replace: true})
+        navigate('/sign-up?step=registration&verify=true', {replace: true})
       },
       onError: () => {
         toast({title: 'Invalid code', variant: 'destructive'})

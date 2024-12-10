@@ -6,6 +6,7 @@ import {useHandleRequest} from './hooks'
 import {useEffect} from 'react'
 import {useGetAllJobsQuery} from './features/jobs'
 import {useStorage} from './utils/storage'
+import {Toaster} from './components/ui/toaster'
 
 export const App = () => {
   const [getUser, {isError, isLoading = true}] = useLazyGetUserQuery()
@@ -45,7 +46,7 @@ export const App = () => {
       ) : (
         <>
           <Routes>{AppRouter(ROUTES)}</Routes>
-          {/* <Toaster /> */}
+          <Toaster />
         </>
       )}
     </>
