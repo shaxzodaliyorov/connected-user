@@ -1,38 +1,38 @@
 export const LANGUAGES = [
   {
-    label: 'ENGLISH',
+    label: 'EN',
     value: 'en',
   },
   {
-    label: '한국어',
+    label: 'KR',
     value: 'kr',
   },
   {
-    label: 'Русский',
+    label: 'RU',
     value: 'ru',
   },
   {
-    label: 'O’zbekcha',
+    label: 'UZ',
     value: 'uz',
   },
   {
-    label: 'Nepali',
+    label: 'TJ',
     value: 'ne',
   },
   {
-    label: 'Filipino',
+    label: 'KZ',
     value: 'ph',
   },
   {
-    label: 'Монгол хэл',
+    label: 'MN',
     value: 'mn',
   },
   {
-    label: 'Bahasa',
+    label: 'ID',
     value: 'id',
   },
   {
-    label: 'indonesia',
+    label: 'ID',
     value: 'id',
   },
 ]

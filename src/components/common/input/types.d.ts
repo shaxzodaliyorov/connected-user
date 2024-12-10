@@ -12,4 +12,6 @@ export interface InputProps {
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   placeholder?: string
+  inputSizeClassName?: string
+  wrapperClassName?: string
 }

@@ -1,5 +1,7 @@
+import {Main} from './_components'
+
 export const HomePage = () => (
   <section>
-    <h1>home</h1>
+    <Main />
   </section>
 )

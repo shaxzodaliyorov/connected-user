@@ -18,6 +18,8 @@ export const Input: React.FC<InputProps> = ({
   size = 'md',
   fullWidth = false,
   placeholder,
+  inputSizeClassName,
+  wrapperClassName,
 }) => {
   const [showPassword, setShowPassword] = useState(false)
 
@@ -46,9 +48,10 @@ export const Input: React.FC<InputProps> = ({
         <span className="text-[#0b0b0b] text-base inline-block mb-2 font-normal font-['Inter Display']">{label}</span>
       )}
       <div
-        className={`relative flex justify-between border items-center border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'} ${
-          disabled ? 'bg-gray-200 cursor-not-allowed' : 'focus-within:border-blue-500'
-        }`}
+        className={cn(
+          `relative flex justify-between border items-center border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'}`,
+          wrapperClassName,
+        )}
       >
         {leftIcon && <span className="absolute left-3">{leftIcon}</span>}
 
@@ -62,6 +65,7 @@ export const Input: React.FC<InputProps> = ({
           className={cn(
             'w-full h-14 pr-12 rounded-md text-[#0b0b0b] text-lg font-normal focus:outline-none focus:ring-2 focus:ring-blue-300',
             inputSizeClasses,
+            inputSizeClassName,
           )}
         />
 

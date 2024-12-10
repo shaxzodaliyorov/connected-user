@@ -85,3 +85,14 @@ select::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb:hover {
   background: #3058ea;
 }
+
+body {
+  background-color: #fbfbfb !important;
+}
+
+.text_gradient {
+  background: var(--Base-Color-Gradient, linear-gradient(90deg, #1ec1ff -11.4%, #0062ff 46.93%, #ff2acc 105.26%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
