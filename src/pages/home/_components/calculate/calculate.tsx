@@ -1,8 +1,8 @@
 import {Button} from '@/components/common'
-import {CalculateIcon} from '@/icons/Calculate'
+import {CalculateIcon} from '@/icons'
 
 export const Calculate = () => (
-  <section className="w-full  ">
+  <section className="w-full">
     <div className="w-full container flex">
       <div className="w-1/2 bg-[#285CAD]  rounded-s-[15px] p-[30px]">
         <img src="./images/calculate-images.svg" alt="calculate" />
