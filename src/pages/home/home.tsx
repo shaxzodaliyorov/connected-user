@@ -1,7 +1,9 @@
-import {Main} from './_components'
+import {Calculate, Main, RealTime} from './_components'
 
 export const HomePage = () => (
   <section>
     <Main />
+    <RealTime />
+    <Calculate />
   </section>
 )

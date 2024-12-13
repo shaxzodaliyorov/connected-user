@@ -8,7 +8,7 @@ export const Main = () => (
             Company <br /> that support E-9 Visa
           </h1>
           <p className="text-[#0b0b0b] mt-2 pb-9 text-2xl font-normal font-['Inter Display'] leading-[33.60px]">
-            We provide visa and accomadation.
+            We provide visa and accommodation.
           </p>
           <div className="flex gap-x-[6px]">
             <div className="w-6 h-1 bg-[#0062ff] rounded-[15px]"></div>
