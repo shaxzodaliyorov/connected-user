@@ -1,5 +1,5 @@
 export const Main = () => (
-  <section className="w-full  ">
+  <section className="w-full">
     <div className="w-full container flex justify-between h-[400px] bg-white rounded-[15px] ">
       <div className="flex flex-col justify-between p-[30px]">
         <img src="/images/light.png" alt="" className="w-[50px] h-[50px]" />

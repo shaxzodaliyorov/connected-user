@@ -14,7 +14,7 @@ export const Header = () => {
   const {t} = useTranslation()
   return (
     <div className="w-full  h-[58px] fixed z-20 top-4 left-1/2 -translate-x-1/2 ">
-      <header className=" h-full w-full container justify-between flex items-center bg-white rounded-[15px]">
+      <header className=" h-full w-full container px-5 justify-between flex items-center bg-white rounded-[15px]">
         <div className="flex items-center gap-x-6">
           <Link to="/">
             <img src="/images/logo.svg" alt="urconnected logo" />
