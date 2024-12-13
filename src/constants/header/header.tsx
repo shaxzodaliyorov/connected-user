@@ -1,3 +1,7 @@
+import {Grid, GridAdd, Notification, Settings, User} from '@/icons'
+import {Like} from '@/icons/like'
+import {Logout} from '@/icons/logout'
+
 export const HEADER_PUBLIC_LINKS = [
   {
     label: 'Jobs',
@@ -25,36 +29,36 @@ export const DASHBOARD_LINKS = [
   {
     label: 'Dashboard',
     path: '/dashboard',
-    icon: 'dashboard',
+    icon: <Grid className="w-6 h-6" />,
   },
   {
     label: 'Application',
     path: '/application',
-    icon: 'dashboard',
+    icon: <GridAdd className="w-6 h-6 text-[#7D7D7D]" />,
   },
   {
     label: 'Notification',
     path: '/notifications',
-    icon: 'notification',
+    icon: <Notification className="w-6 h-6" />,
   },
   {
     label: 'Resume',
     path: '/resume',
-    icon: 'user',
+    icon: <User className="w-6 h-6" />,
   },
   {
     label: 'Saved Jobs',
     path: '/saved-jobs',
-    icon: 'save-2',
+    icon: <Like className="w-6 h-6" />,
   },
   {
     label: 'Settings',
     path: '/settings',
-    icon: 'settings',
+    icon: <Settings className="w-6 h-6" />,
   },
   {
     label: 'Logout',
     path: '/logout',
-    icon: 'logout',
+    icon: <Logout className="w-6 h-6" />,
   },
 ]

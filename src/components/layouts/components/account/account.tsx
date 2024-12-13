@@ -21,20 +21,24 @@ export const Account = () => {
           />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className=" z-[9999] rounded-lg shadow-lg w-[150px]">
-        {DASHBOARD_LINKS.map(link => (
-          <DropdownMenuItem
-            key={link.path}
-            onClick={() => navigate(link.path)}
-            className="text-[#0b0b0b] text-base font-normal cursor-pointer font-['Inter Display']"
-          >
-            {/* <Icons
-              className={`w-6 h-6 ${link.path === '/logout' ? 'text-[#B01212] ' : 'text-[#6E86FF]'} `}
-              name={link.icon as any}
-            /> */}
-            {t(link.label)}
-          </DropdownMenuItem>
-        ))}
+      <DropdownMenuContent className=" z-[9999] rounded-lg shadow-lg w-[198px]">
+        <div className="pt-5  px-6 pb-4 border-b border-b-neutral-100">
+          <p className="text-[#0b0b0b] text-base font-normal leading-[17.60px]">{user.full_name}</p>
+        </div>
+        <div className="pt-4 flex flex-col gap-y-[13px]">
+          {DASHBOARD_LINKS.map(link => (
+            <DropdownMenuItem
+              key={link.path}
+              onClick={() => navigate(link.path)}
+              className="text-[#0b0b0b] text-base py-[7px] flex gap-x-[10px] px-6 font-normal cursor-pointer font-['Inter Display']"
+            >
+              <div className={`${link.path === '/logout' ? 'text-[#F13325]' : 'text-[#7D7D7D]'}`}>{link.icon}</div>
+              <p className="text-[#0b0b0b] text-base font-normal font-['Inter Display'] leading-[17.60px]">
+                {t(link.label)}
+              </p>
+            </DropdownMenuItem>
+          ))}
+        </div>
       </DropdownMenuContent>
     </DropdownMenu>
   )
