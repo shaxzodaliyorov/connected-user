@@ -1,5 +1,5 @@
 import {ROUTES_NAME} from '@/enum'
-import {HomePage, SignIn, SignUp} from '@/pages'
+import {ContactPage, HomePage, SignIn, SignUp} from '@/pages'
 
 export const ROUTES = [
   {
@@ -13,5 +13,9 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.SIGNIN,
     element: <SignIn />,
+  },
+  {
+    path: ROUTES_NAME.CONTACT_US,
+    element: <ContactPage />,
   },
 ]
