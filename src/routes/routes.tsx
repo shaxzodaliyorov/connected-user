@@ -18,4 +18,8 @@ export const ROUTES = [
     path: ROUTES_NAME.CONTACT_US,
     element: <ContactPage />,
   },
+  {
+    path: ROUTES_NAME.JOBS,
+    element: <ContactPage />,
+  },
 ]
