@@ -27,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
       buttonClasses = 'bg-neutral-100 hover:bg-neutral-200 text-[#848484]'
       break
     case 'outline':
-      buttonClasses = 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
+      buttonClasses = 'border border-[#0b0b0b] text-[#0b0b0b] hover:bg-[#0b0b0b] hover:text-white'
       break
     default:
       buttonClasses = 'bg-blue-500 hover:bg-blue-600 text-white'
@@ -54,7 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       className={cn(
-        'rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2',
+        'rounded-lg font-semibold focus:outline-none  disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2',
         fullWidth && 'w-full',
         paddingClasses,
         buttonClasses,

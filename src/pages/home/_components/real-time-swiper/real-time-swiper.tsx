@@ -3,69 +3,57 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import {Card} from '../card'
-import {useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from 'react-icons/md'
+import {useGetUser, useHandleRequest} from '@/hooks'
+import {useGetSaveJobIdsQuery, useLazyGetAllJobsQuery, useSaveJobMutation} from '@/features/jobs'
+import {toast} from '@/components/ui/use-toast'
+import {useTranslation} from 'react-i18next'
+import {useNavigate} from 'react-router-dom'
 
 export const RealTimeSwiper = () => {
   const swiperRef = useRef<any>(null)
-  const jobs = [
-    {
-      title: 'Middle Graphic Designer',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Intermediate+ Communication designer + 3D',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Junior UX/UI designer',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Middle Web Designer (UX/UI designer)',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Middle Graphic Designer',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Intermediate+ Communication designer + 3D',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Junior UX/UI designer',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-    {
-      title: 'Middle Web Designer (UX/UI designer)',
-      salary: '$125K - $140K',
-      location: 'Jung-gu, Seoul',
-      type: 'Remote',
-      company: 'Samsung Electronics',
-    },
-  ]
+
+  const handleRequest = useHandleRequest()
+  const [getAllJobs, {data: {data: jobs = []} = {}}] = useLazyGetAllJobsQuery()
+  const [saveJob] = useSaveJobMutation()
+  const {data: {data: saveJobIds = []} = {}} = useGetSaveJobIdsQuery('')
+  const {t} = useTranslation()
+  const navigate = useNavigate()
+  const user = useGetUser()
+
+  const fetchJobs = async () => {
+    await handleRequest({
+      request: async () => {
+        const response = await getAllJobs({per_page: 20}).unwrap()
+        return response
+      },
+    })
+  }
+
+  const onSaveAndUnsaved = async (id: string) => {
+    if (!user) {
+      navigate('/sign-in')
+      return
+    }
+    await handleRequest({
+      request: async () => {
+        const response = await saveJob({
+          id,
+          type: saveJobIds.includes(id) ? 'unfavorite' : 'favorite',
+        })
+        return response
+      },
+      onSuccess: () => {
+        toast({title: t('Job Saved'), variant: 'default'})
+      },
+    })
+  }
+
+  useEffect(() => {
+    fetchJobs()
+  }, [])
+
   const handlePrev = () => {
     if (swiperRef.current) {
       swiperRef.current.slidePrev()
@@ -110,7 +98,17 @@ export const RealTimeSwiper = () => {
           >
             {jobs.map((job, index) => (
               <SwiperSlide key={index}>
-                <Card company={job.company} title={job.title} />
+                <Card
+                  onSaveClick={() => onSaveAndUnsaved(job._id)}
+                  salary_max={job.salary_max}
+                  salary_min={job.salary_min}
+                  title={job.job_title}
+                  location={job.location || '---'}
+                  type_of_employment={job.type_of_employment}
+                  key={job._id}
+                  company={job.company}
+                  id={job._id}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

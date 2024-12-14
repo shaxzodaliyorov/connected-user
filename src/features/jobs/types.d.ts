@@ -17,7 +17,7 @@ export interface GetAllJobsRequest {
   visa?: string
   nationality?: string
   page?: number
-  per_page?: string
+  per_page?: number
 }
 
 export interface GetFilterDataResponse {
