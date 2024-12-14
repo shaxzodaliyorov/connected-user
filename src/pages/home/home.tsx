@@ -1,4 +1,3 @@
-import {Footer} from '@/components/layouts/components'
 import {Calculate, Cards, Connected, Main, Partnering, RealTime} from './_components'
 
 export const HomePage = () => (
@@ -9,6 +8,5 @@ export const HomePage = () => (
     <Partnering />
     <Cards />
     <Connected />
-    <Footer />
   </section>
 )

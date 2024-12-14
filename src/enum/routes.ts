@@ -16,7 +16,7 @@ export enum ROUTES_NAME {
   APPLICATION = '/application',
   SAVED_JOBS = '/saved-jobs',
   JOB_OFFER = '/job-offer',
-  NOT_FOUND = '/404',
+  NOT_FOUND = '/*',
   SKILL_LEVEL_TEST = '/skill-level-test',
   SKILL_LEVEL_START_TEST = '/skill-level-test/test',
   JOB = '/job',
