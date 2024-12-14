@@ -1,13 +1,22 @@
 import {Button, Input} from '@/components/common'
 import {MainCard} from '@/components/main-card'
 import {Controller, useForm} from 'react-hook-form'
-import {AccountFormValues} from './types'
-import {MdOutlineLogout} from 'react-icons/md'
+import {AccountFormProps, AccountFormValues} from './types'
+import {FC, useEffect} from 'react'
+import {useGetUser, useValidationOptions} from '@/hooks'
+import {FaTrashAlt} from 'react-icons/fa'
 
-export const AcccountForm = () => {
+export const AccountForm: FC<AccountFormProps> = ({onSubmit, loading}) => {
   const form = useForm<AccountFormValues>()
+  const validationOptions = useValidationOptions()
+  const user = useGetUser()
 
-  const onSubmit = () => {}
+  useEffect(() => {
+    form.setValue('full_name', user?.full_name || '')
+    form.setValue('phone_number', user?.phone_number || '')
+    form.setValue('email', user?.email || '')
+    form.setValue('profile_photo', user?.profile_photo || '')
+  }, [form, user])
 
   return (
     <section className="w-full container">
@@ -16,33 +25,60 @@ export const AcccountForm = () => {
           <form className="" onSubmit={form.handleSubmit(onSubmit)}>
             <div className="grid grid-cols-2 gap-x-6 gap-y-4">
               <Controller
-                name="name"
+                name="full_name"
                 control={form.control}
-                render={() => <Input placeholder="Enter your name" label="Full Name*" />}
+                rules={validationOptions(true)}
+                render={({field}) => (
+                  <Input
+                    onChange={field.onChange}
+                    value={field.value}
+                    errorMessage={form.formState.errors.full_name?.message}
+                    placeholder="Enter your name"
+                    label="Full Name"
+                  />
+                )}
               />
 
               <Controller
-                name="number"
+                name="phone_number"
+                rules={validationOptions(true)}
                 control={form.control}
-                render={() => <Input placeholder="+1 (555) 000-0000" label="Phone number" />}
+                render={({field}) => (
+                  <Input
+                    onChange={field.onChange}
+                    value={field.value}
+                    errorMessage={form.formState.errors.phone_number?.message}
+                    placeholder="+1 (555) 000-0000"
+                    label="Phone number"
+                  />
+                )}
               />
               <Controller
                 name="email"
                 control={form.control}
-                render={() => <Input placeholder="example@gmail.com" label="Email*" />}
+                rules={validationOptions(true)}
+                render={({field}) => (
+                  <Input
+                    onChange={field.onChange}
+                    value={field.value}
+                    errorMessage={form.formState.errors.phone_number?.message}
+                    placeholder="example@gmail.com"
+                    label="Email"
+                  />
+                )}
               />
             </div>
             <div className="pt-10">
               <div className="w-full h-[1px] bg-[#D9D9D9]" />
             </div>
-            <div className="flex justify-between pt-[30px]">
-              <Button
-                leftIcon={<MdOutlineLogout size={20} color="red" />}
-                className="px-[76px] h-12 text-[red] bg-white hover:bg-white"
+            <div className="flex justify-between w-full pt-[30px]">
+              <button
+                type="button"
+                className="flex items-center gap-x-2 text-center text-[#f13225] text-lg font-medium font-['Inter Display']"
               >
-                Log out
-              </Button>
-              <Button type="submit" className="px-[76px] h-12">
+                <FaTrashAlt /> Delete Account
+              </button>
+              <Button loading={loading} type="submit" className="px-[76px] h-12">
                 Save
               </Button>
             </div>

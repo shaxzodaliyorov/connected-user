@@ -5,7 +5,7 @@ import {Account, BoldTabs, Security, VisaDetails} from './components'
 export const SettingsPage = () => (
   <section className="w-full">
     <div className="w-full container">
-      <div className="pt-6">
+      <div className="py-6">
         <Link to="/" className="flex items-center gap-x-2">
           <span>
             <MdOutlineArrowBackIos />
