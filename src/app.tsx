@@ -8,6 +8,7 @@ import {useGetAllJobsQuery} from './features/jobs'
 import {useStorage} from './utils/storage'
 import {Toaster} from './components/ui/toaster'
 import {MainLayout} from './components/layouts'
+import {PageLoader} from './components/page-loader'
 
 export const App = () => {
   const [getUser, {isError, isLoading = true}] = useLazyGetUserQuery()
@@ -43,7 +44,7 @@ export const App = () => {
   return (
     <>
       {isLoading || isLoadingJobs ? (
-        <p>loading...</p>
+        <PageLoader />
       ) : (
         <MainLayout>
           <Routes>{AppRouter(ROUTES)}</Routes>
