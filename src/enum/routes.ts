@@ -7,6 +7,7 @@ export enum ROUTES_NAME {
   NEW_POSITION = '/new-position',
   MATCH_UP = '/match-up',
   VISA_NEWS = '/visa-news/',
+  VISA_NEWS_DETAIL = '/visa-new/:id',
   NOTIFICATIONS = '/notifications',
   NOTIFICATION = '/notification',
   SETTINGS = '/settings',

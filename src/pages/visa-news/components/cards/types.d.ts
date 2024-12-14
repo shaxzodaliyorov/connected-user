@@ -4,4 +4,5 @@ interface Props {
   category: string
   date: string
   imageUrl: string
+  onClick?: () => void
 }

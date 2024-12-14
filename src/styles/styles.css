@@ -98,11 +98,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   aspect-ratio: 1;
-  --_c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  --_c: no-repeat radial-gradient(farthest-side, #0062ff 92%, #0000);
   background:
     var(--_c) top,
     var(--_c) left,

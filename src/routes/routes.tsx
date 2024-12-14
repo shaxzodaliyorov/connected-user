@@ -1,5 +1,15 @@
 import {ROUTES_NAME} from '@/enum'
-import {ContactPage, HomePage, LogoutPage, NotFound, PrivatePolicy, SignIn, SignUp, VisaNews} from '@/pages'
+import {
+  ContactPage,
+  HomePage,
+  LogoutPage,
+  NotFound,
+  PrivatePolicy,
+  SettingsPage,
+  SignIn,
+  SignUp,
+  VisaNews,
+} from '@/pages'
 
 export const ROUTES = [
   {
@@ -33,6 +43,10 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.VISA_NEWS,
     element: <VisaNews />,
+  },
+  {
+    path: ROUTES_NAME.SETTINGS,
+    element: <SettingsPage />,
   },
   {
     path: ROUTES_NAME.LOGOUT,

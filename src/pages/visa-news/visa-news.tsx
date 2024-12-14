@@ -1,59 +1,12 @@
 import {Button, Input} from '@/components/common'
 import {IoSearch} from 'react-icons/io5'
 import {Card} from './components'
+import {VISA_UPDATES} from '@/mock'
+import {useNavigate} from 'react-router-dom'
 
-const VISA_UPDATES = [
-  {
-    id: 1,
-    title: 'Changes in D-10-1 visa',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-  {
-    id: 2,
-    title: 'Changes in D-10-1 visa',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-  {
-    id: 3,
-    title: 'Recent updates regarding the.',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-  {
-    id: 4,
-    title: 'Changes in D-10-1 visa',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-  {
-    id: 5,
-    title: 'Changes in D-10-1 visa',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-  {
-    id: 6,
-    title: 'Changes in D-10-1 visa',
-    description: 'Updates to the D-10-1 visa include new eligibility criteria and application procedures.',
-    category: 'Immigration',
-    date: 'Nov 28, 2024',
-    imageUrl: './images/passport.svg',
-  },
-]
-
-export const VisaNews = () => (
+export const VisaNews = () => {
+  const navigate = useNavigate()
+  return (
     <section className="w-full">
       <div className="w-full container m-auto bg-white p-[30px] rounded-[15px]">
         <div className="flex">
@@ -76,6 +29,7 @@ export const VisaNews = () => (
               category={card.category}
               date={card.date}
               imageUrl={card.imageUrl}
+              onClick={() => navigate(`/visa-new/${card.id}`)}
             />
           ))}
         </div>
@@ -89,3 +43,4 @@ export const VisaNews = () => (
       </div>
     </section>
   )
+}
