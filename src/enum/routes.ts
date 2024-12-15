@@ -10,6 +10,7 @@ export enum ROUTES_NAME {
   VISA_NEWS_DETAIL = '/visa-new/:id',
   NOTIFICATIONS = '/notifications',
   NOTIFICATION = '/notification',
+  NOTIFICATION_DETAILS = '/notification/:id',
   SETTINGS = '/settings',
   SIGN_UP = '/sign-up',
   DASHBOARD = '/dashboard',

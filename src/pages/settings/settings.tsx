@@ -1,6 +1,8 @@
 import {MdOutlineArrowBackIos} from 'react-icons/md'
 import {Link} from 'react-router-dom'
-import {Account, BoldTabs, Security, VisaDetails} from './components'
+import {Account, Security, VisaDetails} from './components'
+import {BoldTabs} from '@/components'
+// import {BoldTabs} from '@/components/common'
 
 export const SettingsPage = () => (
   <section className="w-full">

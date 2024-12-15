@@ -6,6 +6,8 @@ import {
   Jobs,
   LogoutPage,
   NotFound,
+  Notification,
+  NotificationDetails,
   PrivatePolicy,
   SettingsPage,
   SignIn,
@@ -62,5 +64,13 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.JOB_DETAIL,
     element: <JobDetails />,
+  },
+  {
+    path: ROUTES_NAME.NOTIFICATIONS,
+    element: <Notification />,
+  },
+  {
+    path: ROUTES_NAME.NOTIFICATION_DETAILS,
+    element: <NotificationDetails />,
   },
 ]
