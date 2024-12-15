@@ -1,5 +1,18 @@
 import {ROUTES_NAME} from '@/enum'
-import {ContactPage, HomePage, SignIn, SignUp} from '@/pages'
+import {
+  ContactPage,
+  HomePage,
+  JobDetails,
+  Jobs,
+  LogoutPage,
+  NotFound,
+  PrivatePolicy,
+  SettingsPage,
+  SignIn,
+  SignUp,
+  VisaNewDetails,
+  VisaNews,
+} from '@/pages'
 
 export const ROUTES = [
   {
@@ -20,6 +33,34 @@ export const ROUTES = [
   },
   {
     path: ROUTES_NAME.JOBS,
-    element: <ContactPage />,
+    element: <Jobs />,
+  },
+  {
+    path: ROUTES_NAME.PRIVACY_POLICY,
+    element: <PrivatePolicy />,
+  },
+  {
+    path: ROUTES_NAME.NOT_FOUND,
+    element: <NotFound />,
+  },
+  {
+    path: ROUTES_NAME.VISA_NEWS,
+    element: <VisaNews />,
+  },
+  {
+    path: ROUTES_NAME.VISA_NEWS_DETAIL,
+    element: <VisaNewDetails />,
+  },
+  {
+    path: ROUTES_NAME.SETTINGS,
+    element: <SettingsPage />,
+  },
+  {
+    path: ROUTES_NAME.LOGOUT,
+    element: <LogoutPage />,
+  },
+  {
+    path: ROUTES_NAME.JOB_DETAIL,
+    element: <JobDetails />,
   },
 ]
