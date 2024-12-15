@@ -1,7 +1,7 @@
 type Tab = {
   label: string
   value: string
-  children: React.ReactNode
+  children?: React.ReactNode
   leftSideContent?: React.ReactNode
 }
 
@@ -11,4 +11,5 @@ type BoldTabsProps = {
   contentClassName?: string
   tabsClassName?: string
   tabClassName?: string
+  onChange?: (value?: string) => void
 }

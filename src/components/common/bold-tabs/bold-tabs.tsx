@@ -5,8 +5,16 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
   defaultTabIndex = 0,
   contentClassName = '',
   tabsClassName = '',
+  onChange,
 }) => {
   const [activeTabIdx, setActiveTabIdx] = useState(defaultTabIndex)
+
+  const handleTab = (tabIndex: number) => {
+    setActiveTabIdx(tabIndex)
+    if (onChange) {
+      onChange(tabs[tabIndex].value)
+    }
+  }
 
   useEffect(() => {
     if (tabs?.length && defaultTabIndex !== undefined) {
@@ -30,7 +38,7 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
                   ? 'bg-[#0062FF] text-white border border-[#0062FF]'
                   : 'bg-white text-[#0C0C0C] border border-[#E8E8E8]'
               } transition duration-300`}
-              onClick={() => setActiveTabIdx(index)}
+              onClick={() => handleTab(index)}
             >
               {tab.label}
             </button>
@@ -38,7 +46,7 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
         </div>
         {tabs[activeTabIdx]?.leftSideContent && <div className="ml-4">{tabs[activeTabIdx].leftSideContent}</div>}
       </div>
-      <div className={`mt-4 ${contentClassName}`}>{tabs[activeTabIdx]?.children}</div>
+      <div className={`mt-4 ${contentClassName}`}>{tabs?.[activeTabIdx]?.children}</div>
     </div>
   )
 }
