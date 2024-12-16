@@ -29,6 +29,7 @@ export const VisaDetailsForm = () => {
                     placeholder="Select your visa type"
                     size="md"
                     fullWidth
+                    selectClass={''}
                   />
                 )}
               />

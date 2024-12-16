@@ -1,6 +1,7 @@
 import {ROUTES_NAME} from '@/enum'
 import {
   Application,
+  Company,
   ContactPage,
   HomePage,
   JobDetails,
@@ -10,9 +11,11 @@ import {
   NotificationDetails,
   Notifications,
   PrivatePolicy,
+  SavedJobs,
   SettingsPage,
   SignIn,
   SignUp,
+  SkillLevelTest,
   VisaNewDetails,
   VisaNews,
 } from '@/pages'
@@ -77,5 +80,17 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.APPLICATION,
     element: <Application />,
+  },
+  {
+    path: ROUTES_NAME.SKILL_LEVEL_TEST,
+    element: <SkillLevelTest />,
+  },
+  {
+    path: ROUTES_NAME.SAVED_JOBS,
+    element: <SavedJobs />,
+  },
+  {
+    path: ROUTES_NAME.JOB_DETAIL_COMPANY,
+    element: <Company />,
   },
 ]

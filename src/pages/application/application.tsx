@@ -39,7 +39,6 @@ export const Application = () => (
         <div className="py-4">
           <h1 className="text-[32px] font-semibold lg:leading-[38.4px] text-left">Application</h1>
         </div>
-        <div className="flex  gap-x-8"></div>
       </div>
       <div className="flex flex-col gap-y-4">
         {jobs.map((item, index) => (

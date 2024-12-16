@@ -57,18 +57,6 @@ module.exports = {
       fontFamily: {
         inter: "'Inter', sans-serif",
       },
-      fontSize: {
-        xxs: '8px',
-        xs: '10px',
-        sm: '12px',
-        base: '14px',
-        'base-lg': '16px',
-        lg: '18px',
-        xl: '20px',
-        '2xl': '24px',
-        '3xl': '28px',
-        label: '12.8px',
-      },
       lineHeight: {
         1: '1em',
         4: '16px',

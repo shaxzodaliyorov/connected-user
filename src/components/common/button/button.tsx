@@ -62,7 +62,7 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       disabled={disabled || loading}
     >
-      {loading && <Spinner size={12} thickness={1} />}
+      {loading && <Spinner color={variant === 'outline' ? '#000' : '#fff'} size={12} thickness={1} />}
       {!loading && leftIcon && <span className=" mr-2">{leftIcon}</span>}
       <span>{children}</span>
       {!loading && rightIcon && <span className="ml-2">{rightIcon}</span>}

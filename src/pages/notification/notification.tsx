@@ -1,7 +1,8 @@
 import {BoldTabs} from '@/components'
 import {MdOutlineArrowBackIos} from 'react-icons/md'
 import {Link} from 'react-router-dom'
-import {All, NoNotification, Unread} from './components'
+import {All, Unread} from '../notifications/components'
+import {NoNotification} from './components/no-notifications'
 
 const NOTIFICATION = [
   {

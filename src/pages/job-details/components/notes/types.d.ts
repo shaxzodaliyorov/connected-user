@@ -1,3 +1,3 @@
 export interface NotesProps {
-  steps: any[]
+  steps: string[]
 }

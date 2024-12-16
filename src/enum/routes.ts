@@ -22,6 +22,7 @@ export enum ROUTES_NAME {
   SKILL_LEVEL_TEST = '/skill-level-test',
   SKILL_LEVEL_START_TEST = '/skill-level-test/test',
   JOB = '/job',
+  JOB_DETAIL_COMPANY = '/jobs/:id/company',
   JOB_DETAIL = '/jobs/:id',
   LOGOUT = '/logout',
   FORGOT_PASSWORD = '/forgot-password',

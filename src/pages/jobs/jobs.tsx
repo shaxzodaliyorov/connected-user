@@ -1,53 +1,77 @@
-import {Filter} from '@/components'
-import {Button} from '@/components/common'
-import {Like} from '@/icons'
-import {useNavigate} from 'react-router-dom'
-// style="position: sticky; position: -webkit-sticky;"
+/* eslint-disable object-shorthand */
+import {Filter, SelectedFilters} from '@/components'
+import {Button, Input} from '@/components/common'
+import {useLazyGetAllJobsQuery} from '@/features/jobs'
+import {useHandleRequest} from '@/hooks'
+import {useEffect, useState} from 'react'
+import {IoSearch} from 'react-icons/io5'
+import {JobItem} from './_components'
+import {Loader} from '@/components/loader'
 export const Jobs = () => {
-  const navigate = useNavigate()
+  const [search, setSearch] = useState('')
+  const handleRequest = useHandleRequest()
+  const [getAllJobs, {data: {data: jobs = [], next_page} = {}, isLoading, isFetching}] = useLazyGetAllJobsQuery()
+  const [filterData, setFilterData] = useState<SelectedFilters>()
+  const [perPage, setPerPage] = useState(5)
+
+  const fetchJobs = async () => {
+    await handleRequest({
+      request: async () => {
+        const response = await getAllJobs({search: search, per_page: perPage, ...filterData}).unwrap()
+        return response
+      },
+    })
+  }
+
+  useEffect(() => {
+    fetchJobs()
+  }, [search, perPage, filterData])
+
   return (
     <section className="w-full">
-      <div className="w-full container flex gap-4">
-        <div className="w-[20%] !sticky top-[150px]">
-          <Filter />
+      <div className="w-full container m-auto bg-white p-[30px] rounded-[15px]">
+        <div className="flex">
+          <Input
+            onChange={e => setSearch(e.target.value)}
+            value={search}
+            leftIcon={<IoSearch size={20} />}
+            inputSizeClassName="h-12 pl-10"
+            placeholder="Search"
+            fullWidth
+          />
+          <Button className="ml-3 px-8 h-12">Search</Button>
         </div>
-        <div className="w-[80%]  flex flex-col gap-4">
-          {new Array(10).fill(1).map((_, index) => (
-            <div
-              key={index}
-              className="w-full bg-white rounded-[15px] p-[30px] cursor-pointer relative"
-              onClick={() => navigate('/jobs/1')}
-            >
-              <div className="flex justify-between ">
-                <div className="flex gap-4 items-center">
-                  <img
-                    className="w-[60px] h-[60px] rounded-[15px] border-[2px]"
-                    src="https://bsmedia.business-standard.com/_media/bs/img/about-page/1562575696.png?im=FitAndFill=(826,465)"
-                    alt=""
-                  />
-                  <div className="flex flex-col">
-                    <h4 className="text-xl font-semibold leading-[30px] text-left">Middle UI Designer</h4>
-                    <p className="text-base font-normal leading-[19.2px] text-left text-[#7D7D7D]">
-                      Samsung <span>·</span>Jung-gu, Seoul <span>·</span>{' '}
-                      <span className="text-base font-normal leading-6 text-left text-[#0C0C0C]">$125K - $140K </span>
-                    </p>
-                  </div>
-                </div>
-                <button className="absolute z-[9] right-6 top-6 " onClick={() => alert('salom')}>
-                  <Like />
-                </button>
-              </div>
-              <div className="pt-4 flex justify-between">
-                <p className="text-base font-normal leading-[19.2px] text-left text-[#7D7D7D]">
-                  Experience from 3 to 6 years <span>·</span> D-10 <span>·</span> Full-Time <span>·</span> Remote
-                </p>
-                <p className="text-base font-normal leading-[19.2px] text-left text-[#7D7D7D]">Posted 1 day ago</p>
-              </div>
+        <div className="w-full pt-[25px] justify-between">
+          <h4 className="text-2xl font-semibold leading-[29.04px] text-left text-[#0C0C0C]">
+            Visa News <span className="text-[#C5C5C5] font-normal">∙ 10</span>
+          </h4>
+        </div>
+      </div>
+      <div className="w-full container flex gap-4 pt-4">
+        <div className="w-[25%] h-min bg-white rounded-[15px]">
+          <Filter onChange={filter => setFilterData(filter)} />
+        </div>
+        <div className="w-[75%]  flex flex-col gap-4">
+          {isLoading ? (
+            <Loader className="w-full h-80" />
+          ) : jobs.length ? (
+            jobs?.map((job, index) => <JobItem key={index} job={job} />)
+          ) : (
+            <div className="w-full h-80 flex items-center justify-center ">
+              <p className="text-xl font-normal leading-6 text-center text-gray-600">No jobs found</p>
             </div>
-          ))}
-          <Button variant="outline" className=" px-6 py-2 font-medium">
-            Show more
-          </Button>
+          )}
+          {!!jobs.length && next_page && (
+            <Button
+              disabled={!next_page}
+              onClick={() => setPerPage(perPage + 5)}
+              variant="outline"
+              className=" px-6 py-2 font-medium"
+              loading={isFetching}
+            >
+              Show more
+            </Button>
+          )}
         </div>
       </div>
     </section>
