@@ -22,12 +22,7 @@ export const Notifications = () => {
             Back
           </Link>
         </div>
-        <h1
-          className="font-medium text-[32px] text-[#0C0C0C] 
-         "
-        >
-          Notification
-        </h1>
+        <h1 className="font-medium text-[32px] text-[#0C0C0C]">Notification</h1>
         <div className="pt-4">
           <BoldTabs
             onChange={value => setFilter(value as 'all' | 'unread')}

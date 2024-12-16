@@ -18,4 +18,5 @@ export interface SelectProps {
   placeholder?: string
   wrapperClassName?: string
   placeholder?: string
+  selectClassName?: string
 }

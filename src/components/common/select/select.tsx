@@ -15,6 +15,7 @@ export const Select: React.FC<SelectProps> = ({
   fullWidth = false,
   wrapperClassName,
   placeholder,
+  selectClassName,
 }) => {
   let selectSizeClasses = ''
   switch (size) {
@@ -38,7 +39,7 @@ export const Select: React.FC<SelectProps> = ({
       )}
       <div
         className={cn(
-          `relative flex items-center border border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'}`,
+          `relative flex h-14 overflow-hidden items-center border border-[#c5c5c5] text-center text-[#0b0b0b] text-lg font-normal font-['Inter Display'] rounded-lg ${errorMessage ? 'border-red-500' : 'border-gray-300'}`,
           wrapperClassName,
         )}
       >
@@ -46,8 +47,9 @@ export const Select: React.FC<SelectProps> = ({
           <SelectTrigger
             value={value}
             className={cn(
-              'w-full h-14 bg-white border-none rounded-md text-[#0b0b0b] focus:outline-none focus:ring-2 focus:ring-blue-300',
+              'w-full h-full bg-white border-none rounded-md text-[#0b0b0b] focus:outline-none focus:ring-2 focus:ring-blue-300',
               selectSizeClasses,
+              selectClassName,
             )}
           >
             <SelectValue placeholder={placeholder || 'Select'} />

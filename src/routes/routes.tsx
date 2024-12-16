@@ -1,5 +1,6 @@
 import {ROUTES_NAME} from '@/enum'
 import {
+  Application,
   ContactPage,
   HomePage,
   JobDetails,
@@ -72,5 +73,9 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.NOTIFICATION_DETAILS,
     element: <NotificationDetails />,
+  },
+  {
+    path: ROUTES_NAME.APPLICATION,
+    element: <Application />,
   },
 ]

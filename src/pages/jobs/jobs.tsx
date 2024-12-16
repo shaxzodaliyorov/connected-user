@@ -1,13 +1,16 @@
+import {Filter} from '@/components'
 import {Button} from '@/components/common'
 import {Like} from '@/icons'
 import {useNavigate} from 'react-router-dom'
-
+// style="position: sticky; position: -webkit-sticky;"
 export const Jobs = () => {
   const navigate = useNavigate()
   return (
     <section className="w-full">
       <div className="w-full container flex gap-4">
-        <div className="w-[20%] p-[30px] min-h-screen bg-white rounded-[15px]"></div>
+        <div className="w-[20%] !sticky top-[150px]">
+          <Filter />
+        </div>
         <div className="w-[80%]  flex flex-col gap-4">
           {new Array(10).fill(1).map((_, index) => (
             <div
