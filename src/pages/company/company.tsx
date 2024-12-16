@@ -1,5 +1,5 @@
 import {MainCard} from '@/components/main-card'
-import {Employees, Industry, Like} from '@/icons'
+import {Employees, Industry} from '@/icons'
 import {MdOutlineArrowBackIos} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 import {Button, JobCard} from '@/components'
@@ -142,15 +142,7 @@ export const Company = () => (
         </h5>
         <div className="flex flex-col gap-4 pt-4">
           {new Array(4).fill(' ').map((_, index) => (
-            <JobCard
-              key={index}
-              name="Middle UI Designer"
-              img="http://localhost:5173/images/jobs-details.png"
-              cost="$125K - $140K "
-              compony="Samsung | Jung-gu, Seoul • Remote • Full Time"
-              date="1 day ago"
-              icons={<Like />}
-            />
+            <JobCard key={index} />
           ))}
           <Button variant="outline">Show more</Button>
         </div>

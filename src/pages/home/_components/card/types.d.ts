@@ -9,7 +9,7 @@ export interface CardProps {
   salary_min: number
   salary_max: number
   location: string
-  type_of_employment: string
+  type_of_employment: string[]
   description?: string
   onClick?: () => void
   onSaveClick?: () => void

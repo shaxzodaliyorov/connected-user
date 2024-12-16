@@ -36,7 +36,7 @@ export const Card: FC<CardProps> = ({
         </div>
         <div>
           <p className="text-[#7d7d7d] text-sm flex items-center gap-x-1 font-normal font-['Inter Display'] leading-[16.80px]">
-            <Location /> {location}
+            <Location /> {location || '---'}
           </p>
           <p className="text-[#7d7d7d] text-sm flex items-center gap-x-1 font-normal font-['Inter Display'] leading-[16.80px]">
             <Portfolio /> {type_of_employment}

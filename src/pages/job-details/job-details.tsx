@@ -13,6 +13,7 @@ import {BENEFIT, QUALIFICATIONS} from '@/constants/job/job'
 import {useEffect, useState} from 'react'
 import {JobItem} from '../jobs/_components'
 import {Loader} from '@/components/loader'
+import {Job} from '@/types'
 
 const STEP = ['Document screening', 'First interview', 'Second interview', 'Final pass']
 
@@ -223,7 +224,7 @@ export const JobDetails = () => {
               <div className="w-full  flex flex-col gap-4">
                 {jobs
                   ?.filter(item => item?._id !== job?._id)
-                  .map((jobItem, index) => <JobItem key={index} job={jobItem} />)}
+                  .map((jobItem, index) => <JobItem key={index} job={jobItem as Job} />)}
                 {next_page && (
                   <Button
                     loading={isFetchingJobs}

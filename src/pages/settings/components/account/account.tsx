@@ -79,7 +79,7 @@ export const Account = () => {
               </Button>
 
               <Button
-                onClick={() => setAvatar(user?.profile_photo)}
+                onClick={() => setAvatar(user?.profile_photo || '')}
                 variant="outline"
                 className="text-[#0C0C0C] border-[#0C0C0C] px-[35px] py-2 font-medium hover:bg-[#FAFAFA] hover:text-[#0C0C0C]"
                 leftIcon={<Trash className="text-[#F13325]" />}

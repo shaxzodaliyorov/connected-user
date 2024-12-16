@@ -23,7 +23,7 @@ export const Account = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className=" z-[9999] rounded-lg shadow-lg w-[198px]">
         <div className="pt-5  px-6 pb-4 border-b border-b-neutral-100">
-          <p className="text-[#0b0b0b] text-base font-normal leading-[17.60px]">{user.full_name}</p>
+          <p className="text-[#0b0b0b] text-base font-normal leading-[17.60px]">{user?.full_name}</p>
         </div>
         <div className="pt-4 flex flex-col gap-y-[13px]">
           {DASHBOARD_LINKS.map(link => (
