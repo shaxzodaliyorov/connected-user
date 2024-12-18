@@ -29,7 +29,7 @@ export const Jobs = () => {
 
   return (
     <section className="w-full">
-      <div className="w-full container m-auto bg-white p-[30px] rounded-[15px]">
+      <div className="w-full container m-auto bg-white p-[20px] rounded-[15px]">
         <div className="flex">
           <Input
             onChange={e => setSearch(e.target.value)}
@@ -43,7 +43,7 @@ export const Jobs = () => {
         </div>
         <div className="w-full pt-[25px] justify-between">
           <h4 className="text-2xl font-semibold leading-[29.04px] text-left text-[#0C0C0C]">
-            Visa News <span className="text-[#C5C5C5] font-normal">∙ 10</span>
+            Visa News <span className="text-[#7D7D7D] font-normal">∙ 10</span>
           </h4>
         </div>
       </div>

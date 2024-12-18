@@ -35,4 +35,6 @@ export enum ROUTES_NAME {
   PRIVACY_POLICY = '/privacy-policy',
   COMPANY = '/company',
   GET_VISA_HELP = '/get-visa-help',
+  PROFILE = '/profile',
+  MY_RESUME = '/my-resume',
 }

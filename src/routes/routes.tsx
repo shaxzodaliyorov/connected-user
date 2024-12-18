@@ -7,10 +7,13 @@ import {
   JobDetails,
   Jobs,
   LogoutPage,
+  MatchUp,
+  MyResume,
   NotFound,
   NotificationDetails,
   Notifications,
   PrivatePolicy,
+  Profile,
   SavedJobs,
   SettingsPage,
   SignIn,
@@ -92,5 +95,17 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.JOB_DETAIL_COMPANY,
     element: <Company />,
+  },
+  {
+    path: ROUTES_NAME.MATCH_UP,
+    element: <MatchUp />,
+  },
+  {
+    path: ROUTES_NAME.PROFILE,
+    element: <Profile />,
+  },
+  {
+    path: ROUTES_NAME.MY_RESUME,
+    element: <MyResume />,
   },
 ]
