@@ -25,6 +25,7 @@ export const Notifications = () => {
         <h1 className="font-medium text-[32px] text-[#0C0C0C]">Notification</h1>
         <div className="pt-4">
           <BoldTabs
+            isBg
             onChange={value => setFilter(value as 'all' | 'unread')}
             tabs={[
               {

@@ -41,7 +41,7 @@ export const MatchUp = () => {
           <div className="w-full pt-[25px] justify-between">
             <h4 className="text-2xl font-semibold leading-[29.04px] text-left text-[#0C0C0C]">
               AI-compatible vacancies{' '}
-              <span className="text-[#7D7D7D] font-normal">∙ {jobs?.length?.toLocaleString() || '0'}</span>
+              <span className="text-[#7D7D7D] font-normal">∙ {(jobs?.length as number)?.toLocaleString() || '0'}</span>
             </h4>
           </div>
         </div>

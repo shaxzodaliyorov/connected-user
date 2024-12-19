@@ -1,7 +1,7 @@
 import {MainCard} from '@/components/main-card'
 import {MdOutlineArrowBackIos} from 'react-icons/md'
 import {Link} from 'react-router-dom'
-import {BoostSkills, UserSkills, VisaRoadmap} from './components'
+import {BoostSkills, CreateResume, UserSkills, VisaRoadmap} from './components'
 import {Button, ProfileJobCard, Resume, StatusButton} from '@/components'
 import {AddResume} from '@/icons'
 import {IoIosArrowForward} from 'react-icons/io'
@@ -18,12 +18,15 @@ export const Profile = () => (
         </Link>
       </div>
       <div className="flex gap-4">
-        <div className="w-2/3">
+        <div className="w-[65%]">
           <MainCard className="w-full">
             <UserSkills />
           </MainCard>
           <div className="pt-4">
             <VisaRoadmap />
+          </div>
+          <div className="pt-[80px]">
+            <CreateResume />
           </div>
           <div className="pt-20">
             <div className="flex justify-between">
@@ -38,6 +41,7 @@ export const Profile = () => (
               </Link>
             </div>
             <Resume
+              onclick={() => '' === undefined}
               title="Frontend Developer (React, React Native, Nextjs)"
               status="91%"
               img="https://mighty.tools/mockmind-api/content/human/57.jpg"
@@ -96,7 +100,7 @@ export const Profile = () => (
             </div>
           </div>
         </div>
-        <div className="w-[35%] p-5 h-[152px] bg-white rounded-[15px]">
+        <div className="w-[35%]">
           <BoostSkills />
         </div>
       </div>

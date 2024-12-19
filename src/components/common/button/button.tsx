@@ -36,7 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   switch (size) {
     case 'sm':
-      paddingClasses = 'px-5 py-2.5 text-sm'
+      paddingClasses = 'px-5 py-[8px] text-sm'
       break
     case 'md':
       paddingClasses = 'px-5 py-[15px] text-base'

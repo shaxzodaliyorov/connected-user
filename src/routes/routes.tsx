@@ -3,6 +3,8 @@ import {
   Application,
   Company,
   ContactPage,
+  CreateResume,
+  ForgotPassword,
   HomePage,
   JobDetails,
   Jobs,
@@ -14,13 +16,16 @@ import {
   Notifications,
   PrivatePolicy,
   Profile,
+  ResumeDetails,
   SavedJobs,
   SettingsPage,
   SignIn,
   SignUp,
   SkillLevelTest,
+  SkillTestPage,
   VisaNewDetails,
   VisaNews,
+  VisaRoadMapPage,
 } from '@/pages'
 
 export const ROUTES = [
@@ -89,6 +94,10 @@ export const ROUTES = [
     element: <SkillLevelTest />,
   },
   {
+    path: ROUTES_NAME.SKILL_LEVEL_START_TEST,
+    element: <SkillTestPage />,
+  },
+  {
     path: ROUTES_NAME.SAVED_JOBS,
     element: <SavedJobs />,
   },
@@ -101,11 +110,27 @@ export const ROUTES = [
     element: <MatchUp />,
   },
   {
-    path: ROUTES_NAME.PROFILE,
+    path: ROUTES_NAME.DASHBOARD,
     element: <Profile />,
   },
   {
     path: ROUTES_NAME.MY_RESUME,
     element: <MyResume />,
+  },
+  {
+    path: ROUTES_NAME.FORGOT_PASSWORD,
+    element: <ForgotPassword />,
+  },
+  {
+    path: ROUTES_NAME.ADD_RESUME,
+    element: <CreateResume />,
+  },
+  {
+    path: ROUTES_NAME.VISA_ROADMAP,
+    element: <VisaRoadMapPage />,
+  },
+  {
+    path: ROUTES_NAME.RESUME_DETAIL,
+    element: <ResumeDetails />,
   },
 ]

@@ -67,6 +67,7 @@ export const Notification = () => {
             <h1 className="font-medium text-[32px] text-[#0C0C0C]">Notification</h1>
             <div className="pt-4">
               <BoldTabs
+                isBg
                 tabs={[
                   {
                     label: `All (${NOTIFICATION.length})`,

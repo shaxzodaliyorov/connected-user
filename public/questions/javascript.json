@@ -1,0 +1,480 @@
+{
+  "junior": [
+    {
+      "question": "What is JavaScript primarily used for?",
+      "options": [
+        "Adding interactivity to web pages",
+        "Managing databases",
+        "Creating server-side applications",
+        "Compiling code"
+      ],
+      "answer": "Adding interactivity to web pages"
+    },
+    {
+      "question": "Which of the following is a valid way to declare a variable in JavaScript?",
+      "options": ["var myVariable;", "let myVariable;", "const myVariable;", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Which symbol is used for comments in JavaScript?",
+      "options": [
+        "// for single-line comments",
+        "/* for single-line comments */",
+        "<!-- for comments -->",
+        "# for comments"
+      ],
+      "answer": "// for single-line comments"
+    },
+    {
+      "question": "What is the result of 3 + 2 + '7' in JavaScript?",
+      "options": ["57", "12", "327", "NaN"],
+      "answer": "57"
+    },
+    {
+      "question": "Which method is used to find the length of a string in JavaScript?",
+      "options": ["length", "size", "count", "measure"],
+      "answer": "length"
+    },
+    {
+      "question": "Which keyword is used to define a function in JavaScript?",
+      "options": ["function", "def", "method", "func"],
+      "answer": "function"
+    },
+    {
+      "question": "What does NaN stand for in JavaScript?",
+      "options": ["Not a Number", "Null and Null", "Not available Number", "None at Node"],
+      "answer": "Not a Number"
+    },
+    {
+      "question": "Which operator is used to assign a value to a variable in JavaScript?",
+      "options": ["=", "==", "===", "=>"],
+      "answer": "="
+    },
+    {
+      "question": "What is the result of typeof null in JavaScript?",
+      "options": ["object", "null", "undefined", "number"],
+      "answer": "object"
+    },
+    {
+      "question": "How do you declare an array in JavaScript?",
+      "options": ["let myArray = [];", "let myArray = ();", "let myArray = {};", "let myArray = <>;"],
+      "answer": "let myArray = [];"
+    },
+    {
+      "question": "Which method is used to convert a JSON string into a JavaScript object?",
+      "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.objectify()"],
+      "answer": "JSON.parse()"
+    },
+    {
+      "question": "What is the purpose of the 'this' keyword in JavaScript?",
+      "options": [
+        "Refers to the current object",
+        "Refers to the global object",
+        "Refers to the parent object",
+        "Refers to a function's arguments"
+      ],
+      "answer": "Refers to the current object"
+    },
+    {
+      "question": "How do you create a constant variable in JavaScript?",
+      "options": ["const myVar = value;", "var myVar = value;", "let myVar = value;", "constant myVar = value;"],
+      "answer": "const myVar = value;"
+    },
+    {
+      "question": "Which array method can be used to remove the last element from an array?",
+      "options": ["pop()", "push()", "shift()", "slice()"],
+      "answer": "pop()"
+    },
+    {
+      "question": "How can you add a comment in JavaScript?",
+      "options": ["// This is a comment", "# This is a comment", "-- This is a comment", "/* This is a comment */"],
+      "answer": "// This is a comment"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "Which method is used to combine two or more arrays in JavaScript?",
+      "options": ["concat()", "join()", "merge()", "combine()"],
+      "answer": "concat()"
+    },
+    {
+      "question": "What is the value of '2' === 2?",
+      "options": ["false", "true", "NaN", "undefined"],
+      "answer": "false"
+    },
+    {
+      "question": "Which of the following is not a looping structure in JavaScript?",
+      "options": ["forEach", "for", "while", "do-while"],
+      "answer": "forEach"
+    },
+    {
+      "question": "Which function is used to parse a string to an integer in JavaScript?",
+      "options": ["parseInt()", "parseFloat()", "toFixed()", "toString()"],
+      "answer": "parseInt()"
+    },
+    {
+      "question": "What does the 'typeof' operator do?",
+      "options": [
+        "Returns the data type of a variable",
+        "Changes the data type of a variable",
+        "Checks the equality of two variables",
+        "None of the above"
+      ],
+      "answer": "Returns the data type of a variable"
+    },
+    {
+      "question": "How do you stop an interval timer in JavaScript?",
+      "options": ["clearInterval", "clearTimeout", "stopInterval", "stopTimeout"],
+      "answer": "clearInterval"
+    },
+    {
+      "question": "Which of the following is a correct way to define an arrow function?",
+      "options": ["const func = () => {}", "const func = function => {}", "const func = () = {}", "const func = => {}"],
+      "answer": "const func = () => {}"
+    },
+    {
+      "question": "How can you convert a number to a string in JavaScript?",
+      "options": ["toString()", "parseString()", "convertToString()", "stringify()"],
+      "answer": "toString()"
+    },
+    {
+      "question": "What will be the output of the following code: console.log(0.1 + 0.2 === 0.3);",
+      "options": ["false", "true", "undefined", "null"],
+      "answer": "false"
+    },
+    {
+      "question": "Which of the following methods adds an element to the end of an array?",
+      "options": ["push()", "pop()", "shift()", "unshift()"],
+      "answer": "push()"
+    },
+    {
+      "question": "What is the default return value of a function that does not explicitly return anything?",
+      "options": ["undefined", "null", "0", "NaN"],
+      "answer": "undefined"
+    },
+    {
+      "question": "How do you write an immediately invoked function expression (IIFE) in JavaScript?",
+      "options": [
+        "(function() { /* code */ })();",
+        "function() { /* code */ }();",
+        "(function() { /* code */ })",
+        "function { /* code */ }()"
+      ],
+      "answer": "(function() { /* code */ })();"
+    },
+    {
+      "question": "Which method can be used to select an HTML element by its ID in JavaScript?",
+      "options": [
+        "document.getElementById()",
+        "document.querySelector()",
+        "document.getElementByClass()",
+        "document.getElementByName()"
+      ],
+      "answer": "document.getElementById()"
+    },
+    {
+      "question": "What will `console.log(typeof NaN)` return?",
+      "options": ["number", "NaN", "undefined", "object"],
+      "answer": "number"
+    },
+    {
+      "question": "How do you remove the first element from an array?",
+      "options": ["shift()", "pop()", "remove()", "delete()"],
+      "answer": "shift()"
+    }
+  ],
+  "middle": [
+    {
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A function that has access to its own scope, the outer function’s scope, and the global scope",
+        "A function that only has access to its local variables",
+        "A variable that can only be accessed globally",
+        "A way to store state across function calls"
+      ],
+      "answer": "A function that has access to its own scope, the outer function’s scope, and the global scope"
+    },
+    {
+      "question": "What is the difference between 'let' and 'var' in JavaScript?",
+      "options": [
+        "'let' has block scope, 'var' has function scope",
+        "'let' is used for constants, 'var' is not",
+        "'let' is used inside loops, 'var' is used outside loops",
+        "'let' has global scope, 'var' has block scope"
+      ],
+      "answer": "'let' has block scope, 'var' has function scope"
+    },
+    {
+      "question": "Which of the following is true about the 'this' keyword in JavaScript?",
+      "options": [
+        "'this' refers to the object that owns the current code",
+        "'this' refers to the function itself",
+        "'this' is always bound to the global object",
+        "'this' can only refer to an instance of a class"
+      ],
+      "answer": "'this' refers to the object that owns the current code"
+    },
+    {
+      "question": "What does the 'spread operator' (...) do in JavaScript?",
+      "options": [
+        "Expands an iterable like an array into its individual elements",
+        "Merges two objects together",
+        "Splits a string into an array",
+        "Multiplies each element in an array"
+      ],
+      "answer": "Expands an iterable like an array into its individual elements"
+    },
+    {
+      "question": "What is the difference between '==' and '===' in JavaScript?",
+      "options": [
+        "'==' checks for value equality, '===' checks for both value and type equality",
+        "'===' is only used for objects, '==' is for primitives",
+        "'==' is faster than '==='",
+        "'===' is used for strict comparison while '==' is used for loose comparison"
+      ],
+      "answer": "'==' checks for value equality, '===' checks for both value and type equality"
+    },
+    {
+      "question": "How do you deep clone an object in JavaScript?",
+      "options": [
+        "Using JSON.parse(JSON.stringify(obj))",
+        "Using Object.assign()",
+        "Using obj.clone()",
+        "Using Object.create(obj)"
+      ],
+      "answer": "Using JSON.parse(JSON.stringify(obj))"
+    },
+    {
+      "question": "What is hoisting in JavaScript?",
+      "options": [
+        "The process of moving variable and function declarations to the top of their scope",
+        "The ability to execute code before it is defined",
+        "The process of calling a function before it is declared",
+        "The way JavaScript handles asynchronous code"
+      ],
+      "answer": "The process of moving variable and function declarations to the top of their scope"
+    },
+    {
+      "question": "What does the 'bind' method do in JavaScript?",
+      "options": [
+        "Creates a new function with the same body and scope but with a different 'this' context",
+        "Changes the 'this' keyword permanently",
+        "Attaches an event to a DOM element",
+        "Executes a function in the context of a different object"
+      ],
+      "answer": "Creates a new function with the same body and scope but with a different 'this' context"
+    },
+    {
+      "question": "What is the purpose of async/await in JavaScript?",
+      "options": [
+        "To simplify the structure of asynchronous code",
+        "To make functions run faster",
+        "To execute code synchronously",
+        "To improve the performance of API calls"
+      ],
+      "answer": "To simplify the structure of asynchronous code"
+    },
+    {
+      "question": "How do you create a promise in JavaScript?",
+      "options": [
+        "new Promise((resolve, reject) => { /* code */ })",
+        "Promise.create((resolve, reject) => { /* code */ })",
+        "promise(() => { /* code */ })",
+        "promise.new((resolve, reject) => { /* code */ })"
+      ],
+      "answer": "new Promise((resolve, reject) => { /* code */ })"
+    },
+    {
+      "question": "What is an IIFE (Immediately Invoked Function Expression) in JavaScript?",
+      "options": [
+        "A function that runs as soon as it is defined",
+        "A function that only runs after an event is triggered",
+        "A function that runs after a certain time delay",
+        "A function that returns another function"
+      ],
+      "answer": "A function that runs as soon as it is defined"
+    },
+    {
+      "question": "What is the event loop in JavaScript?",
+      "options": [
+        "A mechanism that handles asynchronous operations",
+        "A way to iterate through objects",
+        "A method for iterating through arrays",
+        "A method for handling promises"
+      ],
+      "answer": "A mechanism that handles asynchronous operations"
+    },
+    {
+      "question": "What is the difference between 'call' and 'apply' in JavaScript?",
+      "options": [
+        "'call' takes arguments separately, 'apply' takes them as an array",
+        "'apply' is used for asynchronous functions, 'call' is for synchronous functions",
+        "'apply' returns a promise, 'call' does not",
+        "'call' binds the 'this' keyword, 'apply' does not"
+      ],
+      "answer": "'call' takes arguments separately, 'apply' takes them as an array"
+    },
+    {
+      "question": "What is the purpose of the 'prototype' property in JavaScript?",
+      "options": [
+        "To allow objects to inherit properties and methods from other objects",
+        "To store instance variables",
+        "To handle asynchronous code",
+        "To define private methods"
+      ],
+      "answer": "To allow objects to inherit properties and methods from other objects"
+    },
+    {
+      "question": "What is a generator function in JavaScript?",
+      "options": [
+        "A function that can be paused and resumed",
+        "A function that generates random numbers",
+        "A function that returns multiple values",
+        "A function that runs once and returns a value"
+      ],
+      "answer": "A function that can be paused and resumed"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the 'new' keyword used for in JavaScript?",
+      "options": [
+        "To create an instance of an object",
+        "To define a class",
+        "To bind a function to an object",
+        "To assign a new value to a variable"
+      ],
+      "answer": "To create an instance of an object"
+    },
+    {
+      "question": "What is the difference between 'Object.freeze()' and 'Object.seal()'?",
+      "options": [
+        "Object.freeze prevents any changes, Object.seal allows modifications to existing properties but prevents adding new ones",
+        "Object.seal prevents any changes, Object.freeze allows modifications to existing properties",
+        "Object.freeze prevents changes to properties, Object.seal prevents changes to methods",
+        "Object.seal allows adding new properties, Object.freeze does not"
+      ],
+      "answer": "Object.freeze prevents any changes, Object.seal allows modifications to existing properties but prevents adding new ones"
+    },
+    {
+      "question": "How does JavaScript's event delegation work?",
+      "options": [
+        "Events are handled by a parent element instead of the target element",
+        "Each element handles its own events",
+        "Events are passed from child to child",
+        "Events are delegated to the server"
+      ],
+      "answer": "Events are handled by a parent element instead of the target element"
+    },
+    {
+      "question": "What is the Temporal Dead Zone in JavaScript?",
+      "options": [
+        "The time between entering a scope and variable declaration where a variable cannot be accessed",
+        "The time between variable initialization and declaration",
+        "The time between the start and end of a function call",
+        "The time before an asynchronous operation completes"
+      ],
+      "answer": "The time between entering a scope and variable declaration where a variable cannot be accessed"
+    },
+    {
+      "question": "Which method is used to attach an event to an element in JavaScript?",
+      "options": ["addEventListener()", "attachEvent()", "bindEvent()", "onEvent()"],
+      "answer": "addEventListener()"
+    },
+    {
+      "question": "What is the role of a 'polyfill' in JavaScript?",
+      "options": [
+        "A piece of code that provides modern functionality in older browsers",
+        "A tool used for compiling JavaScript",
+        "A function used for managing memory",
+        "A way to create new objects"
+      ],
+      "answer": "A piece of code that provides modern functionality in older browsers"
+    },
+    {
+      "question": "What is the purpose of the 'defer' attribute in a script tag?",
+      "options": [
+        "To execute the script after the HTML document has been parsed",
+        "To execute the script before the document is parsed",
+        "To delay the execution of the script by a set amount of time",
+        "To prevent the script from executing"
+      ],
+      "answer": "To execute the script after the HTML document has been parsed"
+    },
+    {
+      "question": "What is an 'async' function?",
+      "options": [
+        "A function that returns a promise and allows the use of await",
+        "A function that runs synchronously",
+        "A function that automatically resolves a promise",
+        "A function that executes immediately"
+      ],
+      "answer": "A function that returns a promise and allows the use of await"
+    },
+    {
+      "question": "How does the ‘for…of’ loop work in JavaScript?",
+      "options": [
+        "It iterates over the values of an iterable object",
+        "It iterates over the properties of an object",
+        "It loops over an array indefinitely",
+        "It creates a new instance of an object"
+      ],
+      "answer": "It iterates over the values of an iterable object"
+    },
+    {
+      "question": "What is an example of asynchronous programming in JavaScript?",
+      "options": ["setTimeout()", "for loop", "Array.prototype.map()", "If-else statement"],
+      "answer": "setTimeout()"
+    },
+    {
+      "question": "What is an event-driven architecture in JavaScript?",
+      "options": [
+        "An architecture where the flow of the program is determined by events such as user actions or messages from other programs",
+        "An architecture where each function triggers an event",
+        "An architecture where all functions run synchronously",
+        "An architecture where user interactions are stored in a queue"
+      ],
+      "answer": "An architecture where the flow of the program is determined by events such as user actions or messages from other programs"
+    },
+    {
+      "question": "What is tail call optimization in JavaScript?",
+      "options": [
+        "An optimization where the last function call in a recursive function does not grow the call stack",
+        "A method for optimizing loops",
+        "A way to prevent infinite loops",
+        "An optimization technique for handling multiple promises"
+      ],
+      "answer": "An optimization where the last function call in a recursive function does not grow the call stack"
+    },
+    {
+      "question": "How does JavaScript handle memory management?",
+      "options": [
+        "It uses automatic garbage collection",
+        "It requires manual memory allocation",
+        "It doesn’t handle memory management",
+        "It uses a memory manager object"
+      ],
+      "answer": "It uses automatic garbage collection"
+    },
+    {
+      "question": "What is the purpose of the ‘Symbol’ type in JavaScript?",
+      "options": [
+        "To create unique and immutable values",
+        "To manage numeric values",
+        "To store collections of data",
+        "To define custom types"
+      ],
+      "answer": "To create unique and immutable values"
+    },
+    {
+      "question": "What is event bubbling in JavaScript?",
+      "options": [
+        "The event starts from the target element and propagates up to the parent elements",
+        "The event propagates from the parent elements down to the target element",
+        "The event is captured at the target element only",
+        "The event is stopped before it reaches the target"
+      ],
+      "answer": "The event starts from the target element and propagates up to the parent elements"
+    }
+  ]
+}

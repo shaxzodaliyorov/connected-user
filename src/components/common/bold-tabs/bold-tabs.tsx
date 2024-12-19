@@ -1,3 +1,4 @@
+import {cn} from '@/lib/utils'
 import React, {useEffect, useState} from 'react'
 
 export const BoldTabs: React.FC<BoldTabsProps> = ({
@@ -6,6 +7,8 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
   contentClassName = '',
   tabsClassName = '',
   onChange,
+  tabClassName,
+  isBg,
 }) => {
   const [activeTabIdx, setActiveTabIdx] = useState(defaultTabIndex)
 
@@ -33,11 +36,14 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
           {tabs.map((tab, index) => (
             <button
               key={index}
-              className={`px-4 py-2 text-sm font-medium rounded-[8px] ${
-                activeTabIdx === index
-                  ? 'bg-[#0062FF] text-white border border-[#0062FF]'
-                  : 'bg-white text-[#0C0C0C] border border-[#E8E8E8]'
-              } transition duration-300`}
+              className={cn(
+                `px-4 py-2 text-sm font-medium rounded-[8px] ${
+                  activeTabIdx === index
+                    ? '!bg-[#0062FF] text-white border border-[#0062FF]'
+                    : `${isBg ? 'bg-white' : 'bg-transparent'} text-[#0C0C0C] border border-[#E8E8E8]`
+                } transition duration-300`,
+                tabClassName,
+              )}
               onClick={() => handleTab(index)}
             >
               {tab.label}

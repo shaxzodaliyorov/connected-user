@@ -115,3 +115,16 @@ body {
     transform: rotate(0.5turn);
   }
 }
+
+.visa_road_map_bg {
+  background: linear-gradient(90deg, rgba(18, 183, 106, 0.05) 0%, #12b76a 100%);
+}
+
+.rdp-caption_dropdowns {
+  display: flex;
+}
+
+
+.ai_button{
+  background: radial-gradient(395.27% 77.56% at 25.57% 34.38%, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(168.47% 113.47% at -3.98% 12.5%, #FF33BA 19.65%, rgba(237, 66, 179, 0.00) 100%), radial-gradient(74.86% 100.16% at 43.75% 114.06%, #0062FF 0%, #9747FF 80.98%), #55128A;
+}

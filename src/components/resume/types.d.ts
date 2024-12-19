@@ -7,4 +7,5 @@ export interface Props {
   seen: string
   offers: string
   matchUp: string
+  onclick: () => void
 }

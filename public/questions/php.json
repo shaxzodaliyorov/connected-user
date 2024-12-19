@@ -1,0 +1,440 @@
+{
+  "junior": [
+    {
+      "question": "What is the correct way to start a PHP script?",
+      "options": ["<?php", "<script>", "<php>", "php>"],
+      "answer": "<?php"
+    },
+    {
+      "question": "How do you declare a variable in PHP?",
+      "options": ["$var = 5;", "int $var = 5;", "var $var = 5;", "declare $var = 5;"],
+      "answer": "$var = 5;"
+    },
+    {
+      "question": "Which function is used to output text in PHP?",
+      "options": ["echo", "print", "write", "output"],
+      "answer": "echo"
+    },
+    {
+      "question": "How do you create a comment in PHP?",
+      "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Which of the following is a valid way to concatenate strings in PHP?",
+      "options": ["$str1 . $str2", "$str1 + $str2", "concat($str1, $str2)", "$str1 & $str2"],
+      "answer": "$str1 . $str2"
+    },
+    {
+      "question": "What is the output of the following code?\n$var = 5; echo $var == 5 ? 'yes' : 'no';",
+      "options": ["yes", "no", "5", "Error"],
+      "answer": "yes"
+    },
+    {
+      "question": "Which of the following is a correct way to create an array in PHP?",
+      "options": ["$arr = array(1, 2, 3);", "$arr = [1, 2, 3];", "$arr = {1, 2, 3};", "Both A and B"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "How do you count the elements in an array in PHP?",
+      "options": ["count($array)", "sizeof($array)", "length($array)", "Both A and B"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "Which of the following is true about PHP?",
+      "options": [
+        "PHP is a server-side scripting language",
+        "PHP is a client-side language",
+        "PHP is used only for front-end development",
+        "PHP cannot connect to databases"
+      ],
+      "answer": "PHP is a server-side scripting language"
+    },
+    {
+      "question": "What does the 'include()' function do in PHP?",
+      "options": [
+        "Includes and evaluates a specified file",
+        "Creates a new file",
+        "Executes a database query",
+        "Includes a class definition"
+      ],
+      "answer": "Includes and evaluates a specified file"
+    },
+    {
+      "question": "How do you declare a function in PHP?",
+      "options": ["function myFunction() {}", "func myFunction() {}", "def myFunction() {}", "declare myFunction() {}"],
+      "answer": "function myFunction() {}"
+    },
+    {
+      "question": "What is the purpose of the '$this' keyword in PHP?",
+      "options": [
+        "Refers to the current object instance",
+        "Refers to a global variable",
+        "Refers to a static class",
+        "Refers to the parent class"
+      ],
+      "answer": "Refers to the current object instance"
+    },
+    {
+      "question": "Which of the following is a valid way to create an associative array in PHP?",
+      "options": [
+        "$arr = array('key1' => 'value1', 'key2' => 'value2');",
+        "$arr = ['key1' => 'value1', 'key2' => 'value2'];",
+        "$arr = {key1: 'value1', key2: 'value2'};",
+        "Both A and B"
+      ],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "How do you check if a variable is set in PHP?",
+      "options": ["isset($var)", "is_set($var)", "var_exist($var)", "var_defined($var)"],
+      "answer": "isset($var)"
+    },
+    {
+      "question": "What is the correct way to open a PHP block within an HTML file?",
+      "options": ["<?php ?>", "<php ?>", "<script>php</script>", "<?php/>"],
+      "answer": "<?php ?>"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "How do you check if a file exists in PHP?",
+      "options": ["file_exists('filename')", "file_exist('filename')", "is_file('filename')", "file_open('filename')"],
+      "answer": "file_exists('filename')"
+    },
+    {
+      "question": "Which function is used to return the length of a string in PHP?",
+      "options": ["strlen()", "strlength()", "length()", "str_len()"],
+      "answer": "strlen()"
+    },
+    {
+      "question": "What is the correct way to include a file that might not exist, without causing a fatal error?",
+      "options": [
+        "include('file.php');",
+        "require('file.php');",
+        "include_once('file.php');",
+        "require_once('file.php');"
+      ],
+      "answer": "include('file.php');"
+    },
+    {
+      "question": "How can you retrieve the current script's filename in PHP?",
+      "options": ["basename(__FILE__)", "get_filename()", "basename($_SERVER['SCRIPT_NAME'])", "Both A and C"],
+      "answer": "Both A and C"
+    },
+    {
+      "question": "Which of the following superglobals contains information about uploaded files?",
+      "options": ["$_FILES", "$_POST", "$_REQUEST", "$_SERVER"],
+      "answer": "$_FILES"
+    },
+    {
+      "question": "How do you escape special characters in a string for use in a MySQL query?",
+      "options": ["mysqli_real_escape_string()", "mysql_escape_string()", "addslashes()", "Both A and C"],
+      "answer": "mysqli_real_escape_string()"
+    },
+    {
+      "question": "Which function is used to redirect a user to another page in PHP?",
+      "options": ["header('Location: page.php')", "redirect('page.php')", "navigate('page.php')", "goto('page.php')"],
+      "answer": "header('Location: page.php')"
+    },
+    {
+      "question": "How do you start a session in PHP?",
+      "options": ["session_start()", "start_session()", "init_session()", "session_begin()"],
+      "answer": "session_start()"
+    },
+    {
+      "question": "Which of the following is used to get the current date and time in PHP?",
+      "options": ["date()", "current_date()", "datetime()", "time_now()"],
+      "answer": "date()"
+    },
+    {
+      "question": "What is the difference between 'include' and 'require' in PHP?",
+      "options": [
+        "'require' causes a fatal error if the file is missing, 'include' only raises a warning",
+        "'include' causes a fatal error, 'require' raises a warning",
+        "'include' and 'require' are identical in PHP",
+        "'include' is for HTML files, 'require' is for PHP files"
+      ],
+      "answer": "'require' causes a fatal error if the file is missing, 'include' only raises a warning"
+    },
+    {
+      "question": "What does the 'isset()' function do in PHP?",
+      "options": [
+        "Checks if a variable is set and is not NULL",
+        "Checks if a variable is empty",
+        "Checks if a variable is initialized",
+        "Checks if a variable is of a specific type"
+      ],
+      "answer": "Checks if a variable is set and is not NULL"
+    },
+    {
+      "question": "Which of the following is used to store session data on the server?",
+      "options": ["$_SESSION", "$_COOKIE", "$_POST", "$_GET"],
+      "answer": "$_SESSION"
+    },
+    {
+      "question": "How do you create a class in PHP?",
+      "options": ["class MyClass { }", "MyClass() { }", "def class MyClass { }", "create_class My Class {}"],
+      "answer": "class MyClass { }"
+    },
+    {
+      "question": "What is the purpose of 'unset()' in PHP?",
+      "options": ["It destroys a variable", "It unsets a session", "It closes a file", "It resets a form"],
+      "answer": "It destroys a variable"
+    },
+    {
+      "question": "How do you serialize an array in PHP?",
+      "options": ["serialize()", "json_encode()", "array_to_string()", "stringify()"],
+      "answer": "serialize()"
+    }
+  ],
+  "middle": [
+    {
+      "question": "What does the 'final' keyword do in PHP?",
+      "options": [
+        "Prevents a class from being extended or a method from being overridden",
+        "Marks a method as a static method",
+        "Marks a method as private",
+        "Marks a method as protected"
+      ],
+      "answer": "Prevents a class from being extended or a method from being overridden"
+    },
+    {
+      "question": "Which function is used to create a connection to a MySQL database in PHP?",
+      "options": ["mysqli_connect()", "mysql_connect()", "db_connect()", "connect()"],
+      "answer": "mysqli_connect()"
+    },
+    {
+      "question": "What is PDO in PHP?",
+      "options": [
+        "PHP Data Objects, a database access abstraction layer",
+        "PHP Development Object, a base class for objects",
+        "PHP Document Object, a structure for documents",
+        "PHP Dynamic Objects, used for dynamic content"
+      ],
+      "answer": "PHP Data Objects, a database access abstraction layer"
+    },
+    {
+      "question": "How do you prevent SQL injection in PHP?",
+      "options": ["Use prepared statements", "Use addslashes()", "Use htmlentities()", "Use strip_tags()"],
+      "answer": "Use prepared statements"
+    },
+    {
+      "question": "How can you retrieve information sent via GET method in PHP?",
+      "options": ["$_GET", "$_POST", "$_REQUEST", "$_SESSION"],
+      "answer": "$_GET"
+    },
+    {
+      "question": "Which of the following is the correct way to check if an array key exists in PHP?",
+      "options": [
+        "array_key_exists('key', $array)",
+        "key_exists('key', $array)",
+        "in_array('key', $array)",
+        "has_key('key', $array)"
+      ],
+      "answer": "array_key_exists('key', $array)"
+    },
+    {
+      "question": "How do you sort an array in PHP while maintaining the key association?",
+      "options": ["asort()", "sort()", "ksort()", "array_sort()"],
+      "answer": "asort()"
+    },
+    {
+      "question": "What is the purpose of the 'static' keyword in PHP?",
+      "options": [
+        "To declare properties or methods that belong to the class, not instances",
+        "To create a constant",
+        "To define a variable with a global scope",
+        "To declare a method that cannot be overridden"
+      ],
+      "answer": "To declare properties or methods that belong to the class, not instances"
+    },
+    {
+      "question": "Which of the following methods can be used to fetch data from a MySQL database using PDO?",
+      "options": ["$stmt->fetch()", "$stmt->get()", "$stmt->retrieve()", "$stmt->query()"],
+      "answer": "$stmt->fetch()"
+    },
+    {
+      "question": "How do you iterate through an associative array in PHP?",
+      "options": [
+        "foreach ($arr as $key => $value) { }",
+        "for ($i = 0; $i < count($arr); $i++) { }",
+        "while ($key, $value = each($arr)) { }",
+        "for ($key in $arr) { }"
+      ],
+      "answer": "foreach ($arr as $key => $value) { }"
+    },
+    {
+      "question": "What is the purpose of the 'abstract' keyword in PHP?",
+      "options": [
+        "It defines a class or method that must be implemented in a derived class",
+        "It defines a private class",
+        "It is used to create static methods",
+        "It makes a method final"
+      ],
+      "answer": "It defines a class or method that must be implemented in a derived class"
+    },
+    {
+      "question": "Which of the following is used to limit the visibility of a class property or method to the same class in PHP?",
+      "options": ["private", "protected", "public", "static"],
+      "answer": "private"
+    },
+    {
+      "question": "How do you handle exceptions in PHP?",
+      "options": [
+        "Using try-catch blocks",
+        "Using error_reporting()",
+        "Using throw-catch blocks",
+        "Using set_exception_handler()"
+      ],
+      "answer": "Using try-catch blocks"
+    },
+    {
+      "question": "How do you destroy a session in PHP?",
+      "options": ["session_destroy()", "unset($_SESSION)", "session_reset()", "session_close()"],
+      "answer": "session_destroy()"
+    },
+    {
+      "question": "What is the purpose of the 'const' keyword in PHP?",
+      "options": [
+        "To define a constant value that cannot be changed",
+        "To declare a static method",
+        "To define a private class member",
+        "To initialize a session variable"
+      ],
+      "answer": "To define a constant value that cannot be changed"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the difference between '=='' and '===' in PHP?",
+      "options": [
+        "'===' checks both value and type equality, '==' checks only value",
+        "'==' checks both value and type equality, '===' checks only value",
+        "'===' is used for strings, '==' is used for numbers",
+        "'==' is faster than '==='"
+      ],
+      "answer": "'===' checks both value and type equality, '==' checks only value"
+    },
+    {
+      "question": "What does the 'spl_autoload_register()' function do in PHP?",
+      "options": [
+        "Registers a function that automatically loads class files",
+        "Automatically registers session variables",
+        "Loads static files into memory",
+        "Sets the default timezone for the script"
+      ],
+      "answer": "Registers a function that automatically loads class files"
+    },
+    {
+      "question": "Which function is used to filter and validate data in PHP?",
+      "options": ["filter_var()", "validate_data()", "check_input()", "filter_data()"],
+      "answer": "filter_var()"
+    },
+    {
+      "question": "Which method is used to fetch all results from a PDO statement?",
+      "options": ["$stmt->fetchAll()", "$stmt->fetch()", "$stmt->fetchResults()", "$stmt->getAll()"],
+      "answer": "$stmt->fetchAll()"
+    },
+    {
+      "question": "What is the purpose of the '__construct()' method in PHP?",
+      "options": [
+        "It acts as the constructor for a class",
+        "It defines a class constant",
+        "It defines an interface",
+        "It handles exceptions in a class"
+      ],
+      "answer": "It acts as the constructor for a class"
+    },
+    {
+      "question": "What does the 'mysqli_query()' function do in PHP?",
+      "options": [
+        "Executes a query on a MySQL database",
+        "Opens a MySQL database connection",
+        "Fetches a row from a MySQL database",
+        "Closes a MySQL database connection"
+      ],
+      "answer": "Executes a query on a MySQL database"
+    },
+    {
+      "question": "What is the purpose of 'trait' in PHP?",
+      "options": [
+        "It allows the inclusion of methods in multiple classes without inheritance",
+        "It creates a static class",
+        "It defines an interface",
+        "It creates a singleton pattern"
+      ],
+      "answer": "It allows the inclusion of methods in multiple classes without inheritance"
+    },
+    {
+      "question": "Which of the following can be used to sanitize a string in PHP?",
+      "options": ["htmlspecialchars()", "htmlentities()", "strip_tags()", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "How can you execute a shell command in PHP?",
+      "options": ["exec()", "shell_exec()", "system()", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "What is the difference between 'session_unset()' and 'session_destroy()' in PHP?",
+      "options": [
+        "'session_unset()' clears session variables, 'session_destroy()' destroys the session",
+        "'session_destroy()' clears session variables, 'session_unset()’ destroys the session",
+        "‘session_unset()’ removes the session data and the session itself",
+        "‘session_unset()’ clears the session data and regenerates the session ID"
+      ],
+      "answer": "‘session_unset()’ clears session variables, ‘session_destroy()’ destroys the session"
+    },
+    {
+      "question": "Which of the following is true about PHP namespaces?",
+      "options": [
+        "They allow for better organization and prevent name conflicts",
+        "They are used to handle memory allocation",
+        "They are only used in CLI scripts",
+        "They can only be used with global variables"
+      ],
+      "answer": "They allow for better organization and prevent name conflicts"
+    },
+    {
+      "question": "What does the ‘list()’ function do in PHP?",
+      "options": [
+        "It assigns variables as if they were an array",
+        "It creates a list of values",
+        "It generates an array from a string",
+        "It lists all the global variables"
+      ],
+      "answer": "It assigns variables as if they were an array"
+    },
+    {
+      "question": "What is the ‘magic’ method ‘__toString()’ used for in PHP?",
+      "options": [
+        "It converts an object to a string when the object is used in a string context",
+        "It defines a string representation of a function",
+        "It converts an array to a string",
+        "It converts a file path to a string"
+      ],
+      "answer": "It converts an object to a string when the object is used in a string context"
+    },
+    {
+      "question": "What is the role of the ‘use’ keyword in PHP?",
+      "options": [
+        "It imports a class or namespace into the current scope",
+        "It defines a class constant",
+        "It imports a library",
+        "It imports a PHP extension"
+      ],
+      "answer": "It imports a class or namespace into the current scope"
+    },
+    {
+      "question": "What is ‘anonymous function’ in PHP?",
+      "options": [
+        "A function without a name that can be stored in a variable or passed as a parameter",
+        "A function with a private scope",
+        "A function that has no return value",
+        "A function that does not accept parameters"
+      ],
+      "answer": "A function without a name that can be stored in a variable or passed as a parameter"
+    }
+  ]
+}

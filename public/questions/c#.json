@@ -1,0 +1,500 @@
+{
+  "junior": [
+    {
+      "question": "What is the correct syntax to declare a variable in C#?",
+      "options": ["int x = 10;", "let x = 10;", "var x := 10;", "declare x = 10;"],
+      "answer": "int x = 10;"
+    },
+    {
+      "question": "Which method is used to print to the console in C#?",
+      "options": ["Console.WriteLine()", "System.out.println()", "print()", "console.log()"],
+      "answer": "Console.WriteLine()"
+    },
+    {
+      "question": "How do you create a single-line comment in C#?",
+      "options": [
+        "// This is a comment",
+        "/* This is a comment */",
+        "# This is a comment",
+        "<!-- This is a comment -->"
+      ],
+      "answer": "// This is a comment"
+    },
+    {
+      "question": "Which of the following is a correct way to declare a string in C#?",
+      "options": ["string str = \"Hello\";", "str str = \"Hello\";", "let str = \"Hello\";", "text str = 'Hello';"],
+      "answer": "string str = \"Hello\";"
+    },
+    {
+      "question": "How do you create an array in C#?",
+      "options": [
+        "int[] numbers = { 1, 2, 3 };",
+        "int numbers[] = [1, 2, 3];",
+        "array numbers = new int(1, 2, 3);",
+        "int numbers[3] = {1, 2, 3};"
+      ],
+      "answer": "int[] numbers = { 1, 2, 3 };"
+    },
+    {
+      "question": "What is the output of the following code?\nint x = 5; Console.WriteLine(++x);",
+      "options": ["6", "5", "7", "Error"],
+      "answer": "6"
+    },
+    {
+      "question": "Which access modifier makes a class or member accessible from anywhere?",
+      "options": ["public", "private", "protected", "internal"],
+      "answer": "public"
+    },
+    {
+      "question": "Which of the following is the entry point of a C# application?",
+      "options": ["Main()", "Start()", "Init()", "Run()"],
+      "answer": "Main()"
+    },
+    {
+      "question": "Which keyword is used to create an object in C#?",
+      "options": ["new", "create", "initialize", "make"],
+      "answer": "new"
+    },
+    {
+      "question": "Which data type is used to represent true or false values in C#?",
+      "options": ["bool", "boolean", "bit", "truth"],
+      "answer": "bool"
+    },
+    {
+      "question": "What is the purpose of the 'using' statement in C#?",
+      "options": [
+        "To automatically manage resources and release them after use",
+        "To declare a global variable",
+        "To import a namespace",
+        "To define a variable type"
+      ],
+      "answer": "To automatically manage resources and release them after use"
+    },
+    {
+      "question": "Which of the following is used to handle exceptions in C#?",
+      "options": ["try-catch", "if-else", "switch-case", "goto"],
+      "answer": "try-catch"
+    },
+    {
+      "question": "What is the correct way to check if two variables are equal in C#?",
+      "options": ["if (x == y)", "if (x = y)", "if (x is y)", "if (x equals y)"],
+      "answer": "if (x == y)"
+    },
+    {
+      "question": "Which keyword is used to define a constant in C#?",
+      "options": ["const", "let", "static", "final"],
+      "answer": "const"
+    },
+    {
+      "question": "How do you declare a method in C#?",
+      "options": ["public void MyMethod() {}", "method MyMethod() {}", "def MyMethod() {}", "func MyMethod() {}"],
+      "answer": "public void MyMethod() {}"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "Which of the following is true about 'var' in C#?",
+      "options": [
+        "It is used for implicit typing",
+        "It is a keyword for defining arrays",
+        "It makes a variable mutable",
+        "It is used to define constants"
+      ],
+      "answer": "It is used for implicit typing"
+    },
+    {
+      "question": "What is the difference between '==' and '===' in C#?",
+      "options": [
+        "'===' does not exist in C#; '==' checks both value and type equality",
+        "'==' checks only values, '===' checks both value and type",
+        "'===' is faster than '=='",
+        "There is no difference between '==' and '===' in C#"
+      ],
+      "answer": "'===' does not exist in C#; '==' checks both value and type equality"
+    },
+    {
+      "question": "Which keyword is used to inherit a class in C#?",
+      "options": ["extends", "inherits", "derives", ":"],
+      "answer": ":"
+    },
+    {
+      "question": "What is the correct way to define a read-only property in C#?",
+      "options": [
+        "public string Name { get; private set; }",
+        "public string Name { get; }",
+        "private string Name { get; set; }",
+        "public readonly string Name"
+      ],
+      "answer": "public string Name { get; }"
+    },
+    {
+      "question": "What is the purpose of the 'static' keyword in C#?",
+      "options": [
+        "To define a member that belongs to the class itself rather than any instance",
+        "To define a method that cannot be overridden",
+        "To declare a method that can only be used within its class",
+        "To make a variable read-only"
+      ],
+      "answer": "To define a member that belongs to the class itself rather than any instance"
+    },
+    {
+      "question": "What is the difference between 'ref' and 'out' parameters in C#?",
+      "options": [
+        "'ref' requires the variable to be initialized before being passed, 'out' does not",
+        "'out' allows passing by value, 'ref' does not",
+        "'ref' is for reference types, 'out' is for value types",
+        "'out' passes a copy of the variable, 'ref' passes the original"
+      ],
+      "answer": "'ref' requires the variable to be initialized before being passed, 'out' does not"
+    },
+    {
+      "question": "Which of the following is a value type in C#?",
+      "options": ["int", "string", "ArrayList", "Object"],
+      "answer": "int"
+    },
+    {
+      "question": "How do you create a constructor in C#?",
+      "options": ["public MyClass() { }", "def MyClass() { }", "constructor MyClass() { }", "create MyClass() { }"],
+      "answer": "public MyClass() { }"
+    },
+    {
+      "question": "What is an indexer in C#?",
+      "options": [
+        "A special property that allows an object to be indexed like an array",
+        "A method that returns the index of a value in an array",
+        "A loop control structure",
+        "A special type of method that iterates through an array"
+      ],
+      "answer": "A special property that allows an object to be indexed like an array"
+    },
+    {
+      "question": "What is the difference between 'String' and 'string' in C#?",
+      "options": [
+        "'String' is a class, 'string' is an alias for 'String'",
+        "'string' is a class, 'String' is a keyword",
+        "'string' is for primitive types, 'String' is for reference types",
+        "There is no difference"
+      ],
+      "answer": "'String' is a class, 'string' is an alias for 'String'"
+    },
+    {
+      "question": "How do you declare a lambda expression in C#?",
+      "options": ["(x, y) => x + y", "(x, y) => { return x + y; }", "lambda(x, y) => x + y", "func(x, y) => x + y"],
+      "answer": "(x, y) => x + y"
+    },
+    {
+      "question": "What is the purpose of 'params' keyword in C#?",
+      "options": [
+        "To allow a method to accept a variable number of parameters",
+        "To declare an array as a parameter",
+        "To pass parameters by reference",
+        "To define a default parameter"
+      ],
+      "answer": "To allow a method to accept a variable number of parameters"
+    },
+    {
+      "question": "How do you prevent a class from being inherited in C#?",
+      "options": [
+        "Use the 'sealed' keyword",
+        "Use the 'final' keyword",
+        "Use the 'readonly' keyword",
+        "Use the 'private' keyword"
+      ],
+      "answer": "Use the 'sealed' keyword"
+    },
+    {
+      "question": "What is the output of the following code?\nint a = 5; int b = 6; Console.WriteLine(a & b);",
+      "options": ["4", "5", "6", "1"],
+      "answer": "4"
+    },
+    {
+      "question": "Which of the following is true about the 'foreach' loop in C#?",
+      "options": [
+        "It is used to iterate over collections and arrays",
+        "It is faster than a 'for' loop",
+        "It is used only with arrays",
+        "It does not allow breaking out of the loop"
+      ],
+      "answer": "It is used to iterate over collections and arrays"
+    }
+  ],
+  "middle": [
+    {
+      "question": "What is a delegate in C#?",
+      "options": [
+        "A type that represents references to methods with a specific parameter list and return type",
+        "A type that stores a collection of data",
+        "A reference to a class instance",
+        "A special keyword for asynchronous programming"
+      ],
+      "answer": "A type that represents references to methods with a specific parameter list and return type"
+    },
+    {
+      "question": "What is LINQ in C#?",
+      "options": [
+        "Language Integrated Query for querying collections",
+        "A framework for building UI",
+        "A feature to handle exceptions",
+        "A tool for memory management"
+      ],
+      "answer": "Language Integrated Query for querying collections"
+    },
+    {
+      "question": "Which of the following methods is used to order elements in LINQ?",
+      "options": ["OrderBy()", "Sort()", "Arrange()", "SortBy()"],
+      "answer": "OrderBy()"
+    },
+    {
+      "question": "How do you define an anonymous method in C#?",
+      "options": [
+        "delegate(int x, int y) { return x + y; }",
+        "lambda(int x, int y) => x + y;",
+        "func(x, y) => x + y;",
+        "(int x, int y) => { return x + y; }"
+      ],
+      "answer": "delegate(int x, int y) { return x + y; }"
+    },
+    {
+      "question": "What is a nullable type in C#?",
+      "options": [
+        "A type that can represent its normal value or null",
+        "A reference type that can be null",
+        "A value type that can only hold default values",
+        "A class that stores a collection of null values"
+      ],
+      "answer": "A type that can represent its normal value or null"
+    },
+    {
+      "question": "What is the purpose of the 'yield' keyword in C#?",
+      "options": [
+        "To return multiple values from a method",
+        "To define a new type of collection",
+        "To manage memory more efficiently",
+        "To pause the execution of a method and return an iterator"
+      ],
+      "answer": "To pause the execution of a method and return an iterator"
+    },
+    {
+      "question": "How do you handle exceptions in C#?",
+      "options": [
+        "Using try-catch-finally blocks",
+        "Using if-else statements",
+        "Using error() function",
+        "Using throw-catch statements"
+      ],
+      "answer": "Using try-catch-finally blocks"
+    },
+    {
+      "question": "What does the 'lock' statement do in C#?",
+      "options": [
+        "It ensures that a block of code runs by only one thread at a time",
+        "It locks an object to prevent modification",
+        "It prevents a method from being overridden",
+        "It stops the execution of a loop"
+      ],
+      "answer": "It ensures that a block of code runs by only one thread at a time"
+    },
+    {
+      "question": "What is the difference between 'finalize' and 'dispose' in C#?",
+      "options": [
+        "'Dispose' is called explicitly to release resources, 'Finalize' is called by the garbage collector",
+        "'Finalize' releases unmanaged resources, 'Dispose' releases managed resources",
+        "'Dispose' runs automatically, 'Finalize' requires manual invocation",
+        "They are both used for memory management, but 'Dispose' is deprecated"
+      ],
+      "answer": "'Dispose' is called explicitly to release resources, 'Finalize' is called by the garbage collector"
+    },
+    {
+      "question": "Which of the following is true about async and await in C#?",
+      "options": [
+        "They are used to simplify asynchronous programming",
+        "They are used to execute code synchronously",
+        "They are used to make methods run faster",
+        "They are used for parallel programming"
+      ],
+      "answer": "They are used to simplify asynchronous programming"
+    },
+    {
+      "question": "Which of the following is a thread-safe collection in C#?",
+      "options": ["ConcurrentDictionary", "Dictionary", "List", "HashSet"],
+      "answer": "ConcurrentDictionary"
+    },
+    {
+      "question": "What is the role of 'ISerializable' interface in C#?",
+      "options": [
+        "To allow an object to control its own serialization",
+        "To enforce the implementation of a ToString() method",
+        "To manage object references in memory",
+        "To define asynchronous methods"
+      ],
+      "answer": "To allow an object to control its own serialization"
+    },
+    {
+      "question": "How do you implement multiple interfaces in a C# class?",
+      "options": [
+        "class MyClass : Interface1, Interface2",
+        "class MyClass extends Interface1, Interface2",
+        "class MyClass implements Interface1 & Interface2",
+        "class MyClass inherits Interface1, Interface2"
+      ],
+      "answer": "class MyClass : Interface1, Interface2"
+    },
+    {
+      "question": "What is the difference between 'abstract' and 'virtual' methods in C#?",
+      "options": [
+        "'Abstract' methods have no implementation, 'virtual' methods have a default implementation",
+        "'Virtual' methods have no implementation, 'abstract' methods have a default implementation",
+        "'Abstract' methods must be called explicitly, 'virtual' methods are automatically invoked",
+        "'Virtual' methods cannot be overridden, 'abstract' methods must be overridden"
+      ],
+      "answer": "'Abstract' methods have no implementation, 'virtual' methods have a default implementation"
+    },
+    {
+      "question": "What is a 'delegate' in C#?",
+      "options": [
+        "A type that references methods with a specific signature",
+        "A special variable that holds multiple values",
+        "A function that is automatically invoked",
+        "A method that can run asynchronously"
+      ],
+      "answer": "A type that references methods with a specific signature"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is covariance and contravariance in C#?",
+      "options": [
+        "They define how types behave when passed to or returned from generic methods",
+        "They are used to optimize memory management",
+        "They allow arrays to grow dynamically",
+        "They are related to exception handling"
+      ],
+      "answer": "They define how types behave when passed to or returned from generic methods"
+    },
+    {
+      "question": "Which of the following keywords is used for method overloading in C#?",
+      "options": ["overload", "override", "new", "None of the above"],
+      "answer": "None of the above"
+    },
+    {
+      "question": "What is 'boxing' in C#?",
+      "options": [
+        "Converting a value type to a reference type",
+        "Converting a reference type to a value type",
+        "Executing code within a sandbox environment",
+        "Compiling code into a binary format"
+      ],
+      "answer": "Converting a value type to a reference type"
+    },
+    {
+      "question": "What is the purpose of the 'volatile' keyword in C#?",
+      "options": [
+        "To indicate that a field can be modified by multiple threads concurrently",
+        "To mark a variable as read-only",
+        "To throw an exception when an invalid operation occurs",
+        "To define a nullable type"
+      ],
+      "answer": "To indicate that a field can be modified by multiple threads concurrently"
+    },
+    {
+      "question": "What does the 'async' keyword do in C#?",
+      "options": [
+        "It marks a method as asynchronous",
+        "It makes a method run synchronously",
+        "It pauses a method until a task completes",
+        "It prevents exceptions from being thrown"
+      ],
+      "answer": "It marks a method as asynchronous"
+    },
+    {
+      "question": "Which of the following allows multiple methods to be executed concurrently in C#?",
+      "options": ["Task.WhenAll()", "Thread.Join()", "Parallel.Invoke()", "All of the above"],
+      "answer": "Task.WhenAll()"
+    },
+    {
+      "question": "Which design pattern is implemented by the ‘IEnumerable’ interface in C#?",
+      "options": ["Iterator", "Observer", "Factory", "Decorator"],
+      "answer": "Iterator"
+    },
+    {
+      "question": "What is a ‘Task’ in C#?",
+      "options": [
+        "An object that represents an asynchronous operation",
+        "A method that runs in parallel",
+        "A thread that executes immediately",
+        "A reference to an event handler"
+      ],
+      "answer": "An object that represents an asynchronous operation"
+    },
+    {
+      "question": "Which of the following is a benefit of using ‘async’ and ‘await’ in C#?",
+      "options": [
+        "Non-blocking code execution",
+        "Faster method execution",
+        "Synchronous code handling",
+        "Automatic error handling"
+      ],
+      "answer": "Non-blocking code execution"
+    },
+    {
+      "question": "Which of the following is a correct example of method overriding in C#?",
+      "options": [
+        "public override void MyMethod()",
+        "public overload void MyMethod()",
+        "public virtual void MyMethod()",
+        "public final void MyMethod()"
+      ],
+      "answer": "public override void MyMethod()"
+    },
+    {
+      "question": "What is the ‘lock’ keyword used for in C#?",
+      "options": [
+        "To synchronize access to shared resources",
+        "To lock a file for writing",
+        "To prevent methods from being overridden",
+        "To pause the execution of a thread"
+      ],
+      "answer": "To synchronize access to shared resources"
+    },
+    {
+      "question": "What is the purpose of ‘ConfigureAwait(false)’ in C#?",
+      "options": [
+        "To avoid returning to the original context after an await",
+        "To pause method execution until a task is completed",
+        "To configure a method to run on a separate thread",
+        "To handle exceptions in an asynchronous method"
+      ],
+      "answer": "To avoid returning to the original context after an await"
+    },
+    {
+      "question": "What is the difference between ‘readonly’ and ‘const’ in C#?",
+      "options": [
+        "‘const’ is a compile-time constant, ‘readonly’ is a run-time constant",
+        "‘readonly’ is a compile-time constant, ‘const’ is a run-time constant",
+        "‘readonly’ can only be used with strings, ‘const’ can be used with numbers",
+        "There is no difference between ‘readonly’ and ‘const’"
+      ],
+      "answer": "‘const’ is a compile-time constant, ‘readonly’ is a run-time constant"
+    },
+    {
+      "question": "What is the role of ‘Dispose’ method in C#?",
+      "options": [
+        "To release unmanaged resources explicitly",
+        "To handle exceptions in a method",
+        "To execute code in a loop",
+        "To clean up memory before garbage collection"
+      ],
+      "answer": "To release unmanaged resources explicitly"
+    },
+    {
+      "question": "What is the ‘IDisposable’ interface used for in C#?",
+      "options": [
+        "To define a method for releasing unmanaged resources",
+        "To define a method for serializing objects",
+        "To allow an object to be passed by reference",
+        "To control memory allocation"
+      ],
+      "answer": "To define a method for releasing unmanaged resources"
+    }
+  ]
+}

@@ -54,7 +54,10 @@ export const Select: React.FC<SelectProps> = ({
               selectClassName,
             )}
           >
-            <SelectValue placeholder={placeholder || 'Select'} />
+            <SelectValue
+              className="placeholder:text-[#737373]"
+              placeholder={<span className="text-[#737373]">{placeholder || 'Select'}</span>}
+            />
           </SelectTrigger>
           <SelectContent>
             {options.map((option, index) => (

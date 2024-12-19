@@ -43,7 +43,7 @@ export const DASHBOARD_LINKS = [
   },
   {
     label: 'Resume',
-    path: '/resume',
+    path: '/my-resume',
     icon: <User className="w-6 h-6" />,
   },
   {

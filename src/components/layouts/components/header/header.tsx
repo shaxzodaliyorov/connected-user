@@ -22,7 +22,7 @@ export const Header = () => {
           <div>
             <Input
               placeholder="Search"
-              wrapperClassName="!bg-[#FAFAFA] rounded-lg border-none"
+              wrapperClassName="rounded-lg border-none "
               inputSizeClassName="!h-[38px] w-[255px] "
               rightIcon={<IoSearch />}
               className="!bg-[#FAFAFA]"

@@ -1,0 +1,465 @@
+{
+  "junior": [
+    {
+      "question": "What is the correct way to declare a variable in Kotlin?",
+      "options": ["var x = 5", "int x = 5", "x := 5", "let x = 5"],
+      "answer": "var x = 5"
+    },
+    {
+      "question": "How do you define a constant in Kotlin?",
+      "options": ["val PI = 3.14", "const val PI = 3.14", "constant PI = 3.14", "let PI = 3.14"],
+      "answer": "const val PI = 3.14"
+    },
+    {
+      "question": "Which of the following is used to define a function in Kotlin?",
+      "options": ["fun myFunction() {}", "def myFunction() {}", "function myFunction() {}", "myFunction() {}"],
+      "answer": "fun myFunction() {}"
+    },
+    {
+      "question": "What is the output of the following code?\nprint(3 + 4 * 2)",
+      "options": ["11", "14", "10", "7"],
+      "answer": "11"
+    },
+    {
+      "question": "What is the default visibility modifier in Kotlin?",
+      "options": ["public", "private", "protected", "internal"],
+      "answer": "public"
+    },
+    {
+      "question": "Which of the following is a valid way to create an array in Kotlin?",
+      "options": ["arrayOf(1, 2, 3)", "new Array(1, 2, 3)", "Array[1, 2, 3]", "createArray(1, 2, 3)"],
+      "answer": "arrayOf(1, 2, 3)"
+    },
+    {
+      "question": "How do you create a nullable variable in Kotlin?",
+      "options": ["var name: String? = null", "var name = null", "let name: String = null", "name: String? = 'null'"],
+      "answer": "var name: String? = null"
+    },
+    {
+      "question": "What does the 'val' keyword mean in Kotlin?",
+      "options": ["A read-only variable", "A variable that can change", "A global constant", "A nullable variable"],
+      "answer": "A read-only variable"
+    },
+    {
+      "question": "Which of the following is used for string interpolation in Kotlin?",
+      "options": ["${}", "${}", "{{}}", "#{}"],
+      "answer": "${}"
+    },
+    {
+      "question": "How do you check if a variable is of a specific type in Kotlin?",
+      "options": ["is", "instanceof", "typeof", "checktype"],
+      "answer": "is"
+    },
+    {
+      "question": "What is a 'when' expression used for in Kotlin?",
+      "options": ["To replace a switch statement", "To create loops", "To handle null safety", "To define classes"],
+      "answer": "To replace a switch statement"
+    },
+    {
+      "question": "Which of the following is a valid way to write an if-else statement in Kotlin?",
+      "options": [
+        "if (a > b) { print(a) } else { print(b) }",
+        "if a > b then print(a) else print(b)",
+        "if a > b { print(a) } else { print(b) }",
+        "if (a > b): print(a) else: print(b)"
+      ],
+      "answer": "if (a > b) { print(a) } else { print(b) }"
+    },
+    {
+      "question": "What is the equivalent of Java's 'null' in Kotlin?",
+      "options": ["null", "None", "empty", "nil"],
+      "answer": "null"
+    },
+    {
+      "question": "Which of the following is true about Kotlin?",
+      "options": [
+        "Kotlin is fully interoperable with Java",
+        "Kotlin cannot be used with Java",
+        "Kotlin is not object-oriented",
+        "Kotlin is only for Android development"
+      ],
+      "answer": "Kotlin is fully interoperable with Java"
+    },
+    {
+      "question": "How do you create a for loop in Kotlin?",
+      "options": ["for (i in 1..10)", "for i in 1..10", "for (i = 1; i <= 10; i++)", "foreach i in 1 to 10"],
+      "answer": "for (i in 1..10)"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "How do you handle null values in Kotlin?",
+      "options": ["Using safe calls (?.)", "Using null checks with 'if'", "Using try-catch", "Both A and B"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "What is the Elvis operator (?:) used for in Kotlin?",
+      "options": [
+        "It provides a default value when the expression to the left is null",
+        "It throws an exception when a variable is null",
+        "It checks if a variable is of the right type",
+        "It converts a nullable type to a non-nullable type"
+      ],
+      "answer": "It provides a default value when the expression to the left is null"
+    },
+    {
+      "question": "Which of the following is a valid way to create a lambda function in Kotlin?",
+      "options": [
+        "{ x: Int, y: Int -> x + y }",
+        "(x: Int, y: Int) -> x + y",
+        "lambda(x: Int, y: Int) => x + y",
+        "def(x: Int, y: Int) -> x + y"
+      ],
+      "answer": "{ x: Int, y: Int -> x + y }"
+    },
+    {
+      "question": "Which function is used to iterate over a collection in Kotlin?",
+      "options": ["forEach", "map", "filter", "reduce"],
+      "answer": "forEach"
+    },
+    {
+      "question": "What is a data class in Kotlin?",
+      "options": [
+        "A class that is primarily used to hold data",
+        "A class with no methods",
+        "A class with static members",
+        "A class with public fields"
+      ],
+      "answer": "A class that is primarily used to hold data"
+    },
+    {
+      "question": "What is the purpose of the 'lateinit' modifier in Kotlin?",
+      "options": [
+        "To declare a variable that will be initialized later",
+        "To declare a constant",
+        "To declare a nullable variable",
+        "To declare a static variable"
+      ],
+      "answer": "To declare a variable that will be initialized later"
+    },
+    {
+      "question": "How do you define a singleton in Kotlin?",
+      "options": ["object Singleton", "class Singleton", "val Singleton = object()", "const Singleton"],
+      "answer": "object Singleton"
+    },
+    {
+      "question": "Which keyword is used to create an extension function in Kotlin?",
+      "options": ["fun", "ext", "extend", "override"],
+      "answer": "fun"
+    },
+    {
+      "question": "Which of the following is the correct way to make a function return a nullable value?",
+      "options": [
+        "fun myFunction(): String?",
+        "fun myFunction() String?",
+        "fun myFunction?(): String",
+        "fun myFunction?()"
+      ],
+      "answer": "fun myFunction(): String?"
+    },
+    {
+      "question": "What is the 'companion object' in Kotlin?",
+      "options": [
+        "An object that allows defining static members inside a class",
+        "An object that can be accessed only within the class",
+        "An object that represents a global variable",
+        "An object that contains the primary constructor"
+      ],
+      "answer": "An object that allows defining static members inside a class"
+    },
+    {
+      "question": "Which of the following is true about Kotlin properties?",
+      "options": [
+        "They are accessed directly without getter or setter methods",
+        "They must always have explicit getter and setter methods",
+        "They are the same as fields in Java",
+        "They are not allowed in data classes"
+      ],
+      "answer": "They are accessed directly without getter or setter methods"
+    },
+    {
+      "question": "How do you create an immutable list in Kotlin?",
+      "options": ["listOf(1, 2, 3)", "mutableListOf(1, 2, 3)", "ArrayList(1, 2, 3)", "val list = [1, 2, 3]"],
+      "answer": "listOf(1, 2, 3)"
+    },
+    {
+      "question": "Which of the following is the correct way to handle an exception in Kotlin?",
+      "options": [
+        "try { ... } catch (e: Exception) { ... }",
+        "catch (Exception e) { ... }",
+        "exception (e: Exception) { ... }",
+        "throw e { ... }"
+      ],
+      "answer": "try { ... } catch (e: Exception) { ... }"
+    },
+    {
+      "question": "How do you declare a variable that can hold a nullable integer in Kotlin?",
+      "options": ["var num: Int? = null", "val num: Int? = null", "let num: Int = null", "nullable var num = null"],
+      "answer": "var num: Int? = null"
+    },
+    {
+      "question": "Which of the following can be used to define a primary constructor in Kotlin?",
+      "options": [
+        "class Person(val name: String)",
+        "class Person(name: String) { ... }",
+        "def Person(name: String) { ... }",
+        "primary class Person(name: String)"
+      ],
+      "answer": "class Person(val name: String)"
+    }
+  ],
+  "middle": [
+    {
+      "question": "How do you declare a function with a default argument in Kotlin?",
+      "options": [
+        "fun myFunction(x: Int = 10)",
+        "fun myFunction(int x = 10)",
+        "def myFunction(x = 10: Int)",
+        "fun myFunction(x = 10)"
+      ],
+      "answer": "fun myFunction(x: Int = 10)"
+    },
+    {
+      "question": "What is the purpose of the 'by' keyword in Kotlin?",
+      "options": [
+        "It is used to delegate property handling to another object",
+        "It is used for type casting",
+        "It defines a nullable property",
+        "It is used to declare a constant"
+      ],
+      "answer": "It is used to delegate property handling to another object"
+    },
+    {
+      "question": "Which Kotlin collection is thread-safe?",
+      "options": ["ConcurrentHashMap", "HashMap", "ArrayList", "HashSet"],
+      "answer": "ConcurrentHashMap"
+    },
+    {
+      "question": "How do you handle coroutines in Kotlin?",
+      "options": ["By using suspend functions", "By using threads", "By using runAsync()", "By using async { ... }"],
+      "answer": "By using suspend functions"
+    },
+    {
+      "question": "What is the scope function 'apply' used for in Kotlin?",
+      "options": [
+        "To configure an object and return the same object",
+        "To map a value to another type",
+        "To filter a collection",
+        "To execute a block of code only if a condition is met"
+      ],
+      "answer": "To configure an object and return the same object"
+    },
+    {
+      "question": "What is the use of the 'inline' keyword in Kotlin?",
+      "options": [
+        "To request inlining of a function's code at the call site",
+        "To make a function execute in a single line",
+        "To allow variables to be declared inline",
+        "To define a function that executes asynchronously"
+      ],
+      "answer": "To request inlining of a function's code at the call site"
+    },
+    {
+      "question": "How can you represent a sealed class in Kotlin?",
+      "options": ["sealed class Result", "enum class Result", "class Result", "sealed interface Result"],
+      "answer": "sealed class Result"
+    },
+    {
+      "question": "What does 'with' do in Kotlin?",
+      "options": [
+        "It executes a block of code on a provided object and returns a result",
+        "It performs type casting",
+        "It declares a class that can be extended",
+        "It creates a new instance of a class"
+      ],
+      "answer": "It executes a block of code on a provided object and returns a result"
+    },
+    {
+      "question": "What does the 'in' keyword mean in Kotlin?",
+      "options": [
+        "It is used to iterate over a collection",
+        "It is used for importing packages",
+        "It is used for nullable types",
+        "It is used to declare variables"
+      ],
+      "answer": "It is used to iterate over a collection"
+    },
+    {
+      "question": "Which function is used to handle asynchronous operations in Kotlin?",
+      "options": ["launch", "async", "runBlocking", "defer"],
+      "answer": "launch"
+    },
+    {
+      "question": "Which of the following is a higher-order function in Kotlin?",
+      "options": [
+        "A function that takes another function as a parameter or returns a function",
+        "A function that is called by another function",
+        "A function that can be called in a loop",
+        "A function that handles multiple threads"
+      ],
+      "answer": "A function that takes another function as a parameter or returns a function"
+    },
+    {
+      "question": "Which of the following is used to create an immutable map in Kotlin?",
+      "options": ["mapOf()", "mutableMapOf()", "HashMap()", "ArrayList()"],
+      "answer": "mapOf()"
+    },
+    {
+      "question": "What is destructuring in Kotlin?",
+      "options": [
+        "It allows you to assign multiple variables from a single object",
+        "It refers to handling exceptions",
+        "It allows type inference",
+        "It is a way to convert a list into a map"
+      ],
+      "answer": "It allows you to assign multiple variables from a single object"
+    },
+    {
+      "question": "Which of the following is the correct syntax for a lambda function in Kotlin?",
+      "options": ["{ x: Int -> x * x }", "(x: Int) -> { x * x }", "lambda(x: Int) -> x * x", "(x: Int) { x * x }"],
+      "answer": "{ x: Int -> x * x }"
+    },
+    {
+      "question": "Which of the following functions blocks the current coroutine until the result is available?",
+      "options": ["runBlocking", "launch", "async", "await"],
+      "answer": "runBlocking"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the purpose of the 'reified' keyword in Kotlin?",
+      "options": [
+        "It allows you to access a type parameter at runtime in inline functions",
+        "It converts an object to a primitive type",
+        "It serializes an object",
+        "It handles exceptions during type casting"
+      ],
+      "answer": "It allows you to access a type parameter at runtime in inline functions"
+    },
+    {
+      "question": "Which of the following statements is true about Kotlin coroutines?",
+      "options": [
+        "They are light-weight threads for asynchronous programming",
+        "They can only run on the main thread",
+        "They are slower than traditional threads",
+        "They require Java's Future API"
+      ],
+      "answer": "They are light-weight threads for asynchronous programming"
+    },
+    {
+      "question": "What is the difference between 'launch' and 'async' in Kotlin coroutines?",
+      "options": [
+        "'launch' returns a Job, while 'async' returns a Deferred",
+        "'async' returns a Job, while 'launch' returns a Deferred",
+        "'launch' is synchronous, while 'async' is asynchronous",
+        "'async' is used for I/O tasks, while 'launch' is used for CPU tasks"
+      ],
+      "answer": "'launch' returns a Job, while 'async' returns a Deferred"
+    },
+    {
+      "question": "What does the 'sealed' keyword do in Kotlin?",
+      "options": [
+        "It restricts class inheritance to a fixed set of classes",
+        "It creates a class that cannot be extended",
+        "It defines a class with static members",
+        "It marks a class as abstract"
+      ],
+      "answer": "It restricts class inheritance to a fixed set of classes"
+    },
+    {
+      "question": "How can you use reflection in Kotlin?",
+      "options": [
+        "Using the 'kotlin.reflect' package",
+        "Using the 'java.reflection' package",
+        "Using the 'reflect()' function",
+        "Reflection is not supported in Kotlin"
+      ],
+      "answer": "Using the 'kotlin.reflect' package"
+    },
+    {
+      "question": "Which of the following is a coroutine builder in Kotlin?",
+      "options": ["launch", "run", "execute", "defer"],
+      "answer": "launch"
+    },
+    {
+      "question": "What is tail recursion in Kotlin?",
+      "options": [
+        "A recursion where the recursive call is the last operation in the function",
+        "A recursion that occurs in anonymous functions",
+        "A recursion that optimizes memory usage by eliminating the call stack",
+        "A recursion that cannot return a value"
+      ],
+      "answer": "A recursion where the recursive call is the last operation in the function"
+    },
+    {
+      "question": "Which keyword is used to make a function tail-recursive in Kotlin?",
+      "options": ["tailrec", "recursive", "inline", "repeat"],
+      "answer": "tailrec"
+    },
+    {
+      "question": "What does ‘inline’ do in Kotlin?",
+      "options": [
+        "It inlines the function code at the call site",
+        "It converts a lambda to a function",
+        "It makes the function run on the main thread",
+        "It handles exceptions in the function"
+      ],
+      "answer": "It inlines the function code at the call site"
+    },
+    {
+      "question": "Which of the following is true about suspend functions in Kotlin?",
+      "options": [
+        "They can be paused and resumed at a later time",
+        "They are used for synchronous programming",
+        "They block the thread while waiting",
+        "They can only return a single value"
+      ],
+      "answer": "They can be paused and resumed at a later time"
+    },
+    {
+      "question": "What is the ‘deferred’ type in Kotlin coroutines?",
+      "options": [
+        "A future result that will be available later",
+        "A function that is executed after a delay",
+        "A variable that cannot be modified",
+        "An asynchronous stream of data"
+      ],
+      "answer": "A future result that will be available later"
+    },
+    {
+      "question": "Which of the following allows for handling multiple Kotlin coroutines concurrently?",
+      "options": ["select", "if-else", "repeat", "defer"],
+      "answer": "select"
+    },
+    {
+      "question": "What is the difference between ‘map’ and ‘flatMap’ in Kotlin?",
+      "options": [
+        "‘map’ transforms each element, while ‘flatMap’ flattens nested collections",
+        "‘map’ is used for arrays, while ‘flatMap’ is used for lists",
+        "‘map’ returns a set, while ‘flatMap’ returns a list",
+        "‘flatMap’ is faster than ‘map’"
+      ],
+      "answer": "‘map’ transforms each element, while ‘flatMap’ flattens nested collections"
+    },
+    {
+      "question": "How do you define a lazy-initialized property in Kotlin?",
+      "options": [
+        "val myValue by lazy { … }",
+        "val myValue = lazy { … }",
+        "val myValue = later { … }",
+        "lazy val myValue = { … }"
+      ],
+      "answer": "val myValue by lazy { … }"
+    },
+    {
+      "question": "What is a higher-order function in Kotlin?",
+      "options": [
+        "A function that takes another function as a parameter or returns a function",
+        "A function that performs complex mathematical operations",
+        "A function that must be defined inside a class",
+        "A function that returns multiple values"
+      ],
+      "answer": "A function that takes another function as a parameter or returns a function"
+    }
+  ]
+}

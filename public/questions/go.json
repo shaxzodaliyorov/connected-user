@@ -1,0 +1,505 @@
+{
+  "junior": [
+    {
+      "question": "What is the correct way to print 'Hello, World!' in Go?",
+      "options": [
+        "fmt.Println('Hello, World!')",
+        "System.out.println('Hello, World!')",
+        "console.log('Hello, World!')",
+        "print('Hello, World!')"
+      ],
+      "answer": "fmt.Println('Hello, World!')"
+    },
+    {
+      "question": "Which package is required to use the Println function in Go?",
+      "options": ["fmt", "io", "log", "system"],
+      "answer": "fmt"
+    },
+    {
+      "question": "How do you declare a variable in Go?",
+      "options": ["var x int = 5", "x := 5", "int x = 5", "Both A and B"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "What is the default value of an uninitialized integer variable in Go?",
+      "options": ["0", "null", "undefined", "-1"],
+      "answer": "0"
+    },
+    {
+      "question": "Which of the following is the correct syntax for an if statement in Go?",
+      "options": [
+        "if x == 10 { fmt.Println(x) }",
+        "if (x == 10) then { fmt.Println(x) }",
+        "if x == 10: print(x)",
+        "if x == 10 { print(x) }"
+      ],
+      "answer": "if x == 10 { fmt.Println(x) }"
+    },
+    {
+      "question": "What does the 'defer' keyword do in Go?",
+      "options": [
+        "It defers the execution of a function until the surrounding function returns",
+        "It throws an exception",
+        "It stops the function execution immediately",
+        "It pauses the program"
+      ],
+      "answer": "It defers the execution of a function until the surrounding function returns"
+    },
+    {
+      "question": "Which symbol is used to import packages in Go?",
+      "options": ["import", "#include", "require", "package"],
+      "answer": "import"
+    },
+    {
+      "question": "What is a slice in Go?",
+      "options": [
+        "A dynamically sized, flexible view into the elements of an array",
+        "A fixed-size array",
+        "A reference to an element in an array",
+        "A method for string manipulation"
+      ],
+      "answer": "A dynamically sized, flexible view into the elements of an array"
+    },
+    {
+      "question": "Which of the following is true about Go?",
+      "options": [
+        "Go has garbage collection",
+        "Go does not have garbage collection",
+        "Go has only manual memory management",
+        "Go requires third-party tools for garbage collection"
+      ],
+      "answer": "Go has garbage collection"
+    },
+    {
+      "question": "How do you write a single-line comment in Go?",
+      "options": [
+        "// This is a comment",
+        "/* This is a comment */",
+        "# This is a comment",
+        "<!-- This is a comment -->"
+      ],
+      "answer": "// This is a comment"
+    },
+    {
+      "question": "How do you declare a constant in Go?",
+      "options": ["const pi = 3.14", "constant pi = 3.14", "final pi = 3.14", "var pi = 3.14"],
+      "answer": "const pi = 3.14"
+    },
+    {
+      "question": "Which function is used to handle errors in Go?",
+      "options": ["error()", "try-catch", "panic()", "throw()"],
+      "answer": "panic()"
+    },
+    {
+      "question": "Which of the following is the correct syntax for a for loop in Go?",
+      "options": [
+        "for i := 0; i < 10; i++ { fmt.Println(i) }",
+        "for (i = 0; i < 10; i++) { fmt.Println(i) }",
+        "for (i = 0, i < 10, i++) { fmt.Println(i) }",
+        "while i < 10 { fmt.Println(i); i++ }"
+      ],
+      "answer": "for i := 0; i < 10; i++ { fmt.Println(i) }"
+    },
+    {
+      "question": "Which of the following is used to create a new Go module?",
+      "options": ["go mod init", "go module create", "go new module", "go mod create"],
+      "answer": "go mod init"
+    },
+    {
+      "question": "Which of the following is not a Go keyword?",
+      "options": ["inherit", "defer", "go", "return"],
+      "answer": "inherit"
+    },
+    {
+      "question": "What is the purpose of the 'go' keyword in Go?",
+      "options": ["To start a new goroutine", "To define a function", "To declare a variable", "To import a package"],
+      "answer": "To start a new goroutine"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "How do you create a function in Go?",
+      "options": ["func myFunction() {}", "function myFunction() {}", "def myFunction() {}", "func:myFunction() {}"],
+      "answer": "func myFunction() {}"
+    },
+    {
+      "question": "Which of the following statements is true about Go?",
+      "options": [
+        "Go supports multiple return values from a function",
+        "Go does not allow multiple return values",
+        "Go functions can only return one value",
+        "Go supports returning values of different types in one function"
+      ],
+      "answer": "Go supports multiple return values from a function"
+    },
+    {
+      "question": "How do you define an interface in Go?",
+      "options": [
+        "type Reader interface { Read(p []byte) (n int, err error) }",
+        "interface Reader { Read(p []byte) (n int, err error) }",
+        "type Reader implements { Read(p []byte) (n int, err error) }",
+        "Reader implements interface { Read(p []byte) (n int, err error) }"
+      ],
+      "answer": "type Reader interface { Read(p []byte) (n int, err error) }"
+    },
+    {
+      "question": "How do you handle errors in Go functions?",
+      "options": [
+        "By returning error as a second value from the function",
+        "By throwing exceptions",
+        "By using try-catch",
+        "By raising an exception"
+      ],
+      "answer": "By returning error as a second value from the function"
+    },
+    {
+      "question": "What does the 'recover()' function do in Go?",
+      "options": [
+        "It regains control of a panicking goroutine",
+        "It restarts the program",
+        "It terminates a function",
+        "It is used to handle file recovery"
+      ],
+      "answer": "It regains control of a panicking goroutine"
+    },
+    {
+      "question": "What is the default value of a string in Go?",
+      "options": ["\"\"", "null", "undefined", "\"null\""],
+      "answer": "\"\""
+    },
+    {
+      "question": "How do you create a map in Go?",
+      "options": ["make(map[string]int)", "create(map[string]int)", "map[string]int{}", "new(map[string]int)"],
+      "answer": "make(map[string]int)"
+    },
+    {
+      "question": "Which Go keyword is used to exit a program with an error?",
+      "options": ["panic()", "exit()", "throw()", "raise()"],
+      "answer": "panic()"
+    },
+    {
+      "question": "What is the difference between a slice and an array in Go?",
+      "options": [
+        "Slices are dynamic, arrays are fixed-size",
+        "Arrays are dynamic, slices are fixed-size",
+        "Both are the same",
+        "Slices are slower than arrays"
+      ],
+      "answer": "Slices are dynamic, arrays are fixed-size"
+    },
+    {
+      "question": "Which of the following is a correct way to create a struct in Go?",
+      "options": [
+        "type Person struct { Name string; Age int }",
+        "struct Person { string Name; int Age }",
+        "class Person { Name string; Age int }",
+        "new Person { string Name; int Age }"
+      ],
+      "answer": "type Person struct { Name string; Age int }"
+    },
+    {
+      "question": "What is the output of the following code?\nfmt.Println(len(\"Hello\"))",
+      "options": ["5", "4", "6", "Error"],
+      "answer": "5"
+    },
+    {
+      "question": "Which Go package is used to manipulate strings?",
+      "options": ["strings", "fmt", "io", "strconv"],
+      "answer": "strings"
+    },
+    {
+      "question": "How do you check if a map contains a key in Go?",
+      "options": [
+        "value, exists := myMap[key]",
+        "exists = myMap.has(key)",
+        "value, exists = myMap[key]",
+        "exists := myMap.contains(key)"
+      ],
+      "answer": "value, exists := myMap[key]"
+    },
+    {
+      "question": "What is the purpose of the 'select' statement in Go?",
+      "options": [
+        "To handle multiple channel operations",
+        "To switch between different functions",
+        "To select a value from a slice",
+        "To select between different goroutines"
+      ],
+      "answer": "To handle multiple channel operations"
+    },
+    {
+      "question": "Which of the following is true about Go pointers?",
+      "options": [
+        "Pointers store the memory address of a variable",
+        "Pointers are not supported in Go",
+        "Pointers store the value of a variable",
+        "Pointers are used to manage garbage collection"
+      ],
+      "answer": "Pointers store the memory address of a variable"
+    }
+  ],
+  "middle": [
+    {
+      "question": "Which of the following is used to define a method in Go?",
+      "options": [
+        "func (r ReceiverType) methodName()",
+        "method (r ReceiverType) methodName()",
+        "func ReceiverType.methodName()",
+        "method ReceiverType.methodName()"
+      ],
+      "answer": "func (r ReceiverType) methodName()"
+    },
+    {
+      "question": "How do you define a constant block in Go?",
+      "options": [
+        "const ( Pi = 3.14; E = 2.71 )",
+        "constant ( Pi = 3.14; E = 2.71 )",
+        "const { Pi = 3.14; E = 2.71 }",
+        "const Pi = 3.14; const E = 2.71"
+      ],
+      "answer": "const ( Pi = 3.14; E = 2.71 )"
+    },
+    {
+      "question": "What is a goroutine in Go?",
+      "options": [
+        "A lightweight thread managed by the Go runtime",
+        "A built-in library for string manipulation",
+        "A process that handles I/O operations",
+        "A function that returns multiple values"
+      ],
+      "answer": "A lightweight thread managed by the Go runtime"
+    },
+    {
+      "question": "How do you implement synchronization between goroutines?",
+      "options": ["Using channels", "Using locks", "Using slices", "Using structs"],
+      "answer": "Using channels"
+    },
+    {
+      "question": "What is a 'nil' value in Go?",
+      "options": [
+        "It is the zero value for pointers, slices, maps, channels, and interfaces",
+        "It represents a false boolean value",
+        "It is the equivalent of zero",
+        "It is a default value for numbers"
+      ],
+      "answer": "It is the zero value for pointers, slices, maps, channels, and interfaces"
+    },
+    {
+      "question": "Which Go tool is used to format source code?",
+      "options": ["gofmt", "go fmt", "go format", "golint"],
+      "answer": "gofmt"
+    },
+    {
+      "question": "What is the purpose of the 'copy' function in Go?",
+      "options": [
+        "To copy elements from one slice to another",
+        "To copy an entire map",
+        "To duplicate a struct",
+        "To create a copy of a string"
+      ],
+      "answer": "To copy elements from one slice to another"
+    },
+    {
+      "question": "How do you convert a string to an integer in Go?",
+      "options": ["strconv.Atoi()", "fmt.Atoi()", "string.toInt()", "parseInt()"],
+      "answer": "strconv.Atoi()"
+    },
+    {
+      "question": "Which of the following is a built-in Go type for representing errors?",
+      "options": ["error", "exception", "panic", "invalid"],
+      "answer": "error"
+    },
+    {
+      "question": "How do you handle multiple return values in Go?",
+      "options": [
+        "By assigning the returned values to variables separated by commas",
+        "By using a list",
+        "By using a map",
+        "By using an array"
+      ],
+      "answer": "By assigning the returned values to variables separated by commas"
+    },
+    {
+      "question": "Which Go package is used for file I/O operations?",
+      "options": ["os", "io", "file", "sys"],
+      "answer": "os"
+    },
+    {
+      "question": "What is the zero value for a boolean in Go?",
+      "options": ["false", "0", "nil", "undefined"],
+      "answer": "false"
+    },
+    {
+      "question": "How do you define a variadic function in Go?",
+      "options": [
+        "func myFunc(args ...int)",
+        "func myFunc(args []int)",
+        "func myFunc(args: []int)",
+        "func myFunc(args *int)"
+      ],
+      "answer": "func myFunc(args ...int)"
+    },
+    {
+      "question": "What does the 'make' function do in Go?",
+      "options": [
+        "It creates slices, maps, or channels",
+        "It allocates memory for any data type",
+        "It copies data between two objects",
+        "It initializes a struct"
+      ],
+      "answer": "It creates slices, maps, or channels"
+    },
+    {
+      "question": "What is a rune in Go?",
+      "options": [
+        "An alias for int32 representing a Unicode code point",
+        "An alias for string",
+        "A slice of characters",
+        "A special type of string"
+      ],
+      "answer": "An alias for int32 representing a Unicode code point"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the purpose of the 'unsafe' package in Go?",
+      "options": [
+        "To perform low-level memory manipulation",
+        "To handle unsafe operations in concurrent programming",
+        "To manage runtime panics",
+        "To disable garbage collection"
+      ],
+      "answer": "To perform low-level memory manipulation"
+    },
+    {
+      "question": "How do you terminate a goroutine in Go?",
+      "options": [
+        "By returning from the function it is running",
+        "By calling stop()",
+        "By calling goroutine.exit()",
+        "By using the kill() function"
+      ],
+      "answer": "By returning from the function it is running"
+    },
+    {
+      "question": "What is a Go channel?",
+      "options": [
+        "A communication mechanism between goroutines",
+        "A way to handle file I/O",
+        "A special type of struct",
+        "A way to manage memory"
+      ],
+      "answer": "A communication mechanism between goroutines"
+    },
+    {
+      "question": "What does 'select' do when used with Go channels?",
+      "options": [
+        "It allows a goroutine to wait on multiple channel operations",
+        "It iterates over a slice",
+        "It manages concurrent memory access",
+        "It selects a random goroutine to execute"
+      ],
+      "answer": "It allows a goroutine to wait on multiple channel operations"
+    },
+    {
+      "question": "Which of the following is true about Go interfaces?",
+      "options": [
+        "An interface defines a set of methods that a type must implement",
+        "Interfaces in Go can contain fields",
+        "An interface in Go must be explicitly implemented",
+        "Interfaces can inherit from other interfaces"
+      ],
+      "answer": "An interface defines a set of methods that a type must implement"
+    },
+    {
+      "question": "What does the 'reflect' package in Go allow you to do?",
+      "options": [
+        "Inspect the structure and types of variables at runtime",
+        "Perform string manipulation",
+        "Debug memory allocation issues",
+        "Handle file and I/O operations"
+      ],
+      "answer": "Inspect the structure and types of variables at runtime"
+    },
+    {
+      "question": "What is the difference between 'new()' and 'make()' in Go?",
+      "options": [
+        "'new()' allocates memory, 'make()' initializes slices, maps, and channels",
+        "'make()' allocates memory, 'new()' creates new slices",
+        "'new()' is for memory allocation, 'make()' is for variable declarations",
+        "There is no difference"
+      ],
+      "answer": "'new()' allocates memory, 'make()' initializes slices, maps, and channels"
+    },
+    {
+      "question": "What is a type assertion in Go?",
+      "options": [
+        "It is used to retrieve the dynamic type of an interface",
+        "It converts a string to an integer",
+        "It checks if a variable is of a certain type",
+        "It asserts that a function has been called"
+      ],
+      "answer": "It is used to retrieve the dynamic type of an interface"
+    },
+    {
+      "question": "How do you check for a deadlock in Go?",
+      "options": [
+        "By running the program with the ‘go run -race’ flag",
+        "By analyzing the code manually",
+        "By using the ‘go deadlock’ command",
+        "By using the ‘panic()’ function"
+      ],
+      "answer": "By running the program with the ‘go run -race’ flag"
+    },
+    {
+      "question": "Which of the following operations will cause a deadlock in Go?",
+      "options": [
+        "All goroutines are waiting for channel input that never occurs",
+        "A goroutine accesses a shared variable without synchronization",
+        "A goroutine executes a blocking function",
+        "A goroutine tries to terminate prematurely"
+      ],
+      "answer": "All goroutines are waiting for channel input that never occurs"
+    },
+    {
+      "question": "What is the purpose of ‘atomic’ functions in Go?",
+      "options": [
+        "They provide low-level synchronization primitives for concurrent programming",
+        "They allow communication between goroutines",
+        "They manage memory allocation",
+        "They optimize the Go runtime"
+      ],
+      "answer": "They provide low-level synchronization primitives for concurrent programming"
+    },
+    {
+      "question": "What is ‘embedding’ in Go?",
+      "options": [
+        "Embedding allows one struct to include the fields and methods of another",
+        "Embedding means including Go code inside HTML files",
+        "Embedding is a way to optimize memory allocation",
+        "Embedding is used to override methods in Go"
+      ],
+      "answer": "Embedding allows one struct to include the fields and methods of another"
+    },
+    {
+      "question": "What is the default size of a channel’s buffer in Go when none is specified?",
+      "options": ["0 (unbuffered)", "1", "10", "64"],
+      "answer": "0 (unbuffered)"
+    },
+    {
+      "question": "Which of the following is true about Go’s memory model?",
+      "options": [
+        "Go uses automatic garbage collection",
+        "Go requires manual memory management",
+        "Go memory is freed immediately when variables are out of scope",
+        "Go only supports reference counting for memory management"
+      ],
+      "answer": "Go uses automatic garbage collection"
+    },
+    {
+      "question": "How do you convert a slice of bytes to a string in Go?",
+      "options": ["string(slice)", "strconv.ToString(slice)", "fmt.Sprintf(’%s’, slice)", "bytes.ToString(slice)"],
+      "answer": "string(slice)"
+    }
+  ]
+}

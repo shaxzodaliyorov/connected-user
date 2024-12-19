@@ -1,0 +1,455 @@
+{
+  "junior": [
+    {
+      "question": "Which of the following is the correct way to declare a variable in C?",
+      "options": ["int x = 5;", "var x = 5;", "let x = 5;", "declare x = 5;"],
+      "answer": "int x = 5;"
+    },
+    {
+      "question": "What is the purpose of the 'printf()' function in C?",
+      "options": [
+        "To print formatted output to the console",
+        "To accept input from the user",
+        "To end the program",
+        "To read data from a file"
+      ],
+      "answer": "To print formatted output to the console"
+    },
+    {
+      "question": "How do you create a comment in C?",
+      "options": [
+        "// This is a comment",
+        "/* This is a comment */",
+        "# This is a comment",
+        "<!-- This is a comment -->"
+      ],
+      "answer": "/* This is a comment */"
+    },
+    {
+      "question": "Which of the following is a correct syntax for declaring a pointer in C?",
+      "options": ["int* ptr;", "int ptr*;", "int ptr[];", "int& ptr;"],
+      "answer": "int* ptr;"
+    },
+    {
+      "question": "What does the following code print?\nint x = 10; printf(\"%d\", x);",
+      "options": ["10", "x", "%d", "Error"],
+      "answer": "10"
+    },
+    {
+      "question": "Which data type is used to store true or false values in C?",
+      "options": ["_Bool", "boolean", "bool", "int"],
+      "answer": "_Bool"
+    },
+    {
+      "question": "Which of the following operators is used to access the value pointed to by a pointer in C?",
+      "options": ["*", "&", "->", "::"],
+      "answer": "*"
+    },
+    {
+      "question": "Which function is used to find the length of a string in C?",
+      "options": ["strlen()", "strlength()", "length()", "sizeof()"],
+      "answer": "strlen()"
+    },
+    {
+      "question": "How do you allocate dynamic memory in C?",
+      "options": ["malloc()", "new", "allocate()", "dynamic()"],
+      "answer": "malloc()"
+    },
+    {
+      "question": "Which header file is required for input and output operations in C?",
+      "options": ["stdio.h", "iostream.h", "stdlib.h", "conio.h"],
+      "answer": "stdio.h"
+    },
+    {
+      "question": "Which of the following is a correct way to create an array in C?",
+      "options": [
+        "int arr[5];",
+        "array<int> arr = {1, 2, 3};",
+        "int arr = [1, 2, 3, 4, 5];",
+        "int arr[] = new int[5];"
+      ],
+      "answer": "int arr[5];"
+    },
+    {
+      "question": "Which of the following is the correct way to declare a constant in C?",
+      "options": ["const int x = 10;", "let x = 10;", "var const x = 10;", "constant x = 10;"],
+      "answer": "const int x = 10;"
+    },
+    {
+      "question": "Which loop structure is used to execute a block of code multiple times in C?",
+      "options": ["for", "foreach", "repeat", "switch"],
+      "answer": "for"
+    },
+    {
+      "question": "How do you declare a function in C?",
+      "options": [
+        "int myFunction(int a, int b);",
+        "function myFunction(int a, int b);",
+        "def myFunction(int a, int b);",
+        "func myFunction(int a, int b);"
+      ],
+      "answer": "int myFunction(int a, int b);"
+    },
+    {
+      "question": "What is the output of the following code?\nint x = 5, y = 10; printf(\"%d\", x + y);",
+      "options": ["15", "5", "10", "x + y"],
+      "answer": "15"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "What is the correct way to declare a pointer to a pointer in C?",
+      "options": ["int** ptr;", "int* ptr*;", "int&* ptr;", "int ptr[][];"],
+      "answer": "int** ptr;"
+    },
+    {
+      "question": "What does the 'malloc' function return if it fails to allocate memory?",
+      "options": ["NULL", "0", "-1", "Error"],
+      "answer": "NULL"
+    },
+    {
+      "question": "Which function is used to copy one string to another in C?",
+      "options": ["strcpy()", "strncpy()", "strcopy()", "copystr()"],
+      "answer": "strcpy()"
+    },
+    {
+      "question": "What does the following code print?\nint a = 10, b = 20; printf(\"%d\", a > b ? a : b);",
+      "options": ["20", "10", "1", "0"],
+      "answer": "20"
+    },
+    {
+      "question": "Which of the following is the correct syntax for declaring an array of pointers in C?",
+      "options": ["int* arr[10];", "int arr*;", "int arr[10];", "int& arr[10];"],
+      "answer": "int* arr[10];"
+    },
+    {
+      "question": "What does the 'free' function do in C?",
+      "options": [
+        "Deallocates previously allocated dynamic memory",
+        "Initializes a new pointer",
+        "Copies data from one memory location to another",
+        "Frees a variable from memory"
+      ],
+      "answer": "Deallocates previously allocated dynamic memory"
+    },
+    {
+      "question": "What is the purpose of the 'return' statement in C?",
+      "options": [
+        "It exits a function and optionally returns a value",
+        "It creates a new pointer",
+        "It terminates a loop",
+        "It pauses the program execution"
+      ],
+      "answer": "It exits a function and optionally returns a value"
+    },
+    {
+      "question": "Which of the following is used to define a macro in C?",
+      "options": ["#define", "#macro", "const", "let"],
+      "answer": "#define"
+    },
+    {
+      "question": "Which of the following operators can be used to access members of a structure through a pointer?",
+      "options": ["->", ".", "::", "&"],
+      "answer": "->"
+    },
+    {
+      "question": "Which function is used to compare two strings in C?",
+      "options": ["strcmp()", "strcompare()", "strcmpare()", "stringcompare()"],
+      "answer": "strcmp()"
+    },
+    {
+      "question": "What does the 'sizeof()' operator return?",
+      "options": [
+        "The size of a data type or variable in bytes",
+        "The length of a string",
+        "The number of elements in an array",
+        "The memory address of a variable"
+      ],
+      "answer": "The size of a data type or variable in bytes"
+    },
+    {
+      "question": "Which of the following is a valid syntax for a function pointer in C?",
+      "options": ["int (*funcPtr)(int, int);", "int funcPtr*();", "int* funcPtr();", "int& (*funcPtr)();"],
+      "answer": "int (*funcPtr)(int, int);"
+    },
+    {
+      "question": "Which of the following is a valid keyword for controlling visibility in C++?",
+      "options": ["public", "internal", "protected", "Both A and C"],
+      "answer": "Both A and C"
+    },
+    {
+      "question": "Which of the following is used to create an object in C++?",
+      "options": ["new", "create", "malloc()", "initialize"],
+      "answer": "new"
+    },
+    {
+      "question": "Which of the following is a valid way to call a constructor in C++?",
+      "options": ["ClassName obj;", "ClassName obj();", "obj= ClassName();", "initialize obj;"],
+      "answer": "ClassName obj;"
+    }
+  ],
+  "middle": [
+    {
+      "question": "What is the difference between 'malloc' and 'calloc' in C?",
+      "options": [
+        "'malloc' allocates memory without initializing, 'calloc' allocates and initializes to zero",
+        "'malloc' allocates and initializes memory, 'calloc' only allocates memory",
+        "'malloc' is for dynamic memory, 'calloc' is for static memory",
+        "'calloc' allocates memory in multiples, 'malloc' allocates in single blocks"
+      ],
+      "answer": "'malloc' allocates memory without initializing, 'calloc' allocates and initializes to zero"
+    },
+    {
+      "question": "What is the purpose of the 'virtual' keyword in C++?",
+      "options": [
+        "To enable runtime polymorphism",
+        "To declare a constant method",
+        "To define a global variable",
+        "To make a class static"
+      ],
+      "answer": "To enable runtime polymorphism"
+    },
+    {
+      "question": "Which of the following is used to prevent inheritance of a class in C++?",
+      "options": ["final", "sealed", "private", "public"],
+      "answer": "final"
+    },
+    {
+      "question": "Which operator is used for dynamic type casting in C++?",
+      "options": ["dynamic_cast", "reinterpret_cast", "static_cast", "const_cast"],
+      "answer": "dynamic_cast"
+    },
+    {
+      "question": "What does the 'this' pointer represent in C++?",
+      "options": [
+        "A pointer to the current object instance",
+        "A reference to a class",
+        "A static variable in a class",
+        "The global scope of a program"
+      ],
+      "answer": "A pointer to the current object instance"
+    },
+    {
+      "question": "Which of the following is used to handle exceptions in C++?",
+      "options": ["try-catch", "if-else", "error handling", "switch-case"],
+      "answer": "try-catch"
+    },
+    {
+      "question": "Which of the following is the correct syntax for creating a destructor in C++?",
+      "options": [
+        "~ClassName() {}",
+        "ClassName::~ClassName() {}",
+        "destructor ClassName() {}",
+        "~ClassName::~ClassName() {}"
+      ],
+      "answer": "~ClassName() {}"
+    },
+    {
+      "question": "What is the purpose of the 'const' keyword in C++?",
+      "options": [
+        "To declare variables or methods that cannot be modified",
+        "To create a reference",
+        "To define a macro",
+        "To prevent inheritance"
+      ],
+      "answer": "To declare variables or methods that cannot be modified"
+    },
+    {
+      "question": "Which of the following is used to allocate memory for an array in C++?",
+      "options": ["new[]", "malloc()", "calloc()", "allocate()"],
+      "answer": "new[]"
+    },
+    {
+      "question": "What is the purpose of the 'friend' keyword in C++?",
+      "options": [
+        "To allow a function or another class access to the private members of a class",
+        "To declare a pointer to a function",
+        "To prevent a class from being inherited",
+        "To manage memory allocation"
+      ],
+      "answer": "To allow a function or another class access to the private members of a class"
+    },
+    {
+      "question": "Which of the following operators can be overloaded in C++?",
+      "options": ["+", "*", "[]", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Which of the following is used to implement a pure virtual function in C++?",
+      "options": [
+        "virtual void myFunction() = 0;",
+        "void myFunction();",
+        "pure void myFunction();",
+        "abstract void myFunction() {}"
+      ],
+      "answer": "virtual void myFunction() = 0;"
+    },
+    {
+      "question": "Which of the following best describes encapsulation in C++?",
+      "options": [
+        "The practice of keeping data and methods that operate on the data within a single unit",
+        "The use of inheritance to share code between classes",
+        "The separation of a program into different modules",
+        "The creation of a loop to iterate over an array"
+      ],
+      "answer": "The practice of keeping data and methods that operate on the data within a single unit"
+    },
+    {
+      "question": "What is a reference in C++?",
+      "options": [
+        "An alias for an existing variable",
+        "A pointer to a pointer",
+        "A constant variable",
+        "A method that returns an integer"
+      ],
+      "answer": "An alias for an existing variable"
+    },
+    {
+      "question": "Which of the following statements is true about templates in C++?",
+      "options": [
+        "Templates allow functions and classes to operate with generic types",
+        "Templates are only used for arrays",
+        "Templates are deprecated in modern C++",
+        "Templates are only used for function overloading"
+      ],
+      "answer": "Templates allow functions and classes to operate with generic types"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is a smart pointer in C++?",
+      "options": [
+        "An object that manages the lifetime of a dynamically allocated object",
+        "A pointer that points to multiple memory locations",
+        "A pointer that automatically updates its reference",
+        "A pointer that points to static memory"
+      ],
+      "answer": "An object that manages the lifetime of a dynamically allocated object"
+    },
+    {
+      "question": "Which of the following smart pointers is used for single ownership in C++?",
+      "options": ["std::unique_ptr", "std::shared_ptr", "std::auto_ptr", "std::weak_ptr"],
+      "answer": "std::unique_ptr"
+    },
+    {
+      "question": "What is the purpose of the 'override' keyword in C++?",
+      "options": [
+        "To indicate that a method is intended to override a base class method",
+        "To prevent a method from being overridden",
+        "To create an abstract method",
+        "To define a method with no implementation"
+      ],
+      "answer": "To indicate that a method is intended to override a base class method"
+    },
+    {
+      "question": "Which of the following is true about 'move semantics' in C++?",
+      "options": [
+        "Move semantics allow efficient transfer of resources from one object to another",
+        "Move semantics prevent the use of pointers",
+        "Move semantics are only used with arrays",
+        "Move semantics are deprecated in modern C++"
+      ],
+      "answer": "Move semantics allow efficient transfer of resources from one object to another"
+    },
+    {
+      "question": "Which of the following is a thread-safe smart pointer in C++?",
+      "options": ["std::shared_ptr", "std::unique_ptr", "std::weak_ptr", "std::auto_ptr"],
+      "answer": "std::shared_ptr"
+    },
+    {
+      "question": "What is RAII (Resource Acquisition Is Initialization) in C++?",
+      "options": [
+        "A programming idiom where resources are acquired and released automatically through object lifetime",
+        "A feature that allows runtime polymorphism",
+        "A technique to handle exceptions in the constructor",
+        "A method to allocate memory dynamically"
+      ],
+      "answer": "A programming idiom where resources are acquired and released automatically through object lifetime"
+    },
+    {
+      "question": "Which of the following best describes inheritance in C++?",
+      "options": [
+        "A mechanism by which one class can inherit properties and behaviors from another class",
+        "The practice of reusing the same variable name within multiple scopes",
+        "The ability to define multiple constructors within a class",
+        "The creation of pointers that can point to objects of any type"
+      ],
+      "answer": "A mechanism by which one class can inherit properties and behaviors from another class"
+    },
+    {
+      "question": "Which of the following is the best description of polymorphism in C++?",
+      "options": [
+        "The ability to call different methods using the same interface",
+        "The ability to define multiple constructors",
+        "The practice of defining the same method multiple times",
+        "The practice of creating multiple copies of an object"
+      ],
+      "answer": "The ability to call different methods using the same interface"
+    },
+    {
+      "question": "What is the purpose of 'std::mutex' in C++?",
+      "options": [
+        "To prevent multiple threads from accessing a resource at the same time",
+        "To create multiple threads in a program",
+        "To lock a file for reading or writing",
+        "To prevent memory leaks in dynamic memory allocation"
+      ],
+      "answer": "To prevent multiple threads from accessing a resource at the same time"
+    },
+    {
+      "question": "Which C++ feature allows you to specify that a function may not modify any member variables of a class?",
+      "options": ["const", "static", "mutable", "override"],
+      "answer": "const"
+    },
+    {
+      "question": "Which of the following is a key benefit of using templates in C++?",
+      "options": [
+        "Code reusability with different data types",
+        "Improved performance of string operations",
+        "Automatic memory management",
+        "Simpler syntax for loops"
+      ],
+      "answer": "Code reusability with different data types"
+    },
+    {
+      "question": "What does ‘std::weak_ptr’ do in C++?",
+      "options": [
+        "It creates a non-owning reference to an object managed by std::shared_ptr",
+        "It creates a copy of an object",
+        "It holds a pointer that cannot be dereferenced",
+        "It creates a pointer with weak memory allocation"
+      ],
+      "answer": "It creates a non-owning reference to an object managed by std::shared_ptr"
+    },
+    {
+      "question": "What is the purpose of the ‘decltype’ keyword in C++?",
+      "options": [
+        "To deduce the type of an expression at compile-time",
+        "To declare a new data type",
+        "To create a template specialization",
+        "To define the type of a variable as ‘constant’"
+      ],
+      "answer": "To deduce the type of an expression at compile-time"
+    },
+    {
+      "question": "What is the difference between ‘std::vector’ and ‘std::list’ in C++?",
+      "options": [
+        "‘std::vector’ provides random access, while ‘std::list’ provides sequential access",
+        "‘std::list’ is more efficient for random access than ‘std::vector’",
+        "‘std::vector’ stores elements as key-value pairs, while ‘std::list’ does not",
+        "‘std::vector’ automatically deallocates memory, while ‘std::list’ does not"
+      ],
+      "answer": "‘std::vector’ provides random access, while ‘std::list’ provides sequential access"
+    },
+    {
+      "question": "What is the benefit of using ‘std::shared_ptr’ over raw pointers in C++?",
+      "options": [
+        "Automatic memory management and reference counting",
+        "Faster access to memory",
+        "Simplified syntax for pointer dereferencing",
+        "Increased memory allocation speed"
+      ],
+      "answer": "Automatic memory management and reference counting"
+    }
+  ]
+}

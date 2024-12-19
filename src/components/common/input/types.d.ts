@@ -4,7 +4,7 @@ export interface InputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   onClick?: () => void
   className?: string
-  type?: 'text' | 'password' | 'email' | 'number' | 'tel'
+  type?: string
   disabled?: boolean
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
@@ -14,4 +14,9 @@ export interface InputProps {
   placeholder?: string
   inputSizeClassName?: string
   wrapperClassName?: string
+  name?: string
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement> & React.ChangeEvent<HTMLInputElement>) => void
+  leftElement?: React.ReactNode
 }

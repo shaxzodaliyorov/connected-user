@@ -1,0 +1,465 @@
+{
+  "junior": [
+    {
+      "question": "What is the default value of a boolean variable in Java?",
+      "options": ["false", "true", "null", "0"],
+      "answer": "false"
+    },
+    {
+      "question": "Which of the following is not a valid data type in Java?",
+      "options": ["byte", "int", "string", "float"],
+      "answer": "string"
+    },
+    {
+      "question": "What does the 'public' keyword mean in Java?",
+      "options": [
+        "The method or variable can be accessed by any other class",
+        "The method or variable can only be accessed by the class itself",
+        "The method or variable can only be accessed by classes in the same package",
+        "It specifies the return type of the method"
+      ],
+      "answer": "The method or variable can be accessed by any other class"
+    },
+    {
+      "question": "Which method is used to compare two strings in Java?",
+      "options": ["equals()", "compare()", "compareTo()", "match()"],
+      "answer": "equals()"
+    },
+    {
+      "question": "What is the size of an 'int' variable in Java?",
+      "options": ["4 bytes", "2 bytes", "8 bytes", "1 byte"],
+      "answer": "4 bytes"
+    },
+    {
+      "question": "Which of the following is not a primitive data type in Java?",
+      "options": ["String", "int", "boolean", "char"],
+      "answer": "String"
+    },
+    {
+      "question": "Which of the following is the correct way to declare an array in Java?",
+      "options": ["int[] arr = new int[10];", "int arr = new int[10];", "array int[10];", "int arr[10];"],
+      "answer": "int[] arr = new int[10];"
+    },
+    {
+      "question": "Which of the following is used to terminate a loop in Java?",
+      "options": ["break", "stop", "exit", "return"],
+      "answer": "break"
+    },
+    {
+      "question": "What is the return type of a constructor in Java?",
+      "options": ["It has no return type", "int", "void", "Object"],
+      "answer": "It has no return type"
+    },
+    {
+      "question": "Which of these is not a Java keyword?",
+      "options": ["static", "interface", "extends", "implement"],
+      "answer": "implement"
+    },
+    {
+      "question": "Which class is the superclass of all classes in Java?",
+      "options": ["Object", "Class", "Main", "Base"],
+      "answer": "Object"
+    },
+    {
+      "question": "What does the 'void' keyword mean in Java?",
+      "options": [
+        "The method does not return any value",
+        "The method returns an integer",
+        "The method returns a string",
+        "The method is private"
+      ],
+      "answer": "The method does not return any value"
+    },
+    {
+      "question": "Which of these statements is used to handle exceptions in Java?",
+      "options": ["try-catch", "if-else", "switch-case", "for-loop"],
+      "answer": "try-catch"
+    },
+    {
+      "question": "How do you declare a constant in Java?",
+      "options": ["final", "const", "static", "immutable"],
+      "answer": "final"
+    },
+    {
+      "question": "Which operator is used to concatenate two strings in Java?",
+      "options": ["+", "-", "*", "&"],
+      "answer": "+"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "options": [
+        "It makes a variable or method unchangeable",
+        "It allows overriding methods",
+        "It allows extending a class",
+        "It ensures a method is executed last"
+      ],
+      "answer": "It makes a variable or method unchangeable"
+    },
+    {
+      "question": "Which of the following is a checked exception in Java?",
+      "options": ["IOException", "RuntimeException", "NullPointerException", "ArithmeticException"],
+      "answer": "IOException"
+    },
+    {
+      "question": "What does the 'this' keyword refer to in Java?",
+      "options": ["The current object", "The parent class", "The method itself", "The return type"],
+      "answer": "The current object"
+    },
+    {
+      "question": "How is a constructor defined in Java?",
+      "options": [
+        "It has the same name as the class",
+        "It has a different name than the class",
+        "It has a return type",
+        "It cannot have parameters"
+      ],
+      "answer": "It has the same name as the class"
+    },
+    {
+      "question": "What is method overloading in Java?",
+      "options": [
+        "Defining multiple methods with the same name but different parameters",
+        "Defining multiple methods with the same name and parameters",
+        "Defining methods with the same name but different return types",
+        "Overriding a method in a subclass"
+      ],
+      "answer": "Defining multiple methods with the same name but different parameters"
+    },
+    {
+      "question": "What is the purpose of the 'super' keyword in Java?",
+      "options": [
+        "To refer to the superclass of the current object",
+        "To define a superclass",
+        "To create a new instance of a class",
+        "To override a method"
+      ],
+      "answer": "To refer to the superclass of the current object"
+    },
+    {
+      "question": "Which method is called to start a thread in Java?",
+      "options": ["start()", "run()", "init()", "begin()"],
+      "answer": "start()"
+    },
+    {
+      "question": "What is the difference between '== operator' and 'equals()' method in Java?",
+      "options": [
+        "'==' compares object references, 'equals()' compares the contents of the objects",
+        "'==' compares values, 'equals()' compares references",
+        "'==' compares integers, 'equals()' compares strings",
+        "'==' compares booleans, 'equals()' compares floats"
+      ],
+      "answer": "'==' compares object references, 'equals()' compares the contents of the objects"
+    },
+    {
+      "question": "What is the output of the following code snippet?\nint a = 5;\nSystem.out.println(++a);",
+      "options": ["6", "5", "7", "Error"],
+      "answer": "6"
+    },
+    {
+      "question": "Which of the following is an interface in Java?",
+      "options": ["Runnable", "Thread", "ArrayList", "HashMap"],
+      "answer": "Runnable"
+    },
+    {
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": ["extends", "implements", "inherits", "super"],
+      "answer": "extends"
+    },
+    {
+      "question": "Which access modifier allows access within the same package but not from outside?",
+      "options": ["default", "public", "private", "protected"],
+      "answer": "default"
+    },
+    {
+      "question": "Which collection class allows you to store key-value pairs in Java?",
+      "options": ["HashMap", "ArrayList", "HashSet", "LinkedList"],
+      "answer": "HashMap"
+    },
+    {
+      "question": "What is the difference between an interface and an abstract class in Java?",
+      "options": [
+        "An abstract class can have concrete methods, but an interface cannot",
+        "An interface can have concrete methods, but an abstract class cannot",
+        "An abstract class cannot be inherited, but an interface can",
+        "There is no difference"
+      ],
+      "answer": "An abstract class can have concrete methods, but an interface cannot"
+    },
+    {
+      "question": "Which method is used to find the length of an array in Java?",
+      "options": ["length", "size()", "getLength()", "count()"],
+      "answer": "length"
+    }
+  ],
+  "middle": [
+    {
+      "question": "What is a 'final' method in Java?",
+      "options": [
+        "A method that cannot be overridden",
+        "A method that cannot be called",
+        "A method that must be overridden",
+        "A method that can only be called once"
+      ],
+      "answer": "A method that cannot be overridden"
+    },
+    {
+      "question": "What is the default value of a reference variable in Java?",
+      "options": ["null", "undefined", "0", "empty"],
+      "answer": "null"
+    },
+    {
+      "question": "Which of the following is used to serialize an object in Java?",
+      "options": ["Serializable interface", "Externalizable interface", "Cloneable interface", "Comparable interface"],
+      "answer": "Serializable interface"
+    },
+    {
+      "question": "Which statement is true about Java memory management?",
+      "options": [
+        "Java uses automatic garbage collection",
+        "Java requires manual memory allocation and deallocation",
+        "Java does not manage memory",
+        "Memory is managed using the 'free()' function"
+      ],
+      "answer": "Java uses automatic garbage collection"
+    },
+    {
+      "question": "What is the purpose of the 'volatile' keyword in Java?",
+      "options": [
+        "It guarantees visibility of changes to variables across threads",
+        "It allows variables to be changed only once",
+        "It makes a variable constant",
+        "It increases the performance of variable access"
+      ],
+      "answer": "It guarantees visibility of changes to variables across threads"
+    },
+    {
+      "question": "What is method overriding in Java?",
+      "options": [
+        "When a subclass provides a specific implementation of a method already defined in its superclass",
+        "When two methods have the same name but different parameters",
+        "When a method has the same name as its class",
+        "When a method calls another method within the same class"
+      ],
+      "answer": "When a subclass provides a specific implementation of a method already defined in its superclass"
+    },
+    {
+      "question": "What is the role of the 'transient' keyword in Java?",
+      "options": [
+        "To exclude a field from serialization",
+        "To prevent a method from being inherited",
+        "To allow multiple inheritance",
+        "To create a thread-safe variable"
+      ],
+      "answer": "To exclude a field from serialization"
+    },
+    {
+      "question": "What is the difference between 'throw' and 'throws' in Java?",
+      "options": [
+        "'throw' is used to explicitly throw an exception, while 'throws' is used in the method signature to declare exceptions",
+        "'throws' is used for checked exceptions, 'throw' is used for unchecked exceptions",
+        "'throws' is used to catch exceptions, 'throw' is used to define exceptions",
+        "There is no difference between the two"
+      ],
+      "answer": "'throw' is used to explicitly throw an exception, while 'throws' is used in the method signature to declare exceptions"
+    },
+    {
+      "question": "What does the 'synchronized' keyword do in Java?",
+      "options": [
+        "It ensures that a method or block of code is accessed by only one thread at a time",
+        "It synchronizes data between classes",
+        "It optimizes memory management",
+        "It makes a variable constant"
+      ],
+      "answer": "It ensures that a method or block of code is accessed by only one thread at a time"
+    },
+    {
+      "question": "Which of the following is used to create a custom unchecked exception in Java?",
+      "options": ["Extend RuntimeException", "Extend Exception", "Implement Serializable", "Extend Throwable"],
+      "answer": "Extend RuntimeException"
+    },
+    {
+      "question": "What is the difference between shallow copy and deep copy in Java?",
+      "options": [
+        "Shallow copy copies object references, while deep copy copies the actual object",
+        "Shallow copy is faster than deep copy",
+        "Deep copy copies references only",
+        "There is no difference between the two"
+      ],
+      "answer": "Shallow copy copies object references, while deep copy copies the actual object"
+    },
+    {
+      "question": "What is the result of trying to divide an integer by zero in Java?",
+      "options": ["An ArithmeticException is thrown", "It returns infinity", "It returns NaN", "It returns 0"],
+      "answer": "An ArithmeticException is thrown"
+    },
+    {
+      "question": "What is a functional interface in Java?",
+      "options": [
+        "An interface that has only one abstract method",
+        "An interface that has no methods",
+        "An interface that allows multiple inheritance",
+        "An interface that defines a function template"
+      ],
+      "answer": "An interface that has only one abstract method"
+    },
+    {
+      "question": "Which class in Java is used to handle input and output streams?",
+      "options": [
+        "InputStream and OutputStream",
+        "Reader and Writer",
+        "FileReader and FileWriter",
+        "BufferReader and BufferWriter"
+      ],
+      "answer": "InputStream and OutputStream"
+    },
+    {
+      "question": "What is the result of the following expression in Java?\nSystem.out.println(10/3);",
+      "options": ["3", "3.33", "0", "Error"],
+      "answer": "3"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the purpose of the 'Callable' interface in Java?",
+      "options": [
+        "It is used to return a result from a thread",
+        "It is used to schedule tasks to run periodically",
+        "It is used to call methods within a class",
+        "It is used to create custom annotations"
+      ],
+      "answer": "It is used to return a result from a thread"
+    },
+    {
+      "question": "Which of the following is a thread-safe collection in Java?",
+      "options": ["ConcurrentHashMap", "HashMap", "ArrayList", "HashSet"],
+      "answer": "ConcurrentHashMap"
+    },
+    {
+      "question": "What is the purpose of the 'ForkJoinPool' in Java?",
+      "options": [
+        "It is used for parallel task execution by breaking tasks into smaller subtasks",
+        "It is used for managing single-threaded tasks",
+        "It is used to manage database connections",
+        "It is used for handling file input and output"
+      ],
+      "answer": "It is used for parallel task execution by breaking tasks into smaller subtasks"
+    },
+    {
+      "question": "What is the 'volatile' keyword in Java used for in the context of multithreading?",
+      "options": [
+        "It ensures that changes to a variable are visible to all threads",
+        "It prevents the variable from being updated",
+        "It allows multiple threads to modify the same variable",
+        "It stops a thread from executing"
+      ],
+      "answer": "It ensures that changes to a variable are visible to all threads"
+    },
+    {
+      "question": "Which design pattern does the 'StringBuilder' class implement in Java?",
+      "options": ["Builder pattern", "Singleton pattern", "Factory pattern", "Observer pattern"],
+      "answer": "Builder pattern"
+    },
+    {
+      "question": "What is the main difference between 'Runnable' and 'Callable' in Java?",
+      "options": [
+        "'Callable' returns a result, while 'Runnable' does not",
+        "'Runnable' throws exceptions, while 'Callable' does not",
+        "'Runnable' runs synchronously, while 'Callable' runs asynchronously",
+        "There is no difference"
+      ],
+      "answer": "'Callable' returns a result, while 'Runnable' does not"
+    },
+    {
+      "question": "What is the primary purpose of the 'Stream' API in Java?",
+      "options": [
+        "To process collections of objects in a functional programming style",
+        "To handle network communication",
+        "To manage database connections",
+        "To perform file I/O operations"
+      ],
+      "answer": "To process collections of objects in a functional programming style"
+    },
+    {
+      "question": "What is the difference between 'Iterator' and 'ListIterator' in Java?",
+      "options": [
+        "'ListIterator' allows bidirectional traversal, while 'Iterator' only allows forward traversal",
+        "'Iterator' allows bidirectional traversal, while 'ListIterator' allows only forward traversal",
+        "'Iterator' can modify elements, while 'ListIterator' cannot",
+        "'ListIterator' is thread-safe, while 'Iterator' is not"
+      ],
+      "answer": "'ListIterator' allows bidirectional traversal, while 'Iterator' only allows forward traversal"
+    },
+    {
+      "question": "What is the difference between 'notify()' and 'notifyAll()' in Java?",
+      "options": [
+        "'notify()' wakes up a single waiting thread, while 'notifyAll()' wakes up all waiting threads",
+        "'notify()' wakes up all threads, while 'notifyAll()' wakes up only one thread",
+        "'notifyAll()' is used for synchronous operations, while 'notify()' is used for asynchronous operations",
+        "'notifyAll()' is more efficient than 'notify()'"
+      ],
+      "answer": "'notify()' wakes up a single waiting thread, while 'notifyAll()' wakes up all waiting threads"
+    },
+    {
+      "question": "How does the 'compareTo()' method work in Java?",
+      "options": [
+        "It compares two objects and returns an integer indicating their relative ordering",
+        "It compares the memory addresses of two objects",
+        "It checks if two objects are the same",
+        "It compares the lengths of two strings"
+      ],
+      "answer": "It compares two objects and returns an integer indicating their relative ordering"
+    },
+    {
+      "question": "What is the purpose of the ‘Optional’ class in Java?",
+      "options": [
+        "It provides a container that may or may not contain a non-null value",
+        "It is used to make parameters optional in method calls",
+        "It is used for lazy initialization of objects",
+        "It ensures that objects are immutable"
+      ],
+      "answer": "It provides a container that may or may not contain a non-null value"
+    },
+    {
+      "question": "What is the difference between ‘fail-fast’ and ‘fail-safe’ iterators in Java?",
+      "options": [
+        "‘Fail-fast’ iterators throw an exception if the collection is modified, while ‘fail-safe’ iterators do not",
+        "‘Fail-safe’ iterators are faster than ‘fail-fast’ iterators",
+        "‘Fail-fast’ iterators allow concurrent modification, while ‘fail-safe’ iterators do not",
+        "‘Fail-fast’ iterators are used for collections, while ‘fail-safe’ iterators are used for arrays"
+      ],
+      "answer": "‘Fail-fast’ iterators throw an exception if the collection is modified, while ‘fail-safe’ iterators do not"
+    },
+    {
+      "question": "What is the purpose of the ‘CompletableFuture’ class in Java?",
+      "options": [
+        "It is used for asynchronous programming with promises and callbacks",
+        "It is used to handle multi-threaded database connections",
+        "It is used to manage file I/O operations asynchronously",
+        "It is used to complete a thread’s execution"
+      ],
+      "answer": "It is used for asynchronous programming with promises and callbacks"
+    },
+    {
+      "question": "What is the ‘diamond operator’ used for in Java?",
+      "options": [
+        "To infer the type of a generic instance",
+        "To initialize an array",
+        "To perform bitwise operations",
+        "To create a singleton class"
+      ],
+      "answer": "To infer the type of a generic instance"
+    },
+    {
+      "question": "What is the purpose of the ‘PhantomReference’ class in Java?",
+      "options": [
+        "It allows a program to determine when an object has been finalized and garbage collected",
+        "It prevents objects from being garbage collected",
+        "It creates a reference that can never be dereferenced",
+        "It makes the object immutable"
+      ],
+      "answer": "It allows a program to determine when an object has been finalized and garbage collected"
+    }
+  ]
+}

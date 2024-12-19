@@ -1,0 +1,450 @@
+{
+  "junior": [
+    {
+      "question": "What is the correct syntax to print 'Hello, World!' in Python?",
+      "options": [
+        "print('Hello, World!')",
+        "echo('Hello, World!')",
+        "console.log('Hello, World!')",
+        "printf('Hello, World!')"
+      ],
+      "answer": "print('Hello, World!')"
+    },
+    {
+      "question": "How do you create a list in Python?",
+      "options": ["[1, 2, 3]", "{1, 2, 3}", "(1, 2, 3)", "<1, 2, 3>"],
+      "answer": "[1, 2, 3]"
+    },
+    {
+      "question": "Which of the following is used to start a function in Python?",
+      "options": ["def", "function", "func", "define"],
+      "answer": "def"
+    },
+    {
+      "question": "What is the output of 5 // 2 in Python?",
+      "options": ["2", "2.5", "3", "1"],
+      "answer": "2"
+    },
+    {
+      "question": "How do you access elements in a list?",
+      "options": [
+        "By index, starting from 0",
+        "By key-value pairs",
+        "By reference",
+        "You can't access elements in a list"
+      ],
+      "answer": "By index, starting from 0"
+    },
+    {
+      "question": "Which keyword is used to create a for loop in Python?",
+      "options": ["for", "loop", "repeat", "iterate"],
+      "answer": "for"
+    },
+    {
+      "question": "What is the correct way to create a comment in Python?",
+      "options": [
+        "# This is a comment",
+        "// This is a comment",
+        "<!-- This is a comment -->",
+        "/* This is a comment */"
+      ],
+      "answer": "# This is a comment"
+    },
+    {
+      "question": "How do you get the length of a list in Python?",
+      "options": ["len()", "length()", "count()", "size()"],
+      "answer": "len()"
+    },
+    {
+      "question": "What is the output of 'Hello'.upper()?",
+      "options": ["HELLO", "hello", "Hello", "error"],
+      "answer": "HELLO"
+    },
+    {
+      "question": "Which of the following is a valid way to create a dictionary in Python?",
+      "options": [
+        "{'name': 'Alice', 'age': 25}",
+        "['name', 'Alice', 'age', 25]",
+        "{'Alice', 25}",
+        "[{'name': 'Alice', 'age': 25}]"
+      ],
+      "answer": "{'name': 'Alice', 'age': 25}"
+    },
+    {
+      "question": "What is the output of the following code?\nprint(type(10))",
+      "options": ["<class 'int'>", "<class 'float'>", "<class 'number'>", "<class 'integer'>"],
+      "answer": "<class 'int'>"
+    },
+    {
+      "question": "Which keyword is used for error handling in Python?",
+      "options": ["try", "catch", "except", "throw"],
+      "answer": "try"
+    },
+    {
+      "question": "How do you create a tuple in Python?",
+      "options": ["(1, 2, 3)", "[1, 2, 3]", "{1, 2, 3}", "<1, 2, 3>"],
+      "answer": "(1, 2, 3)"
+    },
+    {
+      "question": "What is the difference between a list and a tuple in Python?",
+      "options": [
+        "A list is mutable, while a tuple is immutable",
+        "A tuple is mutable, while a list is immutable",
+        "They are both the same",
+        "A tuple is faster to access than a list"
+      ],
+      "answer": "A list is mutable, while a tuple is immutable"
+    },
+    {
+      "question": "How do you remove an element from a list in Python?",
+      "options": ["list.remove(element)", "list.delete(element)", "list.pop(element)", "list.erase(element)"],
+      "answer": "list.remove(element)"
+    }
+  ],
+  "strong_junior": [
+    {
+      "question": "What does the 'pass' statement do in Python?",
+      "options": [
+        "It does nothing and is used as a placeholder",
+        "It breaks out of a loop",
+        "It skips the current iteration",
+        "It raises an exception"
+      ],
+      "answer": "It does nothing and is used as a placeholder"
+    },
+    {
+      "question": "Which of the following methods adds an element to the end of a list?",
+      "options": ["append()", "insert()", "extend()", "add()"],
+      "answer": "append()"
+    },
+    {
+      "question": "Which of the following is true about Python variables?",
+      "options": [
+        "They are dynamically typed",
+        "They must be declared with their data type",
+        "They are immutable",
+        "They are statically typed"
+      ],
+      "answer": "They are dynamically typed"
+    },
+    {
+      "question": "Which operator is used to check if two variables point to the same object?",
+      "options": ["is", "==", "equals()", "like"],
+      "answer": "is"
+    },
+    {
+      "question": "What is the purpose of the 'self' keyword in Python classes?",
+      "options": [
+        "It refers to the instance of the class",
+        "It refers to the parent class",
+        "It is a special keyword used for static methods",
+        "It is used to initialize the class"
+      ],
+      "answer": "It refers to the instance of the class"
+    },
+    {
+      "question": "Which of the following is used to create a virtual environment in Python?",
+      "options": ["virtualenv", "venv", "createenv", "pyenv"],
+      "answer": "venv"
+    },
+    {
+      "question": "What is the correct way to handle exceptions in Python?",
+      "options": ["try: ... except: ...", "catch: ... try: ...", "handle: ... catch: ...", "try: ... handle: ..."],
+      "answer": "try: ... except: ..."
+    },
+    {
+      "question": "How do you reverse a list in Python?",
+      "options": ["list.reverse()", "list[::-1]", "Both A and B", "list.reversed()"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "What is the output of the following code?\nprint(bool(0))",
+      "options": ["False", "True", "None", "Error"],
+      "answer": "False"
+    },
+    {
+      "question": "Which of the following is not a built-in data type in Python?",
+      "options": ["set", "list", "map", "tuple"],
+      "answer": "map"
+    },
+    {
+      "question": "How can you iterate over the keys of a dictionary?",
+      "options": ["for key in dict.keys()", "for key in dict.values()", "for key, value in dict", "for key in dict"],
+      "answer": "for key in dict.keys()"
+    },
+    {
+      "question": "How do you check the memory usage of an object in Python?",
+      "options": ["sys.getsizeof()", "memory.get()", "len()", "sizeof()"],
+      "answer": "sys.getsizeof()"
+    },
+    {
+      "question": "Which of the following is not a valid way to declare a set in Python?",
+      "options": ["set()", "{1, 2, 3}", "[1, 2, 3]", "{}"],
+      "answer": "[1, 2, 3]"
+    },
+    {
+      "question": "Which method is used to convert a string to a list of characters?",
+      "options": ["list()", "split()", "str()", "map()"],
+      "answer": "list()"
+    },
+    {
+      "question": "What is a generator in Python?",
+      "options": [
+        "A function that returns an iterator and yields values",
+        "A function that returns a list",
+        "A function that runs once and returns a value",
+        "A function that only returns numbers"
+      ],
+      "answer": " A function that returns an iterator and yields values"
+    }
+  ],
+  "middle": [
+    {
+      "question": "Which of the following is a mutable data type in Python?",
+      "options": ["list", "tuple", "str", "int"],
+      "answer": "list"
+    },
+    {
+      "question": "How do you copy an object in Python?",
+      "options": ["copy.deepcopy()", "copy.copy()", "Both A and B", "object.copy()"],
+      "answer": "Both A and B"
+    },
+    {
+      "question": "What is the purpose of the '__init__' method in Python classes?",
+      "options": [
+        "It is a constructor used to initialize the class instance",
+        "It is a static method",
+        "It is used to define class methods",
+        "It is a method to delete the object"
+      ],
+      "answer": "It is a constructor used to initialize the class instance"
+    },
+    {
+      "question": "Which of the following modules is used for regular expressions in Python?",
+      "options": ["re", "regex", "regularexpression", "rexp"],
+      "answer": "re"
+    },
+    {
+      "question": "What does the 'nonlocal' keyword do in Python?",
+      "options": [
+        "It allows you to modify a variable in the outer (non-global) scope",
+        "It makes a variable global",
+        "It restricts the variable to the local scope",
+        "It removes the variable"
+      ],
+      "answer": "It allows you to modify a variable in the outer (non-global) scope"
+    },
+    {
+      "question": "How do you perform element-wise operations on arrays in Python?",
+      "options": ["Using NumPy", "Using array", "Using list comprehensions", "Using map()"],
+      "answer": "Using NumPy"
+    },
+    {
+      "question": "Which method is used to create an iterator in Python?",
+      "options": ["iter()", "iterator()", "next()", "generator()"],
+      "answer": "iter()"
+    },
+    {
+      "question": "How do you handle file input and output in Python?",
+      "options": ["open()", "file()", "read()", "input()"],
+      "answer": "open()"
+    },
+    {
+      "question": "What is a lambda function in Python?",
+      "options": [
+        "An anonymous function defined with the lambda keyword",
+        "A function that can only be called once",
+        "A function that returns a list",
+        "A method for string operations"
+      ],
+      "answer": "An anonymous function defined with the lambda keyword"
+    },
+    {
+      "question": "What is the difference between 'deepcopy' and 'shallow copy' in Python?",
+      "options": [
+        "Deepcopy copies all objects recursively, while shallow copy copies only the references",
+        "Shallow copy is faster than deepcopy",
+        "Deepcopy copies only primitive values",
+        "There is no difference"
+      ],
+      "answer": "Deepcopy copies all objects recursively, while shallow copy copies only the references"
+    },
+    {
+      "question": "What is the correct way to handle multiple exceptions in Python?",
+      "options": [
+        "Using a tuple of exceptions in a single except block",
+        "Using multiple try blocks",
+        "You can only handle one exception at a time",
+        "Using different try-except blocks for each exception"
+      ],
+      "answer": "Using a tuple of exceptions in a single except block"
+    },
+    {
+      "question": "What is a Python decorator?",
+      "options": [
+        "A function that modifies the behavior of another function",
+        "A function that returns a class",
+        "A method to convert a list into a tuple",
+        "A special type of string formatting"
+      ],
+      "answer": "A function that modifies the behavior of another function"
+    },
+    {
+      "question": "How do you remove duplicates from a list in Python?",
+      "options": [
+        "Convert the list to a set",
+        "Use list.remove_duplicates()",
+        "Use a for loop",
+        "Use the filter() method"
+      ],
+      "answer": "Convert the list to a set"
+    },
+    {
+      "question": "What is the 'with' statement used for in Python?",
+      "options": [
+        "It simplifies exception handling when working with resources like files",
+        "It is used for condition checking",
+        "It is an alternative to the if-else statement",
+        "It is used for defining classes"
+      ],
+      "answer": "It simplifies exception handling when working with resources like files"
+    },
+    {
+      "question": "Which of the following functions converts an integer to a string in Python?",
+      "options": ["str()", "int()", "string()", "toString()"],
+      "answer": "str()"
+    }
+  ],
+  "strong_middle": [
+    {
+      "question": "What is the purpose of the 'global' keyword in Python?",
+      "options": [
+        "It allows a function to modify a variable outside of its local scope",
+        "It defines a variable with global scope",
+        "It creates a global class",
+        "It restricts a variable to the local scope"
+      ],
+      "answer": "It allows a function to modify a variable outside of its local scope"
+    },
+    {
+      "question": "How can you handle memory management in Python?",
+      "options": [
+        "Python automatically manages memory using garbage collection",
+        "By manually allocating and deallocating memory",
+        "Using memory management functions like malloc() and free()",
+        "Using memory libraries"
+      ],
+      "answer": "Python automatically manages memory using garbage collection"
+    },
+    {
+      "question": "What is the purpose of the '__name__ == \"__main__\"' statement in Python?",
+      "options": [
+        "To check if a Python file is being run as the main program",
+        "To define the name of a class",
+        "To initialize a module",
+        "To check if a function is executed"
+      ],
+      "answer": "To check if a Python file is being run as the main program"
+    },
+    {
+      "question": "How do you handle time delays in Python?",
+      "options": ["Using time.sleep()", "Using wait()", "Using delay()", "Using datetime.time()"],
+      "answer": "Using time.sleep()"
+    },
+    {
+      "question": "What is the difference between a process and a thread in Python?",
+      "options": [
+        "A process has its own memory space, while threads share memory",
+        "Threads have their own memory space, while processes share memory",
+        "Processes are faster than threads",
+        "Threads can run independently, while processes can't"
+      ],
+      "answer": "A process has its own memory space, while threads share memory"
+    },
+    {
+      "question": "What does the 'yield' keyword do in Python?",
+      "options": [
+        "It returns a value and pauses the function, allowing it to be resumed later",
+        "It stops the execution of a function permanently",
+        "It raises an exception",
+        "It defines a lambda function"
+      ],
+      "answer": "It returns a value and pauses the function, allowing it to be resumed later"
+    },
+    {
+      "question": "Which library would you use for creating multi-threaded applications in Python?",
+      "options": ["threading", "multiprocessing", "asyncio", "concurrent"],
+      "answer": "threading"
+    },
+    {
+      "question": "What is the purpose of the 'GIL' (Global Interpreter Lock) in Python?",
+      "options": [
+        "It prevents multiple native threads from executing Python bytecodes at once",
+        "It prevents garbage collection",
+        "It locks the entire file system",
+        "It provides thread safety by locking shared variables"
+      ],
+      "answer": "It prevents multiple native threads from executing Python bytecodes at once"
+    },
+    {
+      "question": "What is the difference between 'map()' and 'filter()' in Python?",
+      "options": [
+        "'map()' applies a function to all items, while 'filter()' selects items based on a condition",
+        "'map()' is used for strings, while 'filter()' is used for numbers",
+        "'filter()' is faster than 'map()'",
+        "They are interchangeable"
+      ],
+      "answer": "'map()' applies a function to all items, while 'filter()' selects items based on a condition"
+    },
+    {
+      "question": "What is the 'asyncio' library used for in Python?",
+      "options": [
+        "It is used for writing asynchronous programs",
+        "It is used for parallel computing",
+        "It is used for threading",
+        "It is used for handling signals"
+      ],
+      "answer": "It is used for writing asynchronous programs"
+    },
+    {
+      "question": "How do you serialize and deserialize objects in Python?",
+      "options": ["Using the pickle module", "Using the json module", "Using the xml module", "Using the yaml module"],
+      "answer": "Using the pickle module"
+    },
+    {
+      "question": "What is the difference between ‘deepcopy()’ and ‘copy()’?",
+      "options": [
+        "Deepcopy copies everything recursively, while copy() creates a shallow copy",
+        "Deepcopy is faster than copy()",
+        "Copy() duplicates objects, while deepcopy() moves objects",
+        "There is no difference"
+      ],
+      "answer": "Deepcopy copies everything recursively, while copy() creates a shallow copy"
+    },
+    {
+      "question": "What does the ‘re’ module in Python provide?",
+      "options": [
+        "Support for regular expressions",
+        "Support for reading files",
+        "Support for recursion",
+        "Support for raising exceptions"
+      ],
+      "answer": "Support for regular expressions"
+    },
+    {
+      "question": "Which of the following is true about Python’s ‘collections’ module?",
+      "options": [
+        "It provides specialized data structures like namedtuples, deque, Counter, etc.",
+        "It allows you to handle file operations",
+        "It provides support for creating multiple processes",
+        "It is used to handle exception logging"
+      ],
+      "answer": "It provides specialized data structures like namedtuples, deque, Counter, etc."
+    },
+    {
+      "question": "Which method in Python is used to check whether all elements in an iterable are true?",
+      "options": ["all()", "any()", "is()", "every()"],
+      "answer": "all()"
+    }
+  ]
+}

@@ -12,4 +12,5 @@ type BoldTabsProps = {
   tabsClassName?: string
   tabClassName?: string
   onChange?: (value?: string) => void
+  isBg?: boolean
 }

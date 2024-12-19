@@ -1,25 +1,27 @@
-import { Button } from "@/components";
-import { StartNow } from "@/icons";
-import { IoReload } from "react-icons/io5";
+import {Button} from '@/components'
+import {MainCard} from '@/components/main-card'
+import {StartNow} from '@/icons'
+import {IoReload} from 'react-icons/io5'
 
 export const BoostSkills = () => (
-  <>
-    <h4 className="text-xl font-medium leading-[22px]  text-[#0C0C0C]">Boost Your Skills for Korea</h4>
-    <div className="pt-[6px]">
-      <p className="w-full text-base font-normal leading-6 text-[#0C0C0C]">
-        Boost your language skills for visa readiness.
-      </p>
-    </div>
-    <div className="flex pt-6 gap-4">
-      <Button leftIcon={<StartNow />} className="py-2 px-6" variant="primary">
+  <MainCard>
+    <h1 className="text-left text-[#0b0b0b] text-xl font-medium font-['Inter Display'] leading-snug">
+      Boost Your Skills for Korea
+    </h1>
+    <p className="text-left mt-[6px] text-[#0b0b0b] text-[15px] font-normal font-['Inter Display'] leading-normal">
+      Boost your language skills for visa readiness.
+    </p>
+    <div className="flex pt-6 items-center gap-x-3">
+      <Button size="sm" leftIcon={<StartNow />}>
         Start now
       </Button>
-      <button className="flex items-center gap-[6px] text-[#0062FF]  text-base font-medium leading-5 text-center">
-        <span>
-          <IoReload size={18} className="font-bold" />
-        </span>
+      <Button
+        size="sm"
+        className="bg-transparent text-[#0062ff] hover:bg-[#0062ff] hover:text-white"
+        leftIcon={<IoReload />}
+      >
         Fill out the form
-      </button>
+      </Button>
     </div>
-  </>
+  </MainCard>
 )
