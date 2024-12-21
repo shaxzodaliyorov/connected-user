@@ -6,6 +6,7 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import "swiper/css";
 import { useGetUser, useHandleRequest } from "@/hooks";
 import {
   useGetSaveJobIdsQuery,
