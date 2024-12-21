@@ -120,7 +120,7 @@ export const Test = ({setScore, score, quiz, setQuiz}: Props) => {
     <>
       <MainCard className="mt-6">
         <div className="w-full flex justify-between">
-          <h1 className="text-[32px] text-[#161C1C] font-bold leading-[51.2px] tracking-[0.14px] text-left">
+          <h1 className="text-[#0b0b0b] text-[32px] font-medium font-['Inter Display'] leading-[41.60px]">
             {t('Manufacturing & Industrial Skill')}
           </h1>
           <p className="text-[32px] font-normal leading-[51.2px] text-[#6E86FF] text-left">{formatTime(timeLeft)}</p>
@@ -136,7 +136,9 @@ export const Test = ({setScore, score, quiz, setQuiz}: Props) => {
           className="pt-6 mb-10"
         >
           <div className="flex">
-            <p className="text-xl font-medium leading-[22px] text-left">{quiz[currentQuestion]?.question}</p>
+            <p className="text-[#0b0b0b] text-xl font-medium font-['Inter Display'] leading-snug">
+              {quiz[currentQuestion]?.question}
+            </p>
           </div>
           <div className="py-6">
             <div className=" w-[120%] mr-[-10%] h-[1px] bg-[#F5F5F5] border-solid" />
@@ -167,7 +169,9 @@ export const Test = ({setScore, score, quiz, setQuiz}: Props) => {
                     whileTap={{scale: 1.1}}
                     transition={{duration: 0.3}}
                   ></motion.div>
-                  <span>{option}</span>
+                  <span className="text-[#0b0b0b] text-base font-normal font-['Inter Display'] leading-normal">
+                    {option}
+                  </span>
                 </motion.div>
                 <div className="w-full h-[1px] bg-[#F5F5F5]" />
               </>

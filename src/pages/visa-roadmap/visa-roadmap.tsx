@@ -77,14 +77,14 @@ export const VisaRoadMapPage = () => {
               <h4 className="text-[#1289F8] text-[32px] font-medium leading-[38.72px] text-left">Visa Calculation</h4>
               <p className="w-[80%]">Discover your visa score in under 2 minutes and see how you stack up!</p>
               <div className="pt-6">
-                <Button variant="primary" className="text-[#fff]">
+                <Button onClick={() => navigate('/visa-calculation')} variant="primary" className="text-[#fff]">
                   Start Your Test
                 </Button>
               </div>
             </div>
           </div>
-          <div className="w-1/2 bg-white rounded-[15px] p-[30px] ">
-            <img className="w-[297.41px] h-[301.52px] m-auto " src="./images/diagram.svg" alt="" />
+          <div className="w-1/2 h-[420px] bg-white rounded-[15px] p-[30px] ">
+            <img className="w-[483px] h-[390px] m-auto " src="./images/calculate.svg" alt="" />
           </div>
         </div>
       </div>

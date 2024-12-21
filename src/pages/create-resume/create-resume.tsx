@@ -76,7 +76,7 @@ export const CreateResume = () => {
   return (
     <section>
       <div className="py-6 container ">
-        <Link to="/notifications" className="flex items-center gap-x-2">
+        <Link to="/dashboard" className="flex items-center gap-x-2">
           <span>
             <MdOutlineArrowBackIos />
           </span>

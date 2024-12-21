@@ -2,9 +2,9 @@ import {cn} from '@/lib/utils'
 import {Button} from '@/components/ui/button'
 import {Calendar} from '@/components/ui/calendar'
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover'
-import {Props} from './types'
 import {useEffect, useState} from 'react'
 import dayjs from 'dayjs'
+import {Props} from './types'
 import {Calendar2} from '@/icons'
 
 export const DatePicker = ({

@@ -16,6 +16,7 @@ export enum ROUTES_NAME {
   DASHBOARD = '/dashboard',
   RESUME = '/resume',
   RESUME_DETAIL = '/my-resume/:id',
+  START_NOW = '/start-now',
   APPLICATION = '/application',
   SAVED_JOBS = '/saved-jobs',
   JOB_OFFER = '/job-offer',
@@ -38,4 +39,5 @@ export enum ROUTES_NAME {
   GET_VISA_HELP = '/get-visa-help',
   PROFILE = '/profile',
   MY_RESUME = '/my-resume',
+  VISA_CALCULATION = '/visa-calculation',
 }

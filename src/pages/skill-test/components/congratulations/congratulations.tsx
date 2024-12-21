@@ -10,6 +10,9 @@ import html2pdf from 'html2pdf.js'
 import {PdfContent} from './components/template/certificate'
 import {useTranslation} from 'react-i18next'
 import {MainCard} from '@/components/main-card'
+import {ALevel} from '../a-level/a-level'
+import {BLevel} from '../b-level'
+import {CLevel} from '../c-level'
 
 export const Congratulations = ({score, quiz}: {score: number | null; quiz: Quiz[]}) => {
   const [updateSkillLevel] = useSkillLevelTestUpdateMutation()
@@ -21,7 +24,7 @@ export const Congratulations = ({score, quiz}: {score: number | null; quiz: Quiz
   const user = useGetUser()
   const contentRef = useRef(null)
   const {t} = useTranslation()
-  const {grade, bgColor} = useGetGradeDetails(percentage)
+  const {grade} = useGetGradeDetails(percentage)
 
   const fetchSkillLevel = async () => {
     await handleRequest({
@@ -44,9 +47,19 @@ export const Congratulations = ({score, quiz}: {score: number | null; quiz: Quiz
           margin: [0.3, 0.3],
           filename: 'certificate.pdf',
           html2canvas: {scale: 1, useCORS: true},
-          jsPDF: {unit: 'in', format: 'a4', orientation: 'landscape'}, // Landscape orientation
+          jsPDF: {unit: 'in', format: 'a4', orientation: 'landscape'},
         })
         .save()
+    }
+  }
+
+  const renderLevel = () => {
+    if (percentage >= 85) {
+      return <ALevel score={Math.floor(percentage)} />
+    } else if (percentage >= 70 && percentage < 85) {
+      return <BLevel score={Math.floor(percentage)} />
+    } else {
+      return <CLevel score={Math.floor(percentage)} />
     }
   }
 
@@ -64,12 +77,13 @@ export const Congratulations = ({score, quiz}: {score: number | null; quiz: Quiz
         exit={{opacity: 0, y: -50}}
         transition={{duration: 0.7}}
       >
-        <div
+        {/* <div
           className="w-[100px] h-[100px] rounded-full text-white flex items-center justify-center m-auto mt-6 text-[44px] font-bold leading-[66px] text-center"
           style={{backgroundColor: bgColor}}
         >
           {grade}
-        </div>
+        </div> */}
+        <div className="w-full flex justify-center items-center">{renderLevel()}</div>
         <h1 className="text-[32px] font-normal leading-[41.6px] text-center text-[#0C0C0C] mt-[64px]">
           Closer to career goals!
         </h1>
