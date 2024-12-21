@@ -1,70 +1,76 @@
-import {SwiperSlide, Swiper} from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import {Card} from '../card'
-import {useEffect, useRef} from 'react'
-import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from 'react-icons/md'
-import {useGetUser, useHandleRequest} from '@/hooks'
-import {useGetSaveJobIdsQuery, useLazyGetAllJobsQuery, useSaveJobMutation} from '@/features/jobs'
-import {toast} from '@/components/ui/use-toast'
-import {useTranslation} from 'react-i18next'
-import {useNavigate} from 'react-router-dom'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Card } from "../card";
+import { useEffect, useRef } from "react";
+import {
+  MdOutlineArrowBackIos,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
+import { useGetUser, useHandleRequest } from "@/hooks";
+import {
+  useGetSaveJobIdsQuery,
+  useLazyGetAllJobsQuery,
+  useSaveJobMutation,
+} from "@/features/jobs";
+import { toast } from "@/components/ui/use-toast";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export const RealTimeSwiper = () => {
-  const swiperRef = useRef<any>(null)
+  const swiperRef = useRef<any>(null);
 
-  const handleRequest = useHandleRequest()
-  const [getAllJobs, {data: {data: jobs = []} = {}}] = useLazyGetAllJobsQuery()
-  const [saveJob] = useSaveJobMutation()
-  const {data: {data: saveJobIds = []} = {}} = useGetSaveJobIdsQuery('')
-  const {t} = useTranslation()
-  const navigate = useNavigate()
-  const user = useGetUser()
+  const handleRequest = useHandleRequest();
+  const [getAllJobs, { data: { data: jobs = [] } = {} }] =
+    useLazyGetAllJobsQuery();
+  const [saveJob] = useSaveJobMutation();
+  const { data: { data: saveJobIds = [] } = {} } = useGetSaveJobIdsQuery("");
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const user = useGetUser();
 
   const fetchJobs = async () => {
     await handleRequest({
       request: async () => {
-        const response = await getAllJobs({per_page: 20}).unwrap()
-        return response
+        const response = await getAllJobs({ per_page: 20 }).unwrap();
+        return response;
       },
-    })
-  }
+    });
+  };
 
   const onSaveAndUnsaved = async (id: string) => {
     if (!user) {
-      navigate('/sign-in')
-      return
+      navigate("/sign-in");
+      return;
     }
     await handleRequest({
       request: async () => {
         const response = await saveJob({
           id,
-          type: saveJobIds.includes(id) ? 'unfavorite' : 'favorite',
-        })
-        return response
+          type: saveJobIds.includes(id) ? "unfavorite" : "favorite",
+        });
+        return response;
       },
       onSuccess: () => {
-        toast({title: t('Job Saved'), variant: 'default'})
+        toast({ title: t("Job Saved"), variant: "default" });
       },
-    })
-  }
+    });
+  };
 
   useEffect(() => {
-    fetchJobs()
-  }, [])
+    fetchJobs();
+  }, []);
 
   const handlePrev = () => {
     if (swiperRef.current) {
-      swiperRef.current.slidePrev()
+      swiperRef.current.slidePrev();
     }
-  }
+  };
 
   const handleNext = () => {
     if (swiperRef.current) {
-      swiperRef.current.slideNext()
+      swiperRef.current.slideNext();
     }
-  }
+  };
 
   return (
     <section className="py-10">
@@ -86,14 +92,14 @@ export const RealTimeSwiper = () => {
 
         <div className="w-full">
           <Swiper
-            onSwiper={swiper => (swiperRef.current = swiper)}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             spaceBetween={15}
             slidesPerView={4}
             loop
             breakpoints={{
-              640: {slidesPerView: 1},
-              768: {slidesPerView: 2},
-              1024: {slidesPerView: 4},
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
             }}
           >
             {jobs.map((job, index) => (
@@ -103,7 +109,7 @@ export const RealTimeSwiper = () => {
                   salary_max={job.salary_max}
                   salary_min={job.salary_min}
                   title={job.job_title}
-                  location={job.location || '---'}
+                  location={job.location || "---"}
                   type_of_employment={job.type_of_employment}
                   key={job._id}
                   company={job.company}
@@ -115,5 +121,5 @@ export const RealTimeSwiper = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
