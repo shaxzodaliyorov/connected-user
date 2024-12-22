@@ -1,6 +1,6 @@
 import {BoldTabs} from '@/components'
 import {MdOutlineArrowBackIos} from 'react-icons/md'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {useGetAllNotificationsQuery} from '@/features/notifications'
 import {useState} from 'react'
 import dayjs from 'dayjs'
@@ -10,6 +10,7 @@ import {NoNotifications} from '@/icons/no-notifications'
 export const Notifications = () => {
   const {data: {data: notifications} = {}, isLoading} = useGetAllNotificationsQuery('')
   const [filter, setFilter] = useState<'all' | 'unread'>('all')
+  const navigate = useNavigate()
 
   return (
     <section className="w-full">
@@ -46,7 +47,11 @@ export const Notifications = () => {
                 notifications
                   ?.filter(c => (filter === 'all' ? true : !c.is_read))
                   ?.map((item, index) => (
-                    <div key={index} className="w-full p-[20px] bg-white rounded-[15px]">
+                    <div
+                      onClick={() => navigate(`/notification/${item?._id}`)}
+                      key={index}
+                      className="w-full cursor-pointer p-[20px] bg-white rounded-[15px]"
+                    >
                       <div className="flex justify-between items-center">
                         <h1 className="w-3/4 text-[#0C0C0C] text-2xl font-medium leading-[30px]">{item.title}</h1>
                         {item.is_read ? ' ' : <span className="w-[10px] h-[10px] bg-[#12B76A] rounded-full"></span>}

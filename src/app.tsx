@@ -1,49 +1,50 @@
-import {Routes, useLocation} from 'react-router-dom'
-import {AppRouter} from './router'
-import {ROUTES} from './routes'
-import {useLazyGetUserQuery} from './features/user'
-import {useHandleRequest} from './hooks'
-import {useEffect} from 'react'
-import {useGetAllJobsQuery} from './features/jobs'
-import {useStorage} from './utils/storage'
-import {Toaster} from './components/ui/toaster'
-import {MainLayout} from './components/layouts'
-import {PageLoader} from './components/page-loader'
+import { Routes, useLocation } from "react-router-dom";
+import { AppRouter } from "./router";
+import { ROUTES } from "./routes";
+import { useLazyGetUserQuery } from "./features/user";
+import { useHandleRequest } from "./hooks";
+import { useEffect } from "react";
+import { useGetAllJobsQuery, useGetSaveJobIdsQuery } from "./features/jobs";
+import { useStorage } from "./utils/storage";
+import { Toaster } from "./components/ui/toaster";
+import { MainLayout } from "./components/layouts";
+import { PageLoader } from "./components/page-loader";
 
 export const App = () => {
-  const [getUser, {isError, isLoading = true}] = useLazyGetUserQuery()
-  const {isLoading: isLoadingJobs} = useGetAllJobsQuery({})
-  const {pathname} = useLocation()
-  const handleRequest = useHandleRequest()
+  const [getUser, { isError, isLoading = true }] = useLazyGetUserQuery();
+  const { isLoading: isLoadingJobs } = useGetAllJobsQuery({});
+  const { isLoading: isLoadingSavedJobs } = useGetSaveJobIdsQuery("");
+  const { pathname } = useLocation();
+  const handleRequest = useHandleRequest();
 
   const fetchUser = async () => {
     await handleRequest({
       request: async () => {
-        const result = await getUser('')
-        return result
+        const result = await getUser("");
+        return result;
       },
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     if (isError) {
-      useStorage.removeCredentials()
-      return
+      useStorage.removeCredentials();
+      return;
     }
 
-    const token = useStorage.getTokens().accessToken?.split(' ')[1]
+    const token = useStorage.getTokens().accessToken?.split(" ")[1];
     if (token) {
-      fetchUser()
+      fetchUser();
     }
-  }, [pathname, isError])
+  }, [pathname, isError]);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
-      {isLoading || isLoadingJobs ? (
+      {isLoading || isLoadingJobs || isLoadingSavedJobs ? (
         <PageLoader />
       ) : (
         <MainLayout>
@@ -52,5 +53,5 @@ export const App = () => {
         </MainLayout>
       )}
     </>
-  )
-}
+  );
+};

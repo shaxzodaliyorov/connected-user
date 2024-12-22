@@ -18,6 +18,14 @@ table {
   animation: spinner-rotation 1s linear infinite;
 }
 
+.ring-offset-background {
+  display: none;
+}
+
+.whitespace-nowrap {
+  display: none;
+}
+
 @keyframes spinner-rotation {
   0% {
     transform: rotate(0deg);

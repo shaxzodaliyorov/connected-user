@@ -1,4 +1,4 @@
 export interface AvatarUploadProps {
-  value: string | null
-  onChange: (file: string | null) => void
+  value: string | File;
+  onChange: (file: string | File | null) => void;
 }

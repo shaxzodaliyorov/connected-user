@@ -1,10 +1,17 @@
-import {Resume} from '@/components'
+import {Loader} from '@/components/loader'
+import {useGetAllMyResumeQuery} from '@/features/resume/resume'
 import {AddResume, Transition, UserIcons, WarningIcon} from '@/icons'
 import {MdOutlineArrowBackIos} from 'react-icons/md'
 import {Link, useNavigate} from 'react-router-dom'
+import {ListItem} from './components'
+import {Resume} from '@/types'
+import {useTranslation} from 'react-i18next'
 
 export const MyResume = () => {
+  const {data: {data: resumes = []} = {}, isLoading} = useGetAllMyResumeQuery('')
   const navigate = useNavigate()
+  const {t} = useTranslation()
+
   return (
     <section className="w-full">
       <div className="w-full container">
@@ -15,36 +22,22 @@ export const MyResume = () => {
             </span>
             Back
           </Link>
-          <button className="flex items-center text-base font-medium leading-5 text-left gap-[6px] text-[#0062FF] mr-6">
+          <button
+            onClick={() => navigate('/add-resume')}
+            className="flex items-center text-base font-medium leading-5 text-left gap-[6px] text-[#0062FF] mr-6"
+          >
             <AddResume />
-            Add Resume
+            {t('Add Resume')}
           </button>
         </div>
         <div className="w-full flex gap-4 items-start">
           <div className="w-[80%]">
             <div className="flex flex-col gap-y-4">
-              <Resume
-                onclick={() => navigate('/my-resume/1')}
-                title="Frontend Developer (React, React Native, Nextjs)"
-                img="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                status="91%"
-                update="20.09.2024"
-                views="12"
-                seen="12"
-                offers="12"
-                matchUp="12"
-              />
-              <Resume
-                onclick={() => navigate('/my-resume/1')}
-                title="Frontend Developer (React, React Native, Nextjs)"
-                img="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                status="91%"
-                update="20.09.2024"
-                views="12"
-                seen="12"
-                offers="12"
-                matchUp="12"
-              />
+              {isLoading ? (
+                <Loader className="h-80 flex items-center justify-center" />
+              ) : (
+                resumes?.map((resume: Resume) => <ListItem key={resume._id} resumeItem={resume} />)
+              )}
             </div>
           </div>
 

@@ -1,9 +1,12 @@
 import {ROUTES_NAME} from '@/enum'
 import {
   Application,
+  BoostSkillsForm,
+  Chat,
   Company,
   ContactPage,
   CreateResume,
+  EditResume,
   ForgotPassword,
   HomePage,
   JobDetails,
@@ -23,6 +26,7 @@ import {
   SignUp,
   SkillLevelTest,
   SkillTestPage,
+  VisaCalculation,
   VisaNewDetails,
   VisaNews,
   VisaRoadMapPage,
@@ -132,5 +136,21 @@ export const ROUTES = [
   {
     path: ROUTES_NAME.RESUME_DETAIL,
     element: <ResumeDetails />,
+  },
+  {
+    path: ROUTES_NAME.VISA_CALCULATION,
+    element: <VisaCalculation />,
+  },
+  {
+    path: ROUTES_NAME.START_NOW,
+    element: <BoostSkillsForm />,
+  },
+  {
+    path: ROUTES_NAME.EDIT_RESUME,
+    children: [{path: ':id', element: <EditResume />}],
+  },
+  {
+    path: ROUTES_NAME.CHAT,
+    element: <Chat />,
   },
 ]

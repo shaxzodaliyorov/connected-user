@@ -31,12 +31,12 @@ export const SavedJobs = () => {
             {savedJobs?.map((jobItem, index) => (
               <JobCard
                 key={index}
-                id={jobItem.job._id}
+                id={jobItem?.job?._id}
                 location={jobItem.job?.location}
                 type_of_employment={jobItem?.job?.type_of_employment}
                 company={jobItem.company?.company_name as string}
-                job_title={jobItem.job.job_title}
-                logo={jobItem.company?.logo}
+                job_title={jobItem?.job?.job_title}
+                logo={jobItem?.company?.logo}
               />
             ))}
           </div>

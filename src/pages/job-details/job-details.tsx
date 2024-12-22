@@ -239,7 +239,10 @@ export const JobDetails = () => {
             </div>
           </div>
           <div className="w-1/3 flex flex-col gap-4">
-            <div className="w-full p-[20px] flex max-h-[80px] items-center gap-4 bg-white rounded-[15px]">
+            <div
+              onClick={() => navigate(`/jobs/${job?.company?._id}/company`)}
+              className="w-full p-[20px] flex max-h-[80px] items-center gap-4 bg-white rounded-[15px]"
+            >
               <img
                 className="w-10 h-10 gap-0 opacity-[0px] object-cover border-[2px] rounded-full border-[#F5F5F5]"
                 src={job?.company?.logo}
