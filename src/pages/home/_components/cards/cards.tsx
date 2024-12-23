@@ -20,6 +20,7 @@ export const Cards = () => (
               variant="primary"
               className="text-[#fff]"
               rightIcon={<ArrowRight />}
+              onClick={() => open("https://company.urconnection.co.kr/sign-up")}
             >
               Register Now
             </Button>
