@@ -9,7 +9,10 @@ export const Partnering = () => (
               Partnering with 2,000 Successful Businesses.
             </h4>
             <div className="pt-3">
-              <p className="w-[70%]">Our employers offer job seekers diverse opportunities that match their skills.</p>
+              <p className="w-[70%]">
+                Our employers offer job seekers diverse opportunities that match
+                their skills.
+              </p>
             </div>
             <div className="pt-6"></div>
           </div>
@@ -19,7 +22,7 @@ export const Partnering = () => (
         </div>
       </div>
       <div className="pt-[40px]">
-        <div className="container  w-full h-[2px] rounded-full bg-[#C5C5C5]" />
+        <div className="container  w-full h-[1px] rounded-full bg-[#C5C5C5]" />
       </div>
       <div className="pt-[40px]">
         <div className="flex justify-between">
@@ -33,4 +36,4 @@ export const Partnering = () => (
       </div>
     </div>
   </section>
-)
+);

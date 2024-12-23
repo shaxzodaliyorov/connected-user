@@ -74,22 +74,20 @@ export const RealTimeSwiper = () => {
   };
 
   return (
-    <section className="py-10">
-      <div className="container mx-auto">
-        <div className="w-full flex justify-between items-center mb-6">
-          <button
-            onClick={handlePrev}
-            className="w-10 h-10 rounded-full bg-white relative top-48 z-20 -left-5 shadow-[0px_1.82px_1.82px_0px_#00000026]"
-          >
-            <MdOutlineArrowBackIos className="ml-3" />
-          </button>
-          <button
-            onClick={handleNext}
-            className="w-10 h-10 rounded-full bg-white relative top-48 z-20 left-5 shadow-[0px_1.82px_1.82px_0px_#00000026]"
-          >
-            <MdOutlineArrowForwardIos className="ml-3 " />
-          </button>
-        </div>
+    <section className="w-full pb-[120px]">
+      <div className="container relative mx-auto">
+        <button
+          onClick={handlePrev}
+          className="w-10 h-10 absolute -left-5 rounded-full bg-white  -translate-y-1/2 top-1/2 z-20  shadow-[0px_1.82px_1.82px_0px_#00000026]"
+        >
+          <MdOutlineArrowBackIos className="ml-3" />
+        </button>
+        <button
+          onClick={handleNext}
+          className="w-10 h-10 absolute -right-5  top-1/2 -translate-y-1/2 rounded-full bg-white  z-20 shadow-[0px_1.82px_1.82px_0px_#00000026]"
+        >
+          <MdOutlineArrowForwardIos className="ml-3 " />
+        </button>
 
         <div className="w-full">
           <Swiper
@@ -106,7 +104,11 @@ export const RealTimeSwiper = () => {
             {jobs.map((job, index) => (
               <SwiperSlide key={index}>
                 <Card
-                  onSaveClick={() => onSaveAndUnsaved(job._id)}
+                  onClick={() => navigate(`/jobs/${job._id}`)}
+                  onSaveClick={(e) => {
+                    e.stopPropagation();
+                    onSaveAndUnsaved(job._id);
+                  }}
                   salary_max={job.salary_max}
                   salary_min={job.salary_min}
                   title={job.job_title}

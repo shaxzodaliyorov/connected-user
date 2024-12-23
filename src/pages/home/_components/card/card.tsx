@@ -1,8 +1,9 @@
-import {FC} from 'react'
-import {CardProps} from './types'
-import {FillLike, Like, Location, Portfolio} from '@/icons'
-import {cn} from '@/lib/utils'
-import {useGetSaveJobIdsQuery} from '@/features/jobs'
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import { FC } from "react";
+import { CardProps } from "./types";
+import { FillLike, Like, Location, Portfolio } from "@/icons";
+import { cn } from "@/lib/utils";
+import { useGetSaveJobIdsQuery } from "@/features/jobs";
 
 export const Card: FC<CardProps> = ({
   className,
@@ -14,29 +15,38 @@ export const Card: FC<CardProps> = ({
   type_of_employment,
   id,
   onSaveClick,
+  onClick,
 }) => {
-  const {data: {data: saveJobIds = []} = {}} = useGetSaveJobIdsQuery('')
+  const { data: { data: saveJobIds = [] } = {} } = useGetSaveJobIdsQuery("");
 
   return (
-    <div className={cn('bg-white p-5 h-[284px] w-[272px] rounded-[15px] relative shadow', className)}>
+    <div
+      onClick={onClick}
+      className={cn(
+        "bg-white p-5 h-[284px] cursor-pointer w-[272px] rounded-[15px] relative shadow",
+        className
+      )}
+    >
       <div className="w-full">
         <div className="h-[113px]">
-          <p className="text-[#0b0b0b] text-xl font-normal  line-clamp-3 font-['Inter Display'] leading-7">{title}</p>
+          <p className="text-[#0b0b0b] text-xl font-normal  line-clamp-3 font-['Inter Display'] leading-7">
+            {title}
+          </p>
           <p className="text-[#0062ff] text-base font-normal font-['Inter Display'] leading-[17.60px]">
-            {salary_min?.toLocaleString('en-US', {
-              style: 'currency',
-              currency: 'USD',
-            })}{' '}
-            -{' '}
-            {salary_max?.toLocaleString('en-US', {
-              style: 'currency',
-              currency: 'USD',
+            {salary_min?.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}{" "}
+            -{" "}
+            {salary_max?.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
             })}
           </p>
         </div>
         <div>
           <p className="text-[#7d7d7d] text-sm flex items-center gap-x-1 font-normal font-['Inter Display'] leading-[16.80px]">
-            <Location /> {location || '---'}
+            <Location /> {location || "---"}
           </p>
           <p className="text-[#7d7d7d] text-sm flex items-center gap-x-1 font-normal font-['Inter Display'] leading-[16.80px]">
             <Portfolio /> {type_of_employment}
@@ -58,9 +68,13 @@ export const Card: FC<CardProps> = ({
           </div>
         </div>
         <button onClick={onSaveClick}>
-          {saveJobIds && saveJobIds.includes(id as string) ? <FillLike /> : <Like />}
+          {saveJobIds && saveJobIds.includes(id as string) ? (
+            <FillLike />
+          ) : (
+            <Like />
+          )}
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
