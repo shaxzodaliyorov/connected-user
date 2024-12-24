@@ -22,6 +22,7 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
   const { addQuery, getQuery } = useManageQuery();
   const { t } = useTranslation();
   const [isQuestionLoading, setQuestionLoading] = useState(false);
+  const [difficulty, setDifficulty] = useState<number>(1);
 
   const getFetchQuestion = async () => {
     setQuestionLoading(true);
@@ -34,13 +35,13 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
         messages: [
           {
             role: "system",
-            content: "Siz yordam beruvchi chatbot hisoblanasiz.",
+            content: "You are considered a helpful chatbot.",
           },
           {
             role: "user",
             content: `Give me a multiple choice question in JSON format for the topic ${getQuery(
               "skill"
-            )} at difficulty level ${1}. only response JSON format example: {question:""; options:["","","",""]; answer:""}.`,
+            )} at difficulty level ${difficulty}. only response JSON format example: {question:""; options:["","","",""]; answer:""}.`,
           },
         ],
       }),
@@ -66,6 +67,7 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
     getFetchQuestion();
     if (!isQuestionLoading) {
       const nextQuestion = currentQuestion + 1;
+      setDifficulty((level) => (level < 10 ? level + 1 : level));
       if (nextQuestion < 20) {
         navigate(
           `/skill-level-test/test?testSetup=test&language=${language}&accessibility=${query.get(
