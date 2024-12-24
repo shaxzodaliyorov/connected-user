@@ -1,6 +1,5 @@
 import { Button } from "@/components/common";
 import { motion } from "framer-motion";
-import { Quiz } from "../test/types";
 import { useSkillLevelTestUpdateMutation } from "@/features/skill-level";
 import {
   useGetGradeDetails,
@@ -17,15 +16,9 @@ import { ALevel } from "../a-level/a-level";
 import { BLevel } from "../b-level";
 import { CLevel } from "../c-level";
 
-export const Congratulations = ({
-  score,
-  quiz,
-}: {
-  score: number | null;
-  quiz: Quiz[];
-}) => {
+export const Congratulations = ({ score }: { score: number | null }) => {
   const [updateSkillLevel] = useSkillLevelTestUpdateMutation();
-  const totalQuestions = quiz.length;
+  const totalQuestions = 20;
   const correctAnswers = score || 0;
   const percentage = (correctAnswers / totalQuestions) * 100;
   const handleRequest = useHandleRequest();
