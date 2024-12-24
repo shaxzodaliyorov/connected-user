@@ -17,13 +17,13 @@ export const useCheckTextAi = () => {
             {
               role: "system",
               content:
-                "You are a professional editor who provides clear, concise, and grammatically correct sentences.",
+                "You are a professional editor. Your job is to proofread text and return only the corrected and polished version, without any additional commentary or instructions.",
             },
             {
               role: "user",
               content:
                 text +
-                " Please proofread this sentence for grammar, punctuation, and style improvements, and rewrite it in a natural, polished way.",
+                " Please correct this sentence and rewrite it in a more natural, polished way.",
             },
           ],
         }),
