@@ -1,13 +1,15 @@
-import {MainCard} from '@/components/main-card'
-import {Employees, Industry} from '@/icons'
-import {MdOutlineArrowBackIos} from 'react-icons/md'
-import {Link, useParams} from 'react-router-dom'
+import { MainCard } from "@/components/main-card";
+import { Employees, Industry } from "@/icons";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+import { Link, useParams } from "react-router-dom";
 // import {Button, JobCard} from '@/components'
-import {useGetCompanyQuery} from '@/features/company'
-import {Loader} from '@/components/loader'
+import { useGetCompanyQuery } from "@/features/company";
+import { Loader } from "@/components/loader";
 export const Company = () => {
-  const {id} = useParams()
-  const {data: {data: company} = {}, isLoading} = useGetCompanyQuery(id as string)
+  const { id } = useParams();
+  const { data: { data: company } = {}, isLoading } = useGetCompanyQuery(
+    id as string
+  );
 
   return (
     <section className="w-full">
@@ -27,9 +29,17 @@ export const Company = () => {
             <div className="py-4">
               <div className="w-full rounded-[15px] bg-white">
                 <div className="relative">
-                  <img className="w-full object-cover h-[260px] rounded-t-[15px]" src="http://surl.li/byjkul" alt="" />
+                  <img
+                    className="w-full object-cover h-[260px] rounded-t-[15px]"
+                    src="http://surl.li/byjkul"
+                    alt=""
+                  />
                   <div className="absolute left-[30px] top-[190px] shadow-[0px_4px_20px_0px_#A8A7A540] p-[5px] rounded-[20px] bg-white">
-                    <img className="object-cover w-[100px] h-[100px] rounded-[10px]" src={company?.logo} alt="" />
+                    <img
+                      className="object-cover w-[100px] h-[100px] rounded-[10px]"
+                      src={company?.logo}
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div className="pt-5">
@@ -40,9 +50,13 @@ export const Company = () => {
                       </h3>
                       <div className="pt-2">
                         <p className="text-[16px] font-medium leading-[25.6px] text-left">
-                          <span className="text-[#7D7D7D]">{company?.location}</span>{' '}
-                          <span className="text-[#7D7D7D]">•</span>{' '}
-                          <span className="text-[#0C0C0C]">{company?.date_founded}</span>
+                          <span className="text-[#7D7D7D]">
+                            {company?.location}
+                          </span>{" "}
+                          <span className="text-[#7D7D7D]">•</span>{" "}
+                          <span className="text-[#0C0C0C]">
+                            {company?.date_founded}
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -76,11 +90,15 @@ export const Company = () => {
             </div>
             <div className="flex flex-col gap-4">
               <MainCard>
-                <h5 className="text-xl font-medium leading-[24.2px] text-left text-[#0C0C0C]">About Company</h5>
+                <h5 className="text-xl font-medium leading-[24.2px] text-left text-[#0C0C0C]">
+                  About Company
+                </h5>
                 <div className="pt-4">
                   <p
                     className="text-[16px] font-normal leading-[25.6px] text-left text-[#0C0C0C]"
-                    dangerouslySetInnerHTML={{__html: company?.description || ''}}
+                    dangerouslySetInnerHTML={{
+                      __html: company?.description || "",
+                    }}
                   ></p>
                 </div>
               </MainCard>
@@ -89,7 +107,11 @@ export const Company = () => {
                   Working at {company?.company_name}
                 </h5>
                 <div className="flex justify-between gap-3 items-center pt-4">
-                  <img className="w-[412px] h-[372px] rounded-[15px] " src={company?.images[0]} alt="" />
+                  <img
+                    className="w-[412px] h-[372px] rounded-[15px] "
+                    src={company?.images[0]}
+                    alt=""
+                  />
                   <div className="flex flex-col gap-3">
                     <img
                       className="w-80 h-[180px] gap-0 opacity-[0px] rounded-[15px] object-cover left-[606px] top-[1037px]"
@@ -101,7 +123,7 @@ export const Company = () => {
                       src={company?.images[1]}
                       alt=""
                     />
-                  </div>{' '}
+                  </div>{" "}
                   <div className="flex flex-col gap-3">
                     <img
                       className="w-80 h-[180px] gap-0 opacity-[0px] rounded-[15px] object-cover left-[606px] top-[1037px]"
@@ -131,5 +153,5 @@ export const Company = () => {
         )}
       </div>
     </section>
-  )
-}
+  );
+};

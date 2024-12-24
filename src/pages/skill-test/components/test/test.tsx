@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useManageQuery, useQuery } from "@/hooks";
-import { Props, Quiz } from "./types";
+import { Props } from "./types";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import { MainCard } from "@/components/main-card";
 import { ListIcons } from "@/icons";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const Test = ({ setScore, score, quiz, setQuiz }: Props) => {
+export const Test = ({ setScore, quiz, setQuiz }: Props) => {
   const query = useQuery();
   const currentQuestion = Number(query.get("currentQuestion")) || 0;
   const language = query.get("language");
