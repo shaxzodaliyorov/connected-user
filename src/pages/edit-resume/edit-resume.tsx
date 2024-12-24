@@ -92,6 +92,8 @@ export const EditResume = () => {
     });
   };
 
+  console.log(resume?.employee_type);
+
   useEffect(() => {
     if (resume) {
       form.setValue("position", resume?.position as any);
@@ -123,7 +125,7 @@ export const EditResume = () => {
       form.setValue("country", resume?.country);
       form.setValue("city", resume?.city);
     }
-  }, [resume, form]);
+  }, [resume, form, resume?.employee_type]);
 
   return (
     <section>
