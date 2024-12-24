@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HEADER_PUBLIC_LINKS, PRIVATE_ROUTES } from "@/constants";
 import { useGetUser } from "@/hooks";
@@ -10,9 +11,33 @@ import { Account } from "../account";
 export const Header = () => {
   const user = useGetUser();
   const { t } = useTranslation();
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasShadow(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="w-full  h-[58px] fixed z-20 top-4 left-1/2 -translate-x-1/2 ">
-      <header className=" h-full w-full container px-5 justify-between flex items-center bg-white rounded-[15px]">
+    <div
+      className={`w-full  fixed z-50 ${
+        hasShadow ? "top-0 h-[70px]" : "top-4 h-[58px]"
+      } left-1/2 -translate-x-1/2 transition-all duration-300`}
+    >
+      <header
+        className={`h-full w-full container px-5 justify-between flex items-center bg-white  transition-all ${
+          hasShadow
+            ? "shadow-[0px_10px_15px_0px_rgba(0,0,0,0.10)] rounded-b-[15px] "
+            : "rounded-[15px]"
+        } `}
+      >
         <Link to="/">
           <img src="/images/logo.svg" alt="urconnected logo" />
         </Link>
@@ -34,7 +59,7 @@ export const Header = () => {
         <div className="flex gap-x-8 ">
           <LanguageDropdown />
           {!user && (
-            <div className="flex  items-center gap-x-[36px]">
+            <div className="flex items-center gap-x-[36px]">
               <Link
                 to="/sign-in"
                 className="text-[#0b0b0b] flex items-center gap-x-[6px] text-base font-medium font-['Inter Display']"
