@@ -26,12 +26,36 @@ export const Partnering = () => (
       </div>
       <div className="pt-[40px]">
         <div className="flex justify-between">
-          <img className="opacity-45" src="./images/hyundai.svg" alt="" />
-          <img className="opacity-45" src="./images/cjenm.svg" alt="" />
-          <img className="opacity-45" src="./images/lotion.svg" alt="" />
-          <img className="opacity-45" src="./images/megazone.svg" alt="" />
-          <img className="opacity-45" src="./images/ably.svg" alt="" />
-          <img className="opacity-45" src="./images/pay.svg" alt="" />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/hyundai.svg"
+            alt=""
+          />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/cjenm.svg"
+            alt=""
+          />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/lotion.svg"
+            alt=""
+          />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/megazone.svg"
+            alt=""
+          />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/ably.svg"
+            alt=""
+          />
+          <img
+            className="grayscale transition-all duration-150 cursor-pointer opacity-50 hover:opacity-100 hover:grayscale-0"
+            src="./images/pay.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>

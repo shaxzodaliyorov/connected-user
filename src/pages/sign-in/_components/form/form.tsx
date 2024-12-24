@@ -10,10 +10,10 @@ import { useUserLoginMutation } from "@/features/auth";
 import { useStorage } from "@/utils/storage";
 import { toast } from "@/components/ui/use-toast";
 import { useTranslation } from "react-i18next";
-import { RiKakaoTalkFill } from "react-icons/ri";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
+import { SiKakaotalk } from "react-icons/si";
+import { FcGoogle } from "react-icons/fc";
 
 export const Form = () => {
   const form = useForm<FormValues>();
@@ -111,17 +111,17 @@ export const Form = () => {
           <div className="w-[30%] h-[1px] bg-[#838383]" />
         </div>
         <div className="grid gap-x-2.5 grid-cols-4">
-          <Button variant="secondary">
-            <RiKakaoTalkFill />
+          <Button variant="secondary" className="hover:text-[#e83446]">
+            <SiKakaotalk />
           </Button>
-          <Button variant="secondary">
+          <Button variant="secondary" className="hover:text-black">
             <FaApple />
           </Button>
-          <Button variant="secondary">
+          <Button variant="secondary" className="hover:text-[#0062ff]">
             <FaFacebook />
           </Button>
-          <Button variant="secondary">
-            <FaGoogle />
+          <Button variant="secondary" className="grayscale hover:grayscale-0">
+            <FcGoogle />
           </Button>
         </div>
       </form>
