@@ -1,11 +1,15 @@
-import {MainCard} from '@/components/main-card'
-import {BoldTabs, Button} from '@/components'
-import {Calculation, SkillLevelTestIcons} from '@/icons'
-import {useNavigate} from 'react-router-dom'
-import {Information, VisaRoadmap} from './components'
+import { MainCard } from "@/components/main-card";
+import { BoldTabs, Button } from "@/components";
+import { Calculation, SkillLevelTestIcons } from "@/icons";
+import { useNavigate } from "react-router-dom";
+import { Information, VisaRoadmap } from "./components";
+import { VISAS } from "@/constants/visa";
+import { useState } from "react";
 
 export const VisaRoadMapPage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [filtered, setFiltered] = useState("All");
+
   return (
     <section className="w-full">
       <div className="w-full container">
@@ -25,13 +29,16 @@ export const VisaRoadMapPage = () => {
             </div>
             <div className="pt-[14px]">
               <p className="w-[75%] text-xl font-normal text-[#0C0C0C]">
-                Take our professional test to showcase your capabilities and stand out to employers.
+                Take our professional test to showcase your capabilities and
+                stand out to employers.
               </p>
             </div>
             <div className="pt-6">
               <Button
                 className="px-9"
-                onClick={() => navigate('/skill-level-test/test?testSetup=start')}
+                onClick={() =>
+                  navigate("/skill-level-test/test?testSetup=start")
+                }
                 variant="primary"
               >
                 Start Your Test
@@ -46,48 +53,69 @@ export const VisaRoadMapPage = () => {
           <VisaRoadmap />
         </div>
         <div className="pt-[120px]">
-          <h3 className="text-[32px] font-medium leading-[38.72px] text-left text-[#0C0C0C]">All Visa Information</h3>
+          <h3 className="text-[32px] font-medium leading-[38.72px] text-left text-[#0C0C0C]">
+            All Visa Information
+          </h3>
           <BoldTabs
             isBg
             tabClassName="bg-transparent"
+            onChange={(tab) => setFiltered(tab as string)}
+            defaultValue={filtered}
             tabs={[
-              {label: 'All (37)', value: 'c-1'},
-              {label: 'Employment (14)', value: 'c-2'},
-              {label: 'Study (2)', value: 'c-3'},
-              {label: 'Residence Type (7)', value: 'c-4'},
-              {label: 'Travel (3)', value: 'c-4'},
-              {label: 'Other (11)', value: 'c-4'},
+              { label: "All (37)", value: "All" },
+              { label: "Employment (14)", value: "Employment" },
+              { label: "Study (2)", value: "Study" },
+              { label: "Residence Type (7)", value: "Residence Visas" },
+              { label: "Travel (3)", value: "Travel Visas" },
+              { label: "Other (11)", value: "Other" },
             ]}
           />
           <div className="grid grid-cols-4 gap-4">
-            {new Array(8).fill(' ').map((_, index) => (
-              <Information key={index} title="C-4" text="Foreign Language Instructor" />
+            {VISAS.filter((c) => c.category === filtered).map((visa, index) => (
+              <Information
+                key={index}
+                title={visa.code}
+                text={visa.description}
+              />
             ))}
           </div>
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <Button fullWidth variant="outline">
               Show more
             </Button>
-          </div>
+          </div> */}
         </div>
         <div className="flex gap-x-4 mt-[120px]">
           <div className="w-1/2 bg-white rounded-[15px] p-[30px]">
             <Calculation />
             <div className="pt-[127px]">
-              <h4 className="text-[#1289F8] text-[32px] font-medium leading-[38.72px] text-left">Visa Calculation</h4>
-              <p className="w-[80%]">Discover your visa score in under 2 minutes and see how you stack up!</p>
+              <h4 className="text-[#1289F8] text-[32px] font-medium leading-[38.72px] text-left">
+                Visa Calculation
+              </h4>
+              <p className="w-[80%]">
+                Discover your visa score in under 2 minutes and see how you
+                stack up!
+              </p>
               <div className="pt-6">
-                <Button onClick={() => navigate('/visa-calculation')} variant="primary" className="text-[#fff]">
+                <Button
+                  onClick={() => navigate("/visa-calculation")}
+                  variant="primary"
+                  className="text-[#fff]"
+                >
                   Start Your Test
                 </Button>
               </div>
             </div>
           </div>
           <div className="w-1/2 h-[420px] bg-white rounded-[15px] p-[30px] ">
-            <img className="w-[483px] h-[390px] m-auto " src="./images/calculate.svg" alt="" />
+            <img
+              className="w-[483px] h-[390px] m-auto "
+              src="./images/calculate.svg"
+              alt=""
+            />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
