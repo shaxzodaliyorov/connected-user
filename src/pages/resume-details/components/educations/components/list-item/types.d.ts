@@ -1,5 +1,7 @@
-import {Education} from '@/types/resume'
+import { Education, Resume } from "@/types/resume";
 
 export type Props = {
-  education: Education
-}
+  isLastItem?: boolean;
+  education: Education;
+  resume: Resume;
+};
