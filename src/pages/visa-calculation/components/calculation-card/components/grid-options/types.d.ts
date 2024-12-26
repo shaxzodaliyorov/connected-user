@@ -1,14 +1,10 @@
 type Option = {
-  label: string
-  value: string
-  subLabel?: string
-  point: number
-}
+  label: string;
+  value: number;
+};
 
-export type Props = {
-  options: Option[]
-  value: {point: number; value: string}
-  onChange: (value: {point: number; value: string}) => void
-  contentClassName?: string
-  labelClassName?: string
-}
+export type GridOptionsProps = {
+  options: Option[];
+  value: number;
+  onChange: (value: number) => void;
+};

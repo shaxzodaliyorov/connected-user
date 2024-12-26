@@ -1,4 +1,4 @@
-import {ROUTES_NAME} from '@/enum'
+import { ROUTES_NAME } from "@/enum";
 import {
   Application,
   BoostSkillsForm,
@@ -21,6 +21,7 @@ import {
   Profile,
   ResumeDetails,
   SavedJobs,
+  SelectVisaCalculation,
   SettingsPage,
   SignIn,
   SignUp,
@@ -29,8 +30,9 @@ import {
   VisaCalculation,
   VisaNewDetails,
   VisaNews,
+  VisaResult,
   VisaRoadMapPage,
-} from '@/pages'
+} from "@/pages";
 
 export const ROUTES = [
   {
@@ -147,10 +149,18 @@ export const ROUTES = [
   },
   {
     path: ROUTES_NAME.EDIT_RESUME,
-    children: [{path: ':id', element: <EditResume />}],
+    children: [{ path: ":id", element: <EditResume /> }],
   },
   {
     path: ROUTES_NAME.CHAT,
     element: <Chat />,
   },
-]
+  {
+    path: ROUTES_NAME.VISA_SELECT_CALCULATION,
+    element: <SelectVisaCalculation />,
+  },
+  {
+    path: ROUTES_NAME.VISA_RESULT,
+    element: <VisaResult />,
+  },
+];

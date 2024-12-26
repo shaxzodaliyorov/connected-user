@@ -98,7 +98,7 @@ export const VisaRoadMapPage = () => {
               </p>
               <div className="pt-6">
                 <Button
-                  onClick={() => navigate("/visa-calculation")}
+                  onClick={() => navigate("/visa-select-calculation")}
                   variant="primary"
                   className="text-[#fff]"
                 >
