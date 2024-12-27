@@ -69,3 +69,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.sendbird-iconbutton{
+  display: none !important;
+}
+
