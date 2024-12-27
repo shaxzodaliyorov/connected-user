@@ -8,6 +8,8 @@ import { Controller, useForm } from "react-hook-form";
 import { toast } from "../ui/use-toast";
 import { CloseIcon } from "@/icons/close";
 import { Button, Select } from "../common";
+import { PlusIcon } from "@/icons/plus";
+import { useNavigate } from "react-router-dom";
 
 export const ApplyModal: FC<ApplyModalProps> = ({ open, onClose, job_id }) => {
   const { data: { data: resumes } = {} } = useGetAllMyResumeQuery("");
@@ -22,6 +24,8 @@ export const ApplyModal: FC<ApplyModalProps> = ({ open, onClose, job_id }) => {
   } = useForm({
     defaultValues: { resume: "" },
   });
+
+  const navigate = useNavigate();
 
   const onSubmit = async (formData: { resume: string }) => {
     if (!formData.resume) {
@@ -80,6 +84,15 @@ export const ApplyModal: FC<ApplyModalProps> = ({ open, onClose, job_id }) => {
                 />
               )}
             />
+          </div>
+          <div className="flex justify-end pt-4">
+            <button
+              type="button"
+              onClick={() => navigate("/add-resume")}
+              className="flex text-[#0062FF]  items-center gap-x-2"
+            >
+              <PlusIcon /> Add resume
+            </button>
           </div>
           <div className="pt-8">
             <Button

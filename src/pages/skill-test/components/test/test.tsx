@@ -3,7 +3,6 @@ import { useManageQuery, useQuery } from "@/hooks";
 import { Props } from "./types";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components";
 import { motion } from "framer-motion";
 import { MainCard } from "@/components/main-card";
@@ -20,7 +19,6 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
 
   const navigate = useNavigate();
   const { addQuery, getQuery } = useManageQuery();
-  const { t } = useTranslation();
   const [isQuestionLoading, setQuestionLoading] = useState(false);
   const [difficulty, setDifficulty] = useState<number>(1);
 
@@ -154,8 +152,8 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
     <>
       <MainCard className="mt-6">
         <div className="w-full flex justify-between">
-          <h1 className="text-[#0b0b0b] text-[32px] font-medium font-['Inter Display'] leading-[41.60px]">
-            {t("Manufacturing & Industrial Skill")}
+          <h1 className="text-[#0b0b0b] text-[32px] capitalize font-medium font-['Inter Display'] leading-[41.60px]">
+            {`${getQuery("skill")} Skill test`}
           </h1>
           <p className="text-[32px] font-normal leading-[51.2px] text-[#6E86FF] text-left">
             {formatTime(timeLeft)}

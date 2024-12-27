@@ -41,6 +41,8 @@ export const Profile = () => {
   useEffect(() => {
     if (!user?.visa_help) {
       setOpen(true);
+    } else {
+      setOpen(false);
     }
   }, [user?.visa_help]);
 

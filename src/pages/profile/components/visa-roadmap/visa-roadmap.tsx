@@ -23,8 +23,6 @@ export const VisaRoadmap = () => {
     user?.visa_help?.visa_status || ""
   );
 
-  console.log(currentIndex + 1);
-
   return (
     <MainCard>
       <h1 className="text-[#0b0b0b] text-xl font-medium font-['Inter Display'] leading-snug">
@@ -47,7 +45,7 @@ export const VisaRoadmap = () => {
                     : currentIndex < index
                     ? "bg-[#E8E8E8]"
                     : "bg-white"
-                }  h-6 border w-6 flex items-center justify-center  !z-10 rounded-full `}
+                }  h-6 border w-6 flex items-center justify-center !z-10 rounded-full `}
               >
                 {index === currentCategory.length - 1 ? (
                   <LuFlagTriangleRight className="w-[13.80px] h-[13.80px] ml-1 text-[#12B76A]" />

@@ -146,7 +146,7 @@ export const UserSkills = () => {
     <div className=" flex gap-4">
       <div className="w-1/2 border border-[#F5F5F5] p-[15px] rounded-[15px]">
         <Avatar
-          src={user?.profile_photo || ""}
+          src={user?.profile_photo || "/public/images/placeholder.webp"}
           name=""
           className="w-[72px] h-[72px]"
         />
@@ -196,9 +196,12 @@ export const UserSkills = () => {
         </div>
         <div className="border border-[#F5F5F5] p-[14px] rounded-[8px]">
           <h3 className="flex gap-[6px] items-center text-sm font-normal leading-[16.94px] text-left">
-            Penalty <Penalty className="text-[#12B76A]" />
+            Penalty <Penalty className="text-[#F79009] " />
           </h3>
-          <ProfileProgress progress={user?.visa_help?.violation ? 100 : 50} />
+          <ProfileProgress
+            className="bg-[#F79009]"
+            progress={user?.visa_help?.violation ? 100 : 0}
+          />
         </div>
       </div>
     </div>

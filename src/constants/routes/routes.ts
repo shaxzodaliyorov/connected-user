@@ -1,6 +1,6 @@
 export enum AUTH_ROUTE {
   LOGIN = "/sign-in",
-  REGISTER = "/register",
+  REGISTER = "/sign-up",
   FORGOT_PASSWORD = "/forgot-password",
 }
 
