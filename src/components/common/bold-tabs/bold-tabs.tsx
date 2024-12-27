@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { BoldTabsProps } from "./types";
 
 export const BoldTabs: React.FC<BoldTabsProps> = ({
   tabs,
@@ -11,61 +12,52 @@ export const BoldTabs: React.FC<BoldTabsProps> = ({
   isBg,
   defaultValue,
 }) => {
-  const [activeTabIdx, setActiveTabIdx] = useState(0);
-
-  const handleTab = (tabIndex: number) => {
-    setActiveTabIdx(tabs.indexOf(tabs[tabIndex]));
-    if (onChange && tabIndex) {
-      onChange(tabs[tabIndex].value);
-    }
-  };
-
-  useEffect(() => {
-    if (tabs?.length && defaultTabIndex !== undefined) {
-      setActiveTabIdx(defaultTabIndex);
-    }
-  }, [tabs, defaultTabIndex]);
+  const [activeTabValue, setActiveTabValue] = useState<string | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     if (defaultValue) {
-      setActiveTabIdx(tabs.findIndex((tab) => tab.value === defaultValue));
+      setActiveTabValue(defaultValue);
+    } else if (tabs?.length) {
+      setActiveTabValue(tabs[defaultTabIndex]?.value || tabs[0]?.value);
     }
-  }, [defaultValue]);
+  }, [tabs, defaultValue, defaultTabIndex]);
 
-  if (!tabs?.length) {
-    return;
-  }
+  const handleTabClick = (tabValue: string) => {
+    setActiveTabValue(tabValue);
+    onChange?.(tabValue);
+  };
+
+  const activeTab = tabs?.find((tab) => tab.value === activeTabValue);
 
   return (
     <div className="w-full pt-6">
       <div className={`flex justify-between mb-6 ${tabsClassName}`}>
         <div className="flex overflow-x-auto space-x-2">
-          {tabs.map((tab, index) => (
+          {tabs?.map((tab) => (
             <button
-              key={index}
+              key={tab.value}
               className={cn(
-                `px-4 py-2 text-sm font-medium rounded-[8px] ${
-                  activeTabIdx === index || defaultValue === tab.value
-                    ? "!bg-[#0062FF] text-white border border-[#0062FF]"
-                    : `${
-                        isBg ? "bg-white" : "bg-transparent"
-                      } text-[#0C0C0C] border border-[#E8E8E8]`
-                } transition duration-300`,
+                `px-4 py-2 text-sm font-medium rounded-[8px] transition duration-300`,
+                activeTabValue === tab.value
+                  ? "!bg-[#0062FF] text-white border border-[#0062FF]"
+                  : `${
+                      isBg ? "bg-white" : "bg-transparent"
+                    } text-[#0C0C0C] border border-[#E8E8E8]`,
                 tabClassName
               )}
-              onClick={() => handleTab(index)}
+              onClick={() => handleTabClick(tab.value)}
             >
               {tab.label}
             </button>
           ))}
         </div>
-        {tabs[activeTabIdx]?.leftSideContent && (
-          <div className="ml-4">{tabs[activeTabIdx].leftSideContent}</div>
+        {activeTab?.leftSideContent && (
+          <div className="ml-4">{activeTab.leftSideContent}</div>
         )}
       </div>
-      <div className={`mt-4 ${contentClassName}`}>
-        {tabs?.[activeTabIdx]?.children}
-      </div>
+      <div className={`mt-4 ${contentClassName}`}>{activeTab?.children}</div>
     </div>
   );
 };
