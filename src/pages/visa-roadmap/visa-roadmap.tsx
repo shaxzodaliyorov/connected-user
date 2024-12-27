@@ -79,11 +79,6 @@ export const VisaRoadMapPage = () => {
               />
             ))}
           </div>
-          {/* <div className="mt-4">
-            <Button fullWidth variant="outline">
-              Show more
-            </Button>
-          </div> */}
         </div>
         <div className="flex gap-x-4 mt-[120px]">
           <div className="w-1/2 bg-white rounded-[15px] p-[30px]">
