@@ -1,53 +1,92 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button, DatePicker, Input, Select } from "@/components";
 import { MainCard } from "@/components/main-card";
-import { useState } from "react";
-import { ItemRadio } from "./components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import { Controller, useForm } from "react-hook-form";
+import { FormValue } from "./types";
+import { useHandleRequest, useValidationOptions } from "@/hooks";
+import { RadioList } from "./components/radio-list";
+import { useSetVisaHelpMutation } from "@/features/user";
+import { useState } from "react";
+import { toast } from "@/components/ui/use-toast";
 
-const VISA_STATUS = [
-  { value: "option1", label: "D-10" },
-  { value: "option2", label: "E-10" },
-  { value: "option3", label: "A-10" },
+const EDUCATIONAL = [
+  { value: "0", label: "No, I didn't graduate" },
+  { value: "1", label: "Master" },
+  { value: "2", label: "Bachelor" },
+  { value: "3", label: "PhD" },
 ];
 
-const BACKGROUND = [
-  { name: "one_radio", htmlFor: "1", label: "No, I didn't graduate" },
-  { name: "one_radio", htmlFor: "2", label: "Master" },
-  { name: "one_radio", htmlFor: "3", label: "Bachelor" },
-  { name: "one_radio", htmlFor: "4", label: "PhD" },
+const KIIP = [
+  { value: "0", label: "0" },
+  { value: "1", label: "1" },
+  { value: "2", label: "2" },
+  { value: "3", label: "3" },
+  { value: "4", label: "4" },
+  { value: "5", label: "5" },
 ];
 
-const SKILLS = [
-  { name: "two_radio", htmlFor: "5", label: "0" },
-  { name: "two_radio", htmlFor: "6", label: "1" },
-  { name: "two_radio", htmlFor: "7", label: "2" },
-  { name: "two_radio", htmlFor: "8", label: "3" },
-  { name: "two_radio", htmlFor: "9", label: "4" },
-  { name: "two_radio", htmlFor: "10", label: "5" },
+const TOPIK = [
+  { value: "0", label: "0" },
+  { value: "1", label: "1" },
+  { value: "2", label: "2" },
+  { value: "3", label: "3" },
+  { value: "4", label: "4" },
+  { value: "5", label: "5" },
+  { value: "6", label: "6" },
 ];
 
-const LEVEL = [
-  { name: "three_radio", htmlFor: "5n", label: "0" },
-  { name: "three_radio", htmlFor: "6n", label: "1" },
-  { name: "three_radio", htmlFor: "7n", label: "2" },
-  { name: "three_radio", htmlFor: "8n", label: "3" },
-  { name: "three_radio", htmlFor: "9n", label: "4" },
-  { name: "three_radio", htmlFor: "10n", label: "5" },
-  { name: "three_radio", htmlFor: "11n", label: "6" },
+const VIOLATIONS = [
+  { value: "y", label: "Yes, I have " },
+  { value: "n", label: "No immigration violations." },
 ];
 
-const IMMIGRATION = [
-  { name: "radio", htmlFor: "5y", label: "Yes, I have " },
-  { name: "radio", htmlFor: "5y", label: "No immigration violations." },
+const VISA = [
+  { label: "D-4", value: "D-4" },
+  { label: "D-2", value: "D-2" },
+  { label: "D-10", value: "D-10" },
+  { label: "E-7-1", value: "E-7-1" },
+  { label: "F-2-7", value: "F-2-7" },
+  { label: "F-5-16", value: "F-5-16" },
+  { label: "E-9", value: "E-9" },
+  { label: "E-7-4", value: "E-7-4" },
+  { label: "F-2-99", value: "F-2-99" },
+  { label: "F-5-1", value: "F-5-1" },
+  { label: "F-2R", value: "F-2R" },
+  { label: "F-5-6R", value: "F-5-6R" },
 ];
 
 export const BoostSkillsForm = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  const form = useForm<FormValue>();
+  const validationOptions = useValidationOptions();
+  const handleRequest = useHandleRequest();
+  const navigate = useNavigate();
+  const [useSetVisaHelp, { isLoading }] = useSetVisaHelpMutation();
+  const [violations, setViolations] = useState("");
 
-  const handleChange = (value: string) => {
-    setSelectedValue(value);
+  const onSubmit = async (formValue: FormValue) => {
+    formValue.kiip = (Number(formValue.kiip) / 5) * 100;
+    formValue.topik = (Number(formValue.topik) / 6) * 100;
+    formValue.educational_background =
+      (Number(formValue.educational_background) / 4) * 100;
+
+    await handleRequest({
+      request: async () => {
+        const response = await useSetVisaHelp({
+          ...formValue,
+          violation: violations ? violations : undefined,
+        } as any);
+        return response;
+      },
+      onSuccess: () => {
+        navigate("/dashboard");
+        toast({ title: "Successfully updated" });
+      },
+    });
   };
+
   return (
     <div className="w-full container">
       <div className="py-6">
@@ -60,97 +99,138 @@ export const BoostSkillsForm = () => {
       </div>
       <div className="w-[60%] m-auto">
         <MainCard className="mt-8">
-          <div className="flex gap-6 justify-between items-center">
-            <div className="w-2/3">
-              <Select
-                label="Visa status"
-                value={selectedValue}
-                onChange={handleChange}
-                options={VISA_STATUS}
-                placeholder="D-10"
-                size="md"
-                fullWidth={true}
-                className="mb-4 "
+          <form className="w-full" onSubmit={form.handleSubmit(onSubmit)}>
+            <div className="flex gap-6 justify-between items-center">
+              <div className="w-2/3">
+                <Controller
+                  control={form.control}
+                  name="visa_status"
+                  rules={validationOptions(true)}
+                  render={({ field }) => (
+                    <Select
+                      label="Visa status"
+                      onChange={field.onChange}
+                      value={field.value}
+                      options={VISA}
+                      placeholder="D-10"
+                      size="md"
+                      fullWidth={true}
+                      className="mb-4"
+                      errorMessage={form.formState.errors.visa_status?.message}
+                    />
+                  )}
+                />
+              </div>
+              <div className="w-1/3">
+                <Controller
+                  name="visa_expire_date"
+                  control={form.control}
+                  rules={validationOptions(true)}
+                  render={({ field }) => (
+                    <DatePicker
+                      labelClassName="-mt-[18px]"
+                      label="Visa expire date"
+                      onChange={field.onChange}
+                      value={field.value}
+                      errorMessage={
+                        form.formState.errors.visa_expire_date?.message
+                      }
+                    />
+                  )}
+                />
+              </div>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-xl font-medium leading-[24.2px] text-left">
+                Educational background
+              </h3>
+              <Controller
+                control={form.control}
+                name="educational_background"
+                render={({ field }) => (
+                  <RadioList
+                    className="grid grid-cols-2 gap-y-4"
+                    name="educational_background"
+                    onChange={field.onChange}
+                    value={field.value}
+                    options={EDUCATIONAL}
+                  />
+                )}
               />
             </div>
-            <div className="w-1/3">
-              <DatePicker
-                labelClassName="-mt-[18px]"
-                label="Visa expire date"
-                value={new Date()}
-                className="h-[56px]"
-                required
+            <div className="mt-10">
+              <h3 className="text-[#0b0b0b] text-xl font-medium font-['Inter Display']">
+                Have you finished the KIIP program?
+              </h3>
+              <Controller
+                control={form.control}
+                name="kiip"
+                render={({ field }) => (
+                  <RadioList
+                    name="kiip"
+                    onChange={field.onChange}
+                    value={field.value}
+                    options={KIIP}
+                  />
+                )}
               />
             </div>
-          </div>
-          <div className="mt-10">
-            <h3 className="text-xl font-medium leading-[24.2px] text-left">
-              Educational background
-            </h3>
-            <div className="grid grid-cols-2 gap-y-4 mt-5">
-              {BACKGROUND.map((item, index) => (
-                <ItemRadio
-                  htmlFor={item.htmlFor}
-                  name="background"
-                  key={index}
-                  label={item.label}
-                />
-              ))}
+            <div className="mt-10">
+              <h3 className="text-xl font-medium leading-[24.2px] text-left">
+                What is your Topik level?
+              </h3>
+              <Controller
+                control={form.control}
+                name="topik"
+                render={({ field }) => (
+                  <RadioList
+                    name="topic"
+                    onChange={field.onChange}
+                    value={field.value}
+                    options={TOPIK}
+                  />
+                )}
+              />
             </div>
-          </div>
-          <div className="mt-10">
-            <h3 className="text-xl font-medium leading-[24.2px] text-left">
-              Have you finished the KIIP program?
-            </h3>
-            <div className="flex gap-x-9 items-center mt-5">
-              {SKILLS.map((item, index) => (
-                <ItemRadio
-                  htmlFor={item.htmlFor}
-                  name="skills"
-                  key={index}
-                  label={item.label}
-                />
-              ))}
+            <div className="mt-10">
+              <h3 className="text-xl font-medium leading-[24.2px] text-left">
+                Do you have any immigration violations or punishments?
+              </h3>
+              <Controller
+                name="violation"
+                control={form.control}
+                render={({ field }) => (
+                  <RadioList
+                    name="violations"
+                    onChange={field.onChange}
+                    value={field.value}
+                    options={VIOLATIONS}
+                  />
+                )}
+              />
             </div>
-          </div>
-          <div className="mt-10">
-            <h3 className="text-xl font-medium leading-[24.2px] text-left">
-              What is your Topik level?
-            </h3>
-            <div className="flex gap-x-9 items-center mt-5">
-              {LEVEL.map((item, index) => (
-                <ItemRadio
-                  htmlFor={item.htmlFor}
-                  name="level"
-                  key={index}
-                  label={item.label}
+            {form.watch("violation") === "y" && (
+              <div className="mt-10">
+                <Input
+                  type="number"
+                  value={violations}
+                  onChange={(e) => setViolations(e.target.value)}
+                  placeholder="Please specify"
+                  label="Violation"
                 />
-              ))}
+              </div>
+            )}
+            <div className="py-[30px]">
+              <Button
+                loading={isLoading}
+                type="submit"
+                variant="primary"
+                fullWidth
+              >
+                Submit
+              </Button>
             </div>
-          </div>
-          <div className="mt-10">
-            <h3 className="text-xl font-medium leading-[24.2px] text-left">
-              Do you have any immigration violations or punishments?
-            </h3>
-            <div className="flex gap-x-[161px] items-center mt-5">
-              {IMMIGRATION.map((item, index) => (
-                <ItemRadio
-                  htmlFor={item.htmlFor}
-                  name="violations"
-                  key={index}
-                  label={item.label}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="mt-10">
-            <Input placeholder="Please specify" label="Violation" />
-          </div>
-          <div className="py-[30px]">
-            <Button variant="primary" fullWidth>
-              Submit
-            </Button>
-          </div>
+          </form>
         </MainCard>
       </div>
     </div>

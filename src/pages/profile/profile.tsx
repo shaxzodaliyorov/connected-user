@@ -8,22 +8,41 @@ import {
   VisaRoadmap,
 } from "./components";
 import { Button, ProfileJobCard, StatusButton } from "@/components";
-import { AddResume } from "@/icons";
+import { AddResume, StartNow } from "@/icons";
 import { IoIosArrowForward } from "react-icons/io";
 import { useGetAllMyResumeQuery } from "@/features/resume/resume";
 import { Loader } from "@/components/loader";
 import { Resume } from "@/types";
 import { ListItem } from "../my-resume/components";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { useEffect, useState } from "react";
 import { useGetUser } from "@/hooks";
+import { useGetApplicationsQuery } from "@/features/jobs";
 
 export const Profile = () => {
   const { data: { data: resumes = [] } = {}, isLoading } =
     useGetAllMyResumeQuery("");
   const navigate = useNavigate();
-
+  const [open, setOpen] = useState(false);
   const user = useGetUser();
+  const { data: { data: applications = [] } = {}, isFetching } =
+    useGetApplicationsQuery({});
 
-  console.log(user);
+  const onClose = () => {
+    setOpen(false);
+    navigate("/");
+  };
+
+  useEffect(() => {
+    if (!user?.visa_help) {
+      setOpen(true);
+    }
+  }, [user?.visa_help]);
 
   return (
     <section className="w-full">
@@ -63,7 +82,7 @@ export const Profile = () => {
                 </Link>
               </div>
               <div className="flex pt-4 flex-col gap-y-4">
-                {isLoading ? (
+                {isFetching ? (
                   <Loader className="h-80 flex items-center justify-center" />
                 ) : (
                   resumes
@@ -80,53 +99,37 @@ export const Profile = () => {
               </h4>
 
               <div className="pt-4 flex flex-col gap-y-4">
-                <ProfileJobCard
-                  logo="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                  company="Company Name"
-                  salary_min={50}
-                  salary_max={15}
-                  job_title="Job Title"
-                  location="Location"
-                  buttonstatus={
-                    <StatusButton variant="applied" label="Applied" />
-                  }
-                />
-                <ProfileJobCard
-                  logo="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                  company="Company Name"
-                  salary_min={50}
-                  salary_max={15}
-                  job_title="Job Title"
-                  location="Location"
-                  buttonstatus={
-                    <StatusButton variant="declined" label="Declined" />
-                  }
-                />
-                <ProfileJobCard
-                  logo="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                  company="Company Name"
-                  salary_min={50}
-                  salary_max={15}
-                  job_title="Job Title"
-                  location="Location"
-                  buttonstatus={<StatusButton variant="hired" label="Hired" />}
-                />
-                <ProfileJobCard
-                  logo="https://mighty.tools/mockmind-api/content/human/57.jpg"
-                  company="Company Name"
-                  salary_min={50}
-                  salary_max={15}
-                  job_title="Job Title"
-                  location="Location"
-                  buttonstatus={
-                    <StatusButton variant="interview" label="Interview" />
-                  }
-                />
-                <div className="pt-4">
+                {isLoading ? (
+                  <Loader className="h-80 flex items-center justify-center" />
+                ) : (
+                  applications.map((app) => (
+                    <ProfileJobCard
+                      key={app._id}
+                      id={app?.job?._id}
+                      logo={app?.company?.logo}
+                      company={app?.company?.company_name}
+                      job_title={app?.job?.job_title}
+                      location={app?.company?.location}
+                      buttonstatus={
+                        <StatusButton
+                          variant={
+                            app.status as
+                              | "applied"
+                              | "declined"
+                              | "interview"
+                              | "hired"
+                          }
+                          label={app.status}
+                        />
+                      }
+                    />
+                  ))
+                )}
+                {/* <div className="pt-4">
                   <Button variant="outline" fullWidth>
                     Show more
                   </Button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -135,6 +138,28 @@ export const Profile = () => {
           </div>
         </div>
       </div>
+      <Dialog open={open} onOpenChange={onClose}>
+        <DialogContent className="bg-transparent border-transparent shadow-transparent">
+          <DialogHeader>
+            <DialogTitle>
+              <h4 className="text-xl font-medium leading-[22px] text-center text-[#0C0C0C]">
+                Boost Your Skills for Korea
+              </h4>
+              <p className="text-base font-normal leading-6 text-center mt-[6px]">
+                Boost your language skills for visa readiness.
+              </p>
+              <Button
+                onClick={() => navigate("/get-visa-help")}
+                size="sm"
+                className="m-auto mt-6"
+                leftIcon={<StartNow />}
+              >
+                Start now
+              </Button>
+            </DialogTitle>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

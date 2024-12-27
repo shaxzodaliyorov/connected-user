@@ -1,4 +1,4 @@
 interface Props {
-  label: string
-  variant: 'applied' | 'declined' | 'interview' | 'hired'
+  label: string;
+  variant: "applied" | "declined" | "interview" | "hired" | "offer";
 }

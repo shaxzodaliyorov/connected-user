@@ -18,6 +18,10 @@ table {
   animation: spinner-rotation 1s linear infinite;
 }
 
+.whitespace-nowrap {
+  display: none;
+}
+
 .ring-offset-background {
   display: none;
 }
@@ -45,7 +49,7 @@ input:-webkit-autofill:active {
   background-color: inherit;
 }
 
-.rdp [aria-hidden='true'] {
+.rdp [aria-hidden="true"] {
   @apply hidden;
 }
 
@@ -96,11 +100,14 @@ select::-webkit-scrollbar {
 
 body {
   background-color: #f3f3f3 !important;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .text_gradient {
-  background: var(--Base-Color-Gradient, linear-gradient(90deg, #1ec1ff -11.4%, #0062ff 46.93%, #ff2acc 105.26%));
+  background: var(
+    --Base-Color-Gradient,
+    linear-gradient(90deg, #1ec1ff -11.4%, #0062ff 46.93%, #ff2acc 105.26%)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -110,11 +117,7 @@ body {
   width: 50px;
   aspect-ratio: 1;
   --_c: no-repeat radial-gradient(farthest-side, #0062ff 92%, #0000);
-  background:
-    var(--_c) top,
-    var(--_c) left,
-    var(--_c) right,
-    var(--_c) bottom;
+  background: var(--_c) top, var(--_c) left, var(--_c) right, var(--_c) bottom;
   background-size: 12px 12px;
   animation: l7 1s infinite;
 }
@@ -132,7 +135,21 @@ body {
   display: flex;
 }
 
-
-.ai_button{
-  background: radial-gradient(395.27% 77.56% at 25.57% 34.38%, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(168.47% 113.47% at -3.98% 12.5%, #FF33BA 19.65%, rgba(237, 66, 179, 0.00) 100%), radial-gradient(74.86% 100.16% at 43.75% 114.06%, #0062FF 0%, #9747FF 80.98%), #55128A;
+.ai_button {
+  background: radial-gradient(
+      395.27% 77.56% at 25.57% 34.38%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      168.47% 113.47% at -3.98% 12.5%,
+      #ff33ba 19.65%,
+      rgba(237, 66, 179, 0) 100%
+    ),
+    radial-gradient(
+      74.86% 100.16% at 43.75% 114.06%,
+      #0062ff 0%,
+      #9747ff 80.98%
+    ),
+    #55128a;
 }

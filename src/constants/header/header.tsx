@@ -1,64 +1,68 @@
-import {Grid, GridAdd, Notification, Settings, User} from '@/icons'
-import {Like} from '@/icons/like'
-import {Logout} from '@/icons/logout'
+import { Grid, GridAdd, Notification, Settings, User } from "@/icons";
+import { Like } from "@/icons/like";
+import { Logout } from "@/icons/logout";
 
 export const HEADER_PUBLIC_LINKS = [
   {
-    label: 'Jobs',
-    path: '/jobs',
+    label: "Jobs",
+    path: "/jobs",
   },
   {
-    label: 'Match Up',
-    path: '/match-up',
+    label: "Match Up",
+    path: "/match-up",
   },
   {
-    label: 'Visa Roadmap',
-    path: '/visa-roadmap',
+    label: "Visa Roadmap",
+    path: "/visa-roadmap",
   },
   {
-    label: 'Visa News',
-    path: '/visa-news',
+    label: "Skill Level Test",
+    path: "/skill-level-test",
   },
   {
-    label: 'Chat',
-    path: '/chat',
+    label: "Visa News",
+    path: "/visa-news",
   },
-]
+  {
+    label: "Chat",
+    path: "/chat",
+  },
+];
 
 export const DASHBOARD_LINKS = [
   {
-    label: 'Dashboard',
-    path: '/dashboard',
+    label: "Dashboard",
+    path: "/dashboard",
     icon: <Grid className="w-6 h-6" />,
   },
   {
-    label: 'Application',
-    path: '/application',
+    label: "Application",
+    path: "/application",
     icon: <GridAdd className="w-6 h-6 text-[#7D7D7D]" />,
   },
   {
-    label: 'Notification',
-    path: '/notifications',
+    label: "Notification",
+    path: "/notifications",
     icon: <Notification className="w-6 h-6" />,
   },
   {
-    label: 'Resume',
-    path: '/my-resume',
+    label: "Resume",
+    path: "/my-resume",
     icon: <User className="w-6 h-6" />,
   },
   {
-    label: 'Saved Jobs',
-    path: '/saved-jobs',
+    label: "Saved Jobs",
+    path: "/saved-jobs",
     icon: <Like className="w-6 h-6" />,
   },
   {
-    label: 'Settings',
-    path: '/settings',
+    label: "Settings",
+    path: "/settings",
     icon: <Settings className="w-6 h-6" />,
   },
   {
-    label: 'Logout',
-    path: '/logout',
+    label: "Logout",
+    path: "/logout",
     icon: <Logout className="w-6 h-6" />,
   },
-]
+];

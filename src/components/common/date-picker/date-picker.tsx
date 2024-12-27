@@ -1,11 +1,16 @@
-import {cn} from '@/lib/utils'
-import {Button} from '@/components/ui/button'
-import {Calendar} from '@/components/ui/calendar'
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover'
-import {useEffect, useState} from 'react'
-import dayjs from 'dayjs'
-import {Props} from './types'
-import {Calendar2} from '@/icons'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { useEffect, useState } from "react";
+import dayjs from "dayjs";
+import { Props } from "./types";
+import { Calendar2 } from "@/icons";
 
 export const DatePicker = ({
   label,
@@ -18,30 +23,30 @@ export const DatePicker = ({
   labelClassName,
   wrapperClassName,
   iconClassName,
-  format = 'MM/DD/YYYY',
+  format = "MM/DD/YYYY",
 }: Props) => {
-  const [date, setDate] = useState<Date>()
+  const [date, setDate] = useState<Date>();
 
   useEffect(() => {
     if (value) {
-      setDate(new Date(value))
+      setDate(new Date(value));
     }
-  }, [value])
+  }, [value]);
 
   const handleDateChange = (selectedDate: Date | undefined) => {
-    setDate(selectedDate)
+    setDate(selectedDate);
     if (onChange && selectedDate) {
-      onChange(selectedDate.toISOString() as any)
+      onChange(selectedDate.toISOString() as any);
     }
-  }
+  };
 
   return (
-    <div className={cn('flex flex-col justify-start', wrapperClassName)}>
+    <div className={cn("flex flex-col justify-start", wrapperClassName)}>
       {label && (
         <span
           className={cn(
             "text-[#0b0b0b] inline-block mb-2 text-base font-normal font-['Inter Display']",
-            labelClassName,
+            labelClassName
           )}
         >
           {label}
@@ -51,16 +56,22 @@ export const DatePicker = ({
         <PopoverTrigger asChild>
           <Button
             type="button"
-            variant={'outline'}
+            variant={"outline"}
             className={cn(
               `h-14 px-4 py-2.5 bg-white rounded-lg border border-[#c5c5c5] justify-between items-center inline-flex overflow-hidden `,
-              !date && 'text-muted-foreground',
-              errorMessage && 'border-red-500',
-              className,
+              !date && "text-muted-foreground",
+              errorMessage && "border-red-500",
+              className
             )}
           >
-            {date ? dayjs(date).format(format) : <span>{placeholder || 'Pick a date'}</span>}
-            {!hideIcon && <Calendar2 className={cn('mr-2 h-4 w-4', iconClassName)} />}
+            {date ? (
+              dayjs(date).format(format)
+            ) : (
+              <span>{placeholder || "Pick a date"}</span>
+            )}
+            {!hideIcon && (
+              <Calendar2 className={cn("mr-2 !h-5 !w-5", iconClassName)} />
+            )}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0">
@@ -75,7 +86,9 @@ export const DatePicker = ({
           />
         </PopoverContent>
       </Popover>
-      {errorMessage && <span className="text-red-500 text-xs mt-1">{errorMessage}</span>}
+      {errorMessage && (
+        <span className="text-red-500 text-xs mt-1">{errorMessage}</span>
+      )}
     </div>
-  )
-}
+  );
+};

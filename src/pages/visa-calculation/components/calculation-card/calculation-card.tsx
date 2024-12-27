@@ -4,11 +4,14 @@ import { useManageQuery } from "@/hooks";
 import { VISA_CATEGORIES } from "@/constants/visa-categories/visa-categories";
 import { useState } from "react";
 import { Button } from "@/components";
+import { useNavigate } from "react-router-dom";
 
 export const CalculationCard = () => {
   const [selectedPoints, setSelectedPoints] = useState<Record<string, number>>(
     {}
   );
+
+  const navigate = useNavigate();
 
   const calculateTotalPoints = () =>
     Object.values(selectedPoints).reduce((sum, points) => sum + points, 0);
@@ -66,7 +69,18 @@ export const CalculationCard = () => {
           ))}
         </div>
         <div className="flex justify-end w-full">
-          <Button className="min-w-[190px]">Continue</Button>
+          <Button
+            onClick={() =>
+              navigate(
+                `/visa-result?visa=${getQuery(
+                  "visa"
+                )}&points=${calculateTotalPoints()}`
+              )
+            }
+            className="min-w-[190px]"
+          >
+            Continue
+          </Button>
         </div>
       </MainCard>
       <div className="flex items-center justify-center w-full">

@@ -16,7 +16,6 @@ export enum ROUTES_NAME {
   DASHBOARD = "/dashboard",
   RESUME = "/resume",
   RESUME_DETAIL = "/my-resume/:id",
-  START_NOW = "/start-now",
   APPLICATION = "/application",
   SAVED_JOBS = "/saved-jobs",
   JOB_OFFER = "/job-offer",

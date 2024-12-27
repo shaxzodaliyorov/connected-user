@@ -41,7 +41,7 @@ export const Test = ({ setScore, quiz, setQuiz }: Props) => {
             role: "user",
             content: `Give me a multiple choice question in JSON format for the topic ${getQuery(
               "skill"
-            )} at difficulty level ${difficulty}. only response JSON format example: {question:""; options:["","","",""]; answer:""}.`,
+            )} at difficulty level ${difficulty}. only response JSON format example: {question:""; options:["","","",""]; answer:""}. in ${language}`,
           },
         ],
       }),

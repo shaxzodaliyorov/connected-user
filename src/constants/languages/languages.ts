@@ -1,38 +1,42 @@
 export const LANGUAGES = [
   {
-    label: 'EN',
-    value: 'en',
+    label: "EN",
+    value: "English",
+    code: "en",
   },
   {
-    label: 'KR',
-    value: 'kr',
+    label: "KR",
+    value: "Korean",
+    code: "ko",
   },
   {
-    label: 'RU',
-    value: 'ru',
+    label: "RU",
+    value: "Russian",
+    code: "ru",
   },
   {
-    label: 'UZ',
-    value: 'uz',
+    label: "UZ",
+    value: "Uzbek",
+    code: "uz",
   },
   {
-    label: 'TJ',
-    value: 'ne',
+    label: "TJ",
+    value: "Tajik",
+    code: "tg",
   },
   {
-    label: 'KZ',
-    value: 'ph',
+    label: "KZ",
+    value: "Kazakh",
+    code: "kk",
   },
   {
-    label: 'MN',
-    value: 'mn',
+    label: "MN",
+    value: "Mongolian",
+    code: "mn",
   },
   {
-    label: 'ID',
-    value: 'id',
+    label: "ID",
+    value: "Indonesian",
+    code: "id",
   },
-  {
-    label: 'ID',
-    value: 'id',
-  },
-]
+];

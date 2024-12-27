@@ -16,10 +16,7 @@ export const SkillTestPage = () => {
     <section className="w-full">
       <div className="w-full container">
         <div className="py-6">
-          <Link
-            to="/skill-level-test/test?testSetup=start"
-            className="flex items-center gap-x-2"
-          >
+          <Link to="/" className="flex items-center gap-x-2">
             <span>
               <MdOutlineArrowBackIos />
             </span>

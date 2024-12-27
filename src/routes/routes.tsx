@@ -144,7 +144,7 @@ export const ROUTES = [
     element: <VisaCalculation />,
   },
   {
-    path: ROUTES_NAME.START_NOW,
+    path: ROUTES_NAME.GET_VISA_HELP,
     element: <BoostSkillsForm />,
   },
   {

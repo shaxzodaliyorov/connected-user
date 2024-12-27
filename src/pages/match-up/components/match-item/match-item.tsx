@@ -1,42 +1,48 @@
-import {FillLike, Like} from '@/icons'
-import {FC} from 'react'
-import {useNavigate} from 'react-router-dom'
-import {Props} from './types'
-import {Button} from '@/components'
-import {MatchProgress} from '../match-progress'
-import {useGetUser, useHandleRequest} from '@/hooks'
-import {useGetSaveJobIdsQuery, useSaveJobMutation} from '@/features/jobs'
-import {useTranslation} from 'react-i18next'
-import {toast} from '@/components/ui/use-toast'
+import { FillLike, Like } from "@/icons";
+import { FC, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Props } from "./types";
+import { ApplyModal, Button } from "@/components";
+import { MatchProgress } from "../match-progress";
+import { useGetUser, useHandleRequest } from "@/hooks";
+import { useGetSaveJobIdsQuery, useSaveJobMutation } from "@/features/jobs";
+import { useTranslation } from "react-i18next";
+import { toast } from "@/components/ui/use-toast";
 
-export const MatchItem: FC<Props> = ({job}) => {
-  const navigate = useNavigate()
+export const MatchItem: FC<Props> = ({ job }) => {
+  const navigate = useNavigate();
 
-  const handleRequest = useHandleRequest()
-  const [saveJob] = useSaveJobMutation()
-  const {data: {data: saveJobIds = []} = {}} = useGetSaveJobIdsQuery('')
-  const {t} = useTranslation()
-  const user = useGetUser()
+  const handleRequest = useHandleRequest();
+  const [saveJob] = useSaveJobMutation();
+  const { data: { data: saveJobIds = [] } = {} } = useGetSaveJobIdsQuery("");
+  const { t } = useTranslation();
+  const user = useGetUser();
+  const [open, setOpen] = useState(false);
 
   const onSaveAndUnsaved = async () => {
     if (!user) {
-      navigate('/sign-in')
-      return
+      navigate("/sign-in");
+      return;
     }
 
     await handleRequest({
       request: async () => {
         const response = await saveJob({
           id: job?.job_id,
-          type: saveJobIds.includes(job?.job_id) ? 'unfavorite' : 'favorite',
-        })
-        return response
+          type: saveJobIds.includes(job?.job_id) ? "unfavorite" : "favorite",
+        });
+        return response;
       },
       onSuccess: () => {
-        toast({title: saveJobIds.includes(job?.job_id) ? t('Job Unsaved') : t('Job Saved'), variant: 'default'})
+        toast({
+          title: saveJobIds.includes(job?.job_id)
+            ? t("Job Unsaved")
+            : t("Job Saved"),
+          variant: "default",
+        });
       },
-    })
-  }
+    });
+  };
 
   return (
     <div
@@ -45,9 +51,15 @@ export const MatchItem: FC<Props> = ({job}) => {
     >
       <div className="flex justify-between ">
         <div className="flex gap-4 items-center">
-          <img className="w-[60px] h-[60px] rounded-[15px] border-[2px]" src={job?.company_logo} alt="" />
+          <img
+            className="w-[60px] h-[60px] rounded-[15px] border-[2px]"
+            src={job?.company_logo}
+            alt=""
+          />
           <div className="flex flex-col">
-            <h4 className="text-xl font-semibold leading-[30px] text-left text-[#0C0C0C]">{job?.job_title}</h4>
+            <h4 className="text-xl font-semibold leading-[30px] text-left text-[#0C0C0C]">
+              {job?.job_title}
+            </h4>
             <p className="text-base flex items-center gap-x-2 font-normal leading-[19.2px] text-left text-[#7D7D7D]">
               {job.company_name} <span>·</span> <p>{job.company_location}</p>
               {/* <span>·</span> */}
@@ -71,12 +83,16 @@ export const MatchItem: FC<Props> = ({job}) => {
           <MatchProgress percentage={Number(Math.floor(job.percent))} />
           <button
             className="absolute z-[9] right-6 top-6 "
-            onClick={e => {
-              e.stopPropagation()
-              onSaveAndUnsaved()
+            onClick={(e) => {
+              e.stopPropagation();
+              onSaveAndUnsaved();
             }}
           >
-            {saveJobIds && saveJobIds.includes(job?.job_id as string) ? <FillLike /> : <Like />}
+            {saveJobIds && saveJobIds.includes(job?.job_id as string) ? (
+              <FillLike />
+            ) : (
+              <Like />
+            )}
           </button>
         </div>
       </div>
@@ -92,7 +108,14 @@ export const MatchItem: FC<Props> = ({job}) => {
       </div>
       <div className="flex justify-between items-center">
         <div className="pt-6">
-          <Button variant="primary" className="py-2 px-[44px]">
+          <Button
+            onClick={(e) => {
+              e?.stopPropagation();
+              setOpen(true);
+            }}
+            variant="primary"
+            className="py-2 px-[44px]"
+          >
             Apply
           </Button>
         </div>
@@ -101,6 +124,11 @@ export const MatchItem: FC<Props> = ({job}) => {
           {/* {formatTimeAgo(job.)} */}
         </p>
       </div>
+      <ApplyModal
+        open={open}
+        job_id={job?.job_id || ""}
+        onClose={() => setOpen(false)}
+      />
     </div>
-  )
-}
+  );
+};
