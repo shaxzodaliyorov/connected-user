@@ -11,21 +11,22 @@ export const HEADER_PUBLIC_LINKS = [
     label: "Match Up",
     path: "/match-up",
   },
-  // {
-  //   label: "Visa Roadmap",
-  //   path: "/visa-roadmap",
-  // },
+
   {
     label: "Skill Level Test",
     path: "/skill-level-test",
   },
   {
-    label: "Visa News",
-    path: "/visa-news",
+    label: "Visa Roadmap",
+    path: "/visa-roadmap",
   },
   {
     label: "Chat",
     path: "/chat",
+  },
+  {
+    label: "Visa News",
+    path: "/visa-news",
   },
 ];
 
