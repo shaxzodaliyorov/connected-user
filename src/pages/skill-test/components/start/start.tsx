@@ -6,6 +6,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { LANGUAGES } from "@/constants";
+import { useGetAllMyResumeQuery } from "@/features/resume/resume";
 import { Duration, Language, Questions, TestTypes } from "@/icons";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -22,51 +23,14 @@ const ACCESSIBILITY = [
   },
 ];
 
-const PROGRAMMING_LANGUAGES = [
-  {
-    label: "Python",
-    value: "python",
-  },
-  {
-    label: "Cand C+",
-    value: "candc",
-  },
-  {
-    label: "Go",
-    value: "go",
-  },
-  {
-    label: "Java",
-    value: "java",
-  },
-  {
-    label: "JavaScript",
-    value: "javascript",
-  },
-  {
-    label: "Kotlin",
-    value: "kotlin",
-  },
-  {
-    label: "Php",
-    value: "php",
-  },
-  {
-    label: "Php",
-    value: "php",
-  },
-  {
-    label: "Reactjs",
-    value: "reactjs",
-  },
-];
-
 export const Start = () => {
   const [accessibility, setAccessibility] = useState<string>("off");
   const [language, setLanguage] = useState("English");
   const [skill, setSkill] = useState<string>("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
+
+  const { data: { data: resume } = {} } = useGetAllMyResumeQuery("");
 
   const { t } = useTranslation();
 
@@ -131,7 +95,12 @@ export const Start = () => {
 
       <div className="pt-8">
         <Select
-          options={PROGRAMMING_LANGUAGES}
+          options={
+            resume
+              ?.map((item) => item.skills)
+              .flat()
+              ?.map((item) => ({ label: item, value: item })) || []
+          }
           label="Select Your Skill Test"
           className="max-w-[499px]"
           placeholder="Language Proficiency"
